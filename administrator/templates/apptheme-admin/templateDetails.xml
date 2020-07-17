@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="administrator">
+	<name>apptheme-admin</name>
+	<version>1.3</version>
+	<creationDate>6/10/2013</creationDate>
+	<author>Kyle Ledbetter</author>
+	<authorEmail>support@pixelpraise.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2013 Pixel Praise, LLC. All rights reserved.</copyright>
+	<description>TPL_APPTHEME_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>cpanel.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>login.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>submenu</position>
+		<position>toolbar</position>
+		<position>title-nav</position>
+		<position>status</position>
+		<position>search</position>
+		<position>icon</position>
+		<position>bottom</position>
+		<position>cpanel</position>
+		<position>tabbar</position>
+		<position>login</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_apptheme-admin.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_apptheme-admin.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="theme" type="list" default="flat"
+					label="TPL_APPTHEME_FIELD_THEME_LABEL"
+					description="TPL_APPTHEME_FIELD_THEME_DESC"
+					filter="word"
+				>
+					<option value="mac">TPL_APPTHEME_OPTION_MAC</option>
+					<option value="carbon">TPL_APPTHEME_OPTION_CARBON</option>
+					<option value="sepia">TPL_APPTHEME_OPTION_SEPIA</option>
+					<option value="ironman">TPL_APPTHEME_OPTION_IRONMAN</option>
+					<option value="masterchief">TPL_APPTHEME_OPTION_MASTERCHIEF</option>
+					<option value="dribbble">TPL_APPTHEME_OPTION_DRIBBBLE</option>
+					<option value="flat">TPL_APPTHEME_OPTION_FLAT</option>
+				</field>
+
+				<field name="templateColor" class="" type="color" default="#203142"
+					label="TPL_APPTHEME_COLOR_LABEL"
+					description="TPL_APPTHEME_COLOR_DESC" />
+
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_APPTHEME_LOGO_LABEL"
+					description="TPL_APPTHEME_LOGO_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

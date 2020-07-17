@@ -1,0 +1,197 @@
+.view-login{
+	p a {
+	color: @white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	}
+}
+.container-fixed {
+	.login {
+		position: fixed;
+		left: 38%;
+		top: 15%;
+
+		.btn-group.pull-left {
+			float: none;
+			width: 100%;
+		}
+		.btn-primary {
+			width: 100%;
+		}
+		.chzn-container {
+			width: 300px !important;
+		}
+		#form-login {
+			.input-prepend .add-on,
+			.input-append .btn {
+				display: none;
+			}
+			#mod-login-username{
+				.border-radius (10px 10px 0 0);
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				background: rgba(0, 0, 0, 0.45);
+				.box-shadow (0 -1px 0 rgba(255, 255, 255, 0.25));
+				margin-bottom: 0;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-size: 16px;
+			}
+			#mod-login-password {
+				.border-radius (0 0 10px 10px);
+				border-right: 1px solid rgba(0, 0, 0, 0.25);
+				border-left: 1px solid rgba(0, 0, 0, 0.25);
+				border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+				border-top: 1px solid rgba(255, 255, 255, 0.25);
+				background: rgba(0, 0, 0, 0.45);
+				.box-shadow (0 1px 0 rgba(255, 255, 255, 0.25));
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-size: 16px;
+			}
+			.btn-large {
+				.border-radius (20px);
+			}
+		}
+	}
+	.navigation {
+		z-index: 3;
+
+
+	}
+	.navigation-status {
+		margin: 12px 0 0 12px;
+		.btn-toolbar,
+		.btn-group,
+		a {
+			font-size: 12px;
+			text-decoration: none;
+		}
+	}
+	.sidebar {
+		h3 {
+			margin-left: -10px;
+			margin-right: -10px;
+			margin-bottom: 0;
+			padding: 10px;
+			font-weight: bold;
+		}
+	}
+	.sidebar-nav {
+		top: 76px;
+		bottom: 43px;
+
+		hr {
+			background: transparent;
+			border-top: 0;
+			border-bottom: 0;
+		}
+
+		.nav-list > li {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.page-header {
+			border-bottom: 0;
+		}
+	}
+	#j-sidebar-container {
+		width: 0;
+	}
+	#j-main-container {
+		width: 100%;
+		margin-left: 0;
+
+	}
+}
+.com_config .content-inner .row-fluid > .span10 {
+	width: 100%;
+	margin-left: 0;
+}
+// Fix the content menu
+.has-context {
+	.btn-group {
+		display: inline-block !important;
+		.btn-mini {
+			padding: 0 2px;
+			line-height: 5px;
+		}
+	}
+}
+// Active Buttons in tables
+table {
+	.btn-micro.active {
+		.buttonBackground(@greenSea, @greenSea);
+	}
+}
+@media (max-width: @tabletMax) {
+	.container-fixed {
+		.content-inner #j-sidebar-container {
+			display: none;
+		}
+		#j-main-container {
+			width: 100%;
+			margin-left: 0;
+		}
+		.sidebar {
+			.dropdown-menu {
+				position: relative;
+				top: -1px;
+				width: 100%;
+				margin: 0;
+				background: transparent;
+				.box-shadow (none);
+				border: 0;
+
+				.divider,
+				.dropdown-menu,
+				.dropdown-submenu > a::after  {
+					display: none;
+				}
+			}
+			.sidebar-nav {
+				display: block;
+				position: relative;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: auto;
+				background: transparent;
+				border: 0;
+				margin: -9px;
+			}
+		}
+	}
+}
+@media (max-width: @phoneMax) {
+	.container-fixed {
+		.login {
+			top: 30px;
+			left: 30px;
+			right: 30px;
+			bottom: 0;
+		}
+	}
+}
+
+// Login Themes
+.sepia.view-login{
+	background: url('../images/bg4.png');
+}
+.ironman.view-login {
+	background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #a90329 0%, #8f0222 28%, #a90329 55%, #6d0019 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a90329), color-stop(28%,#8f0222), color-stop(55%,#a90329), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #a90329 0%,#8f0222 28%,#a90329 55%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #a90329 0%,#8f0222 28%,#a90329 55%,#6d0019 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #a90329 0%,#8f0222 28%,#a90329 55%,#6d0019 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #a90329 0%,#8f0222 28%,#a90329 55%,#6d0019 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+	background-attachment: fixed;
+
+}
+.dribbble.view-login{
+	#gradient > .radial(lighten(@dribbbleFooter, 20%), lighten(@dribbbleFooter, 10%));
+	background-attachment: fixed;
+}
