@@ -1,0 +1,381 @@
+/************************
+ * Standard Sections
+ ************************/
+/* Header / Menu */
+
+	
+header {
+	z-index: 2;
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	@extend .transition300ms;
+	
+	.logo {
+		img {
+			width: 282px;
+			@extend .transition300ms;
+			@media only screen and (max-width: 1440px) {
+				width: 260px;
+			}
+			@media only screen and (max-width: 1380px) {
+				width: 240px;
+			}
+
+			@media only screen and (max-width: 1320px) {
+				width: 230px;
+			}
+			@media only screen and (max-width: 639px) {
+				width: 200px;
+			}
+		}
+	}
+	.logoimage {
+		background: url(../images/logo-negative.svg);
+		width: 177px;
+		height: 34px;
+		display: inline-block;
+	}
+	&.uk-sticky.uk-active {
+		//background: $dark-bg;
+		.logoimage {
+			background: url(../images/logo-negative.svg);
+		}
+	}
+	.icon-outer{
+		display: inline-block;
+		background-repeat: no-repeat;
+		width: 30px;
+		height: 30px;
+		background: #000;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		margin-left: 10px;
+		&:hover {
+			
+		}
+		span {
+			color: $white;
+		}
+	}
+
+	.uk-navbar-nav > li {
+		padding-left: 0;
+		margin-left: 5px;
+		margin-right: 5px;
+		position: relative;
+		&:first-child {
+			display: none;
+		}
+		&:last-child {
+			margin-right: 5px;
+			a, span {
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+		
+		&.deeper > a,&.deeper > span{
+			position: relative;
+			&:after {
+				content: "";
+				background: url(../images/icon/arrow-white.svg) no-repeat;
+				display: inline-block;
+				width: 6px;
+				height: 9px;
+				background-size: 100%;
+				margin-left: 8px;
+				background-repeat: no-repeat;
+				transform: rotate(90deg);
+			}
+			&:hover {
+				&:after {
+					background: url(../images/icon/arrow.svg) no-repeat;
+					width: 6px;
+					height: 9px;
+					background-size: 100%;
+				}
+			}
+
+			
+		}
+		> .nav-child {
+			opacity: 0;
+			visibility: hidden;
+			display: none;
+			position: absolute;
+			color: $text-color;
+			padding: 0px 0px 0px 0px;
+			margin-top: 0px;
+			display: table;
+			transform: translateX(-50%);
+			left: 50%;
+			white-space: nowrap;
+			background: $dark-bg;
+			@extend .transition300ms;
+			> li:first-child {
+				a {
+					padding-top: 15px;
+				}
+			}
+			> li {
+				margin-left: 0;
+
+				padding-right: 15px;
+				padding-top: 0px;
+				padding-bottom: 2px;
+				a {
+					
+					text-transform: capitalize;
+					padding: 0px 10px 15px 10px;
+					font-family: $font1;
+					font-weight: bold;
+					font-size: 16px;
+					color: $text-color;
+					display: inline-block;
+					@extend .transition300ms;
+					&:hover {
+						color: $blue;
+					}
+
+				}
+				&:hover {
+					> .nav-child {
+						display: inline-block;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+				&.active {
+					> a {
+						color: $blue;
+
+					}
+					li.active , li:hover {
+						>a {
+							color: $blue
+						}
+					}
+				}
+
+			}
+			.nav-child {
+			    position: absolute;
+			    left: 100%;
+			    transform: translateX(0%);
+			    opacity: 0;
+				visibility: hidden;
+				background: $dark-bg;
+				padding: 15px 0px 0 0;
+				li {
+					padding-left: 0;
+					a {
+						padding-top: 0px;
+						padding-bottom: 20px;
+					}
+				}
+			}
+			
+		}
+		&.active {
+			> a {
+				border-radius: 18px;
+				color: $blue;
+
+			}
+		}
+		&:hover {
+			> .nav-child {
+				display: inline-block;
+				opacity: 1;
+				visibility: visible;
+
+			}
+		}
+	}
+	.uk-navbar-nav > li > a, .uk-navbar-nav > li > span{
+		font-family: $font1;
+		font-weight: normal;
+		font-size: 18px;
+		color: $text-color;
+		min-height: 100px;
+		border-radius: 18px;
+		display: flex;
+		align-items: center;
+		text-transform: capitalize;
+		padding: 0 15px;
+		@extend .transition300ms;
+		
+		&:hover, &:focus,&:active{
+			border-radius: 18px;
+			color: $blue ;
+		}
+
+		
+
+	}
+	.uk-navbar-nav > li:hover > a {
+		color: $blue;
+
+	}
+	.uk-navbar-nav > li.deeper:hover > a, .uk-navbar-nav > li.deeper.active > a, .uk-navbar-nav > li.deeper.active > span{
+		color: $blue;
+		&:after {
+			content: "";
+			background-image: url(../images/icon/arrow.svg);
+			width: 6px;
+			height: 9px;
+			background-size: 100%;
+		}
+	}
+	
+	.icon-menu {
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-image: url(../images/icon/icon-menu.svg);
+		width: 44px;
+		height: 44px;
+	}
+}
+.uk-navbar-nav {
+	img {
+		display: none;
+	}
+}
+.uk-navbar-toggle {
+	font-size: 24px;
+	color: $text-color;
+	padding:0;
+	&:hover {
+		color: $blue;
+	}
+}
+.follower {
+	header {
+		background: $dark-bg;
+		position: relative;
+		.logoimage {
+			background: url(../images/logo-negative.svg);
+		}
+	}
+}
+.uk-offcanvas {
+	
+	.uk-offcanvas-bar {
+		background: $dark-bg;
+		width: 100vw;
+		.uk-close {
+			color: rgb(255, 255, 255);
+			top: 30px;
+		}
+		.logo {
+			img {
+				margin-top: 10px;
+			}
+		}
+	}
+	.uk-navbar-nav {
+		display: block !important;
+		margin-top: 30px;
+	}
+	.uk-navbar-nav > li {
+		padding-left: 0;
+		margin-left: 0;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		&.active {
+			> a {
+				color: $blue;
+				
+			}
+			.nav-child {
+				.active {
+					a {
+						color: $blue;
+					}
+				}
+			}
+		}
+		&.deeper {
+			.nav-child {
+				@extend .transition500ms;
+				max-height: 100vh;
+				&.hide {
+					opacity: 0;
+					visibility: hidden;
+					max-height: 0 ;
+				}
+				li {
+					list-style-type: none;
+					min-height: 40px;
+					a {
+						font-size: 18px;
+					}
+					.nav-child {
+						li {
+							a {
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.deeper  {
+			position: relative;
+			&:after {
+				content: "";
+				margin-left: 10px;
+				width: 0; 
+				height: 0; 
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 5px solid $text-color;
+				@extend .transition300ms;
+				position: absolute;
+				right: 0;
+				top: 20px;
+				cursor: pointer;
+			}
+			&:hover {
+				&:after {
+					border-top: 5px solid $blue;
+				}
+			}
+			
+		}
+		&.deeper > a {
+			width: 80%;
+			z-index: 1;
+			position: relative;
+		}
+		&.deeper.expanded , &.deeper.active {
+			&:after {
+				border-top: 5px solid $blue;
+			}
+		}
+		
+
+	}
+	.uk-navbar-nav > li > a, .uk-navbar-nav > li > span {
+		min-height: 40px;
+		justify-content: left;
+		color: $text-color;
+		font-family: $font1;
+		text-transform: capitalize;
+		font-size: 22px;
+		font-weight: bold;
+		padding: 0 15px;
+		&:hover, &:focus,&:active{
+			color: $blue;
+		}
+	}
+	
+	
+
+}
+
+
+

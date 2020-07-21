@@ -1,0 +1,70 @@
+//
+// Component: Variables
+//
+// ========================================================================
+
+
+// Global variables
+// ========================================================================
+
+//
+// Typography
+//
+$text-color:			#000;
+$text-color-grey:		#5A5A5A; 
+$white:					#FFF; 		
+
+
+$grey: 					#D8D8D8;  //=======TBA
+$red:					#EF6F23;  
+$green: 				#22620e;  
+$blue:					#009FE3;
+
+
+$image-style-padding: 		25px; //=======TBA
+//
+// Colors
+//
+
+$dark-bg: 				#4E4E4E; //=======TBA
+$light-bg: 				#FBFBFB; //=======TBA
+
+$grid-border:			#666666; 
+$content-border:			#DBDBDB; //=======TBA
+//
+//font
+//
+
+$font1: 		'Roboto', sans-serif;
+
+
+$section-padding-tb-desktop: 120px; //=======TBA
+$section-padding-tb-mobile: 40px; 
+$mobile-padding-lr: 15px;
+
+$mobile-menu-trigger:	960px;
+
+.transition0 {
+	transition: all 0s ease-in-out;
+	-webkit-transition: all 0s ease-in-out;
+	-o-transition: all 0s ease-in-out;
+}
+.transition300ms {
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.transition500ms {
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+}
+.transition1000ms {
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.text-shadow {
+	text-shadow: 0 0 3px #E3367F;
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade">
+  <name>Home</name>
+  <creationDate>February 2019</creationDate>
+  <author>Shusmita</author>
+  <copyright>Copyright © www.360south.com.au</copyright>
+  <authorEmail>shusmita@360south.com.au</authorEmail>
+  <authorUrl>http://www.360south.com.au</authorUrl>
+  <version>1.0.0</version>
+  <description>
+    <![CDATA[<h1>Home Template</h1>
+      <p><img src="../templates/home/template_preview.png" /></p>
+      <h2>Module positions</h2>
+      <ol>
+      <li>header</li><li>menu</li><li>footer</li><li>debug</li>
+      </ol>
+      <p>Created by <a href="http://www.360south.com.au" target="_blank">Shusmita Anwar Sharna | www.360south.com.au</a>.</p>]]>
+  </description>
+  <files>
+    <folder>css</folder>
+    <folder>html</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+    <filename>component.php</filename>
+    <filename>error.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>index.php</filename>
+    <filename>offline.php</filename>
+    <filename>template_preview.png</filename>
+    <filename>template_thumbnail.png</filename>
+    <filename>templateDetails.xml</filename>
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB.tpl_templatename.ini</language>
+  </languages>
+  <positions>
+    <position>header</position>
+    <position>menu</position>
+    <position>footer</position>
+    <position>debug</position>
+    <position>position-1</position>
+    <position>position-2</position>
+    <position>position-3</position>
+    <position>position-4</position>
+    <position>position-5</position>
+    <position>position-6</position>
+    <position>position-7</position>
+  </positions>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+        <field name="vemail"  type="text" default=""
+          label="VIC Email"
+          description="Email"
+          filter="string" />
+        <field name="vphone"  type="text" default=""
+          label="VIC Phone"
+          description="Phone"
+          filter="string" />  
+        <field name="vaddress"  type="textarea" default=""
+          label="VIC Address"
+          description="Address"
+          filter="string" />  
+        <field name="vfax"  type="text" default=""
+          label="VIC Fax"
+          description="Fax"
+          filter="string" />  
+        <field name="nemail"  type="text" default=""
+          label="NSW Email"
+          description="Email"
+          filter="string" />
+        <field name="nphone"  type="text" default=""
+          label="NSW Phone"
+          description="Phone"
+          filter="string" />  
+        <field name="naddress"  type="textarea" default=""
+          label="NSW Address"
+          description="Address"
+          filter="string" />  
+        <field name="nfax"  type="text" default=""
+          label="NSW Fax"
+          description="Fax"
+          filter="string" /> 
+        <field name="facebook"  type="text" default=""
+          label="Facebook Link"
+          description="Facebook Link"
+          filter="string" />
+        <field name="youtube"  type="text" default=""
+          label="Youtube Link"
+          description="Youtube Link"
+          filter="string" />
+        <field name="tweet"  type="text" default=""
+          label="Twitter Link"
+          description="Twitter Link"
+          filter="string" />
+        <field name="instagram"  type="text" default=""
+          label="Instagram Link"
+          description="Instagram Link"
+          filter="string" />
+        <field name="linkedin"  type="text" default=""
+          label="Linkedin Link"
+          description="Linkedin Link"
+          filter="string" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

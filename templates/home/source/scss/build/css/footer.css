@@ -1,0 +1,87 @@
+.transition0 {
+  transition: all 0s ease-in-out;
+  -webkit-transition: all 0s ease-in-out;
+  -o-transition: all 0s ease-in-out; }
+
+.transition300ms {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out; }
+
+.transition500ms {
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out; }
+
+.transition1000ms {
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out; }
+
+.text-shadow {
+  text-shadow: 0 0 3px #E3367F; }
+
+footer .container {
+  background: #434C52; }
+
+footer .logo {
+  z-index: 2;
+  position: relative;
+  display: inline-block; }
+  footer .logo img {
+    width: 290px; }
+    @media only screen and (max-width: 639px) {
+      footer .logo img {
+        width: 200px; } }
+
+footer .footer-top p, footer .footer-top a, footer .footer-top span {
+  color: #FFF; }
+
+footer .footer-top p:first-child {
+  margin-top: 0; }
+
+footer .footer-top a:hover {
+  color: #2BACE2; }
+
+footer .footer-top .uk-navbar-nav {
+  flex-direction: column;
+  display: block !important; }
+  footer .footer-top .uk-navbar-nav li {
+    margin-left: 0;
+    padding-left: 0; }
+  footer .footer-top .uk-navbar-nav .deeper .nav-child {
+    display: none; }
+
+footer .footer-top .uk-navbar-nav > li > a {
+  min-height: auto;
+  justify-content: left;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  text-transform: capitalize; }
+
+footer .footer-top .totop {
+  text-align: right; }
+  footer .footer-top .totop svg {
+    display: none; }
+
+footer .footer-bottom {
+  color: #FFF;
+  font-size: 14px; }
+  footer .footer-bottom .grid-container {
+    border-top: 1px solid #2BACE2; }
+  footer .footer-bottom .footer-copyright {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media only screen and (max-width: 639px) {
+      footer .footer-bottom .footer-copyright {
+        display: flex;
+        flex-direction: column; } }
+  footer .footer-bottom a {
+    color: #FFF;
+    font-size: 14px; }
+    footer .footer-bottom a:hover {
+      color: #2BACE2; }
+  footer .footer-bottom span + span {
+    float: right; }
