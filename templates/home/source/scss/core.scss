@@ -123,22 +123,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
 	font-family: $font1;
-	font-size: 37px;
-	line-height: 50px;
+	font-size: 66px;
+	line-height: 77px;
 	letter-spacing: 0px;
-	font-weight: 600;
+	font-weight: bold;
 	margin-bottom: 15px;
 	@media only screen and (max-width: 1470px) {
-		font-size: 30px;
-		line-height: 40px;
+		
 	}
 	@media only screen and (max-width: 768px) {
-		font-size: 26px;
-		line-height: 36px;
+		
 	}
 	@media only screen and (max-width: 639px) {
-		font-size: 24px;
-		line-height: 32px;
+		
 	}
 	
 }
@@ -146,7 +143,7 @@ h2, .h2 {
 	font-family: $font1;
 	font-size: 37px;
 	line-height: 50px;
-	font-weight: 600;
+	font-weight: bold;
 	letter-spacing: 0;
 	@media only screen and (max-width: 1470px) {
 		font-size: 30px;
@@ -167,6 +164,7 @@ h3, .h3 {
 	font-size: 21px;
 	line-height: 36px;
 	margin-bottom: 10px;
+	font-weight: 500;
 	@media only screen and (max-width: 1470px) {
 		font-size: 20px;
 		line-height: 29px;
@@ -181,11 +179,22 @@ h3, .h3 {
 	}
 }
 h4, .h4{
-	font-family: $font1;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 19px;
+	font-family: $font1; 
+	font-size: 21px;
+	line-height: 36px;
 	margin-bottom: 10px;
+	@media only screen and (max-width: 1470px) {
+		font-size: 20px;
+		line-height: 29px;
+	}
+	@media only screen and (max-width: 768px) {
+		font-size: 19px;
+		line-height: 29px;
+	}
+	@media only screen and (max-width: 639px) {
+		font-size: 18px;
+		line-height: 29px;
+	}
 }
 h5, .h5{
 	font-family: $font1;
@@ -301,59 +310,47 @@ li{
 	}
 }
 .button {
-	height: 56px;
+	background: transparent;
+	border: 1px solid $blue;
+	box-sizing: border-box;
+	border-radius: 30px;
+	color: $blue;
+	height: 46px;
 	display: inline-block;
-	color: $white;
 	padding-left: 40px;
 	padding-right: 40px;
-	border: 1px solid $blue;
-	line-height: 56px;
+	line-height: 46px;
 	letter-spacing: 1px;
-	background: $blue;
 	font-family: $font1;
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 13px;
 	text-transform: uppercase;
 	z-index: 1;
 	overflow: hidden;
 	@extend .transition300ms;
 	position: relative;
-	&:before {
-	    content: '';
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 150%;
-	    height: 100%;
-	    background: $white;
-	    z-index: -1;
-	    -webkit-transform: rotate3d(0, 0, 1, -53deg) translate3d(0, -3.1em, 0);
-	    transform: rotate3d(0, 0, 1, -53deg) translate3d(0, -3.1em, 0);
-	    -webkit-transform-origin: 0% 100%;
-	    transform-origin: 0% 100%;
-	    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
-	    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-	}
+	
 	&:hover, &:focus {
 		background: $white;
 		color: $blue;
-		&:before {
-		    opacity: 1;
-		    background-color: $white;
-		    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-		    transform: rotate3d(0, 0, 1, 0deg);
-		    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-		    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		
+	}
+	&.btn-blue {
+		background: $blue;
+		color: $white;
+		border: 1px solid $blue;
+		
+		&:hover, &:focus {
+			background: $white;
+			color: $blue;
 		}
 	}
 	&.btn-white {
-		background: $white;
-		color: $blue;
+		background: transparent;
+		color: $white;
 		border: 1px solid $white;
-		&:before {
-			background: $blue;
-		}	
+			
 		&:hover, &:focus {
+			border: 1px solid $blue;
 			background: $blue;
 			color: $white;
 		}

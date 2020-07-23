@@ -91,6 +91,7 @@ $privacyLinky ="/privacy-policy";
                     
                     <div class="uk-navbar-right">
                         <jdoc:include type="modules" name="mainmenu" /> 
+                        <a href="" class="button btn-blue menu-btn">Join Now</a>
                         <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
                         <a href="<?php echo $this->params->get('linkedin');?>"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
                         <a href="<?php echo $this->params->get('instagram');?>"><span class="icon-outer"><span uk-icon="icon: instagram"></span></span></a>
@@ -101,16 +102,16 @@ $privacyLinky ="/privacy-policy";
                 </nav>
             </div>
         </header>
-        <section class="home-banner">
+        <!--<section class="home-banner">
            <video id="videobcg" preload="auto" loop="loop" autoplay muted playsinline volume="0" poster="/images/hero.jpg" width="100%" height="100%">
-                <source src="images/video/hero.mp4" type="video/mp4">
+                <source src="images/video/hero-0.mp4" type="video/mp4">
                 Sorry, your browser does not support HTML5 video.
             </video>
             <a uk-scroll href="#about" class="scrollto" style="display: block;">
                 <span class="icon"></span>
             </a>
-        </section>
-
+        </section>-->
+        <jdoc:include type="modules" name="home-banner" />
         <jdoc:include type="modules" name="position-1" />
         <!-- <jdoc:include type="component" /> -->
         <jdoc:include type="modules" name="position-2" /> 
@@ -118,62 +119,26 @@ $privacyLinky ="/privacy-policy";
 
         <footer>
 
-            <div class="footer-top section-padding-top-half">
+            <div class="footer-top section-padding-top">
 
                 <div class="grid-container">
                     <div class="logo-outer">
                         
-                        <a class="logo" href="/"><img alt="ICCI Melbourne" src="<?php echo $tpath; ?>/assets/images/logo.svg"/></a>
+                        <a class="logo" href="/"><img alt="ICCI Melbourne" src="<?php echo $tpath; ?>/assets/images/logo-white.svg"/></a>
                     </div>
                 </div>
                 
                 <div class="grid-container uk-margin-medium-top">
                     <div class="uk-grid" data-uk-grid >
-                        <div class="uk-width-1-1 uk-width-auto@s">
-                            <h4>Victoria</h4>
-                            <p>
-                                <?php $toBeReplaced = array("<br />", "/");?>
-                                <a href="https://www.google.com/maps/place/<?php echo str_replace($toBeReplaced," ",nl2br($this->params->get('vaddress')));?>" target="_blank"><?php echo nl2br($this->params->get('vaddress'));?></a><br/>
-                               
-                                <span class="orange">P</span> <a href="tel:+61<?php echo str_replace( " ", "", ( substr( $this->params->get('vphone'), 0, 1 ) === '0' ? substr( $this->params->get('vphone'), 1 ) : $this->params->get('vphone') ) );?>"><?php echo $this->params->get('vphone');?></a><br/>
-                                <span class="orange">F</span> <a href="tel:+61<?php echo str_replace( " ", "", ( substr( $this->params->get('vfax'), 0, 1 ) === '0' ? substr( $this->params->get('vfax'), 1 ) : $this->params->get('vfax') ) );?>"><?php echo $this->params->get('vfax');?></a><br/>
-                                <span class="orange">E</span> <a href="mailto:<?php echo $this->params->get('vemail');?>"><?php echo $this->params->get('vemail');?></a>
-                            </p>
-                        </div>
-                        <div class="uk-width-1-1 uk-width-auto@s">
-                            <h4>New South Wales</h4>
-                            <p>
-                                <?php $toBeReplaced = array("<br />", "/");?>
-                                <a href="https://www.google.com/maps/place/<?php echo str_replace($toBeReplaced," ",nl2br($this->params->get('naddress')));?>" target="_blank"><?php echo nl2br($this->params->get('naddress'));?></a><br/>
-                               
-                                <span class="orange">P</span> <a href="tel:+61<?php echo str_replace( " ", "", ( substr( $this->params->get('nphone'), 0, 1 ) === '0' ? substr( $this->params->get('nphone'), 1 ) : $this->params->get('nphone') ) );?>"><?php echo $this->params->get('nphone');?></a><br/>
-                                <span class="orange">F</span> <a href="tel:+61<?php echo str_replace( " ", "", ( substr( $this->params->get('nfax'), 0, 1 ) === '0' ? substr( $this->params->get('nfax'), 1 ) : $this->params->get('nfax') ) );?>"><?php echo $this->params->get('nfax');?></a><br/>
-                                <span class="orange">E</span> <a href="mailto:<?php echo $this->params->get('nemail');?>"><?php echo $this->params->get('nemail');?></a>
-                            </p>
-                        </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m uk-margin-auto-left hidden-tablet">
-                            <h4 class="orange">About us</h4>
-                            <jdoc:include type="modules" name="footermenu1" />
-                        </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
-                            <h4 class="orange">Sectors</h4>    
-                            <jdoc:include type="modules" name="footermenu2" />       
-                        </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-4@m hidden-tablet">    
-                            <h4 class="orange">Services</h4>    
-                            <jdoc:include type="modules" name="footermenu3" />       
-                        </div>
-                        
-                    </div>
-                    <div class="uk-grid" data-uk-grid >
-                        <div class="uk-width-1-1 uk-width-auto@s newsletter-outer">
-                            <h4>Newsletter</h4>
+                        <div class="uk-width-1-1 uk-width-auto@s uk-width-2-6@m newsletter-outer">
+                            
+                            <h3>Subscribe to our newsletters</h3>
                             <form action="https://multiworks.us17.list-manage.com/subscribe/post?u=bcf2386ff78d9047bf3aabf9d&amp;id=75d689336e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     
                                 <div class="uk-margin">
                                     <div class="uk-form-controls">
                                         
-                                        <input type="email" value="" name="EMAIL" class="uk-input required email" id="mce-EMAIL" placeholder="youremail@example.com"><span class="button"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" ></span>
+                                        <input type="email" value="" name="EMAIL" class="uk-input required email" id="mce-EMAIL" placeholder="youremail@example.com"><input class="submit" type="submit" value='' name="subscribe" id="mc-embedded-subscribe" >
                                     </div>
                                 </div>
                                 <div class="">
@@ -190,34 +155,46 @@ $privacyLinky ="/privacy-policy";
                             </form>
                             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                             <!--End mc_embed_signup-->
-                            <a href="/supply-chain" class="menu-btn">SUPPLY CHAIN</a>
                         </div>
                         
-                        <div class="uk-width-1-1 uk-width-1-3@s uk-width-1-6@m uk-margin-auto-left hidden-tablet">
-                            <h4 class="orange">MW Safety</h4>    
-                            <jdoc:include type="modules" name="footermenu4" />
+                        <div class="uk-width-1-1 uk-margin-auto-left uk-width-auto@s uk-width-1-6@m">
+                            <h3 class="orange">About</h3>
+                            <jdoc:include type="modules" name="footermenu1" />
                         </div>
-                        <div class="uk-width-1-1 uk-width-1-3@s uk-width-1-6@m">  
-                            <h4 class="orange">Legal</h4>          
-                            <jdoc:include type="modules" name="footermenu5" />       
+                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">
+                            <h3 class="orange">Membership</h3>
                         </div>
-                        <div class="uk-width-1-1 uk-width-1-4@m">        
-                            <h4 class="orange">Connect with us</h4>  
-                            <a href="<?php echo $this->params->get('tweet');?>"><i class="icon-tweet"></i></a>
-                            <a href="<?php echo $this->params->get('facebook');?>"><i class="icon-facebook"></i></a>
-                            <a href="<?php echo $this->params->get('linkedin');?>"><i class="icon-linkedin"></i></a>
-                            <a href="<?php echo $this->params->get('instagram');?>"><i class="icon-instagram"></i></a>  
+                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
+                            <h3 class="orange">Services</h3>    
+                            <jdoc:include type="modules" name="footermenu2" />       
+                        </div>
+                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
+                            <h3 class="orange">Events</h3>    
+                            <jdoc:include type="modules" name="footermenu3" />       
                         </div>
                         
                     </div>
-                  
+                   
                 </div>
 
             </div>
-            <div class="footer-bottom uk-margin-medium-top">
+            <div class="footer-middle uk-margin-medium-top">
                 <div class="grid-container">
                     <div class="footer-copyright">
-                        <span class="copy">&copy; Copyright <?php echo date("Y"); ?> ICCI</span>
+                        <span class="copy"><a href="/privacy-policy">Privacy Policy</a> <a href="/t-c">T&Cs</a></span>
+                        <span class="web"> 
+                            <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
+                            <a href="<?php echo $this->params->get('linkedin');?>"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
+                            <a href="<?php echo $this->params->get('instagram');?>"><span class="icon-outer"><span uk-icon="icon: instagram"></span></span></a>
+                        </span>
+                        <!-- <jdoc:include type="modules" name="footermenu" />  -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="grid-container">
+                    <div class="footer-copyright">
+                        <span class="copy">&copy; <?php echo date("Y"); ?> ICCI All Rights reserved</span>
                         <span class="web"><a href="https://www.360south.com.au/" target="_blank" title="Web Developers | Graphic Designers | Photography | 360South">Website By 360South.</a></span>
                         <!-- <jdoc:include type="modules" name="footermenu" />  -->
                     </div>

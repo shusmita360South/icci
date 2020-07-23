@@ -7,7 +7,7 @@ footer {
 		position: relative;
 		display: inline-block;
 		img {
-			width: 177px;
+			width: 257px;
 			@media only screen and (max-width: 639px) {
 				//width: 200px;
 			}
@@ -17,7 +17,7 @@ footer {
 		
 	}
 	.footer-top {
-		h4 {
+		h3 {
 			color: $white;
 		}
 		p, a, span {
@@ -36,7 +36,7 @@ footer {
 			}
 		}
 		.newsletter-outer {
-			max-width: 467px;
+			//max-width: 467px;
 		}
 		.menu-btn {
 			font-size: 14px;
@@ -76,7 +76,20 @@ footer {
 	}	
 	form {
 		.uk-input {
-			width: 300px;
+			//width: 300px;
+			border:0;
+			border-bottom: 1px solid $grid-border;
+			background: transparent;
+			color: $grid-border;
+			font-size: 14px;
+			padding-left: 0;
+			padding-right: 20px;
+		}
+		.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+		    outline: 0;
+		    background-color: transparent;
+		    color: #666;
+		    border-color: none;
 		}
 		.uk-form-controls {
 			display: flex;
@@ -84,8 +97,22 @@ footer {
 		.uk-margin {
 			margin-top: 20px;
 		}
+		.uk-input::placeholder{
+		    color: rgba(255, 255, 255, 0.5);
+		}
+		.submit {
+			width : 15px;
+			height: 16px;
+			background-image: url(../images/icon/submit-arrow.svg);
+			background-repeat:  no-repeat;
+			background-position: 50%;
+			border: none;
+			background-color: transparent;
+			height: 38px;
+			margin-left: -14px;
+		}
 	}
-	.footer-bottom {
+	.footer-bottom, .footer-middle{
 		color: $text-color-grey;
 		font-size: 14px;
 		font-weight: 500;
@@ -111,96 +138,32 @@ footer {
 			float: right;
 		}
 	}
-}
-.footer-top {
-	.icon-tweet{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/twitter-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/twitter-blue.svg);
+	.footer-middle {
+		.grid-container {
+		    border-top: 0px solid #666666;
 		}
-	}
-	.icon-facebook{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/fb-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/fb-blue.svg);
+		.icon-outer{
+			display: inline-block;
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			background: $white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content:center;
+			margin-left: 10px;
+			&:hover {
+				
+			}
+			span {
+				color: #000;
+			}
 		}
-	}
-	.icon-linkedin{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/lin-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/lin-blue.svg);
-		}
-	}
-	.icon-instagram{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/ig-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/ig-blue.svg);
+		span + span {
+		    float: right;
+		    display: flex;
 		}
 	}
 }
-.contact-social {
-	.icon-tweet{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/twitter-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/twitter.svg);
-		}
-	}
-	.icon-facebook{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/fb-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/fb.svg);
-		}
-	}
-	.icon-linkedin{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/lin-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/lin.svg);
-		}
-	}
-	.icon-instagram{
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-image: url(../images/icon/ig-white.svg);
-		width: 15px;
-		height: 15px;
-		margin-right: 10px;
-		&:hover {
-			background-image: url(../images/icon/ig.svg);
-		}
-	}
-}
+

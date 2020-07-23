@@ -12,11 +12,13 @@ defined('_JEXEC') or die;
 
 
 <div class="mod-custom mod-banner" <?php if ($params->get('backgroundimage')) : ?> style="background-image:url(<?php echo $params->get('backgroundimage'); ?>)"<?php endif; ?> >
-	<div class="image">
-		<img src="<?php echo $params->get('backgroundimage'); ?>"/>
-	</div>
+	<!-- <div class="image">
+		<img src="<?php //echo $params->get('backgroundimage'); ?>"/>
+	</div> -->
 	<div class="content">
-		<?php echo $module->content; ?>
+		<div class="content-inner">
+			<?php echo $module->content; ?>
+		</div>
 	</div>
 
 </div>

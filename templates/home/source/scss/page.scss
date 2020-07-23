@@ -67,16 +67,29 @@
 	}
 	
 }
-.home-banner {
-	&:after {
-		//content: "";
-		background: rgba(0,0,0,.5);
+.mod-banner {
+	position: relative;
+	height: calc(100vh - 100px);
+	background-image: url('/images/hero.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.content {
 		position: absolute;
 		top: 0;
-		left:0;
-		width: 100%;
+		left: 0;
 		height: 100%;
-		display: inline-block;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.content-inner {
+			max-width: 715px;
+			text-align: center;
+			h1 {
+				color: $white;
+			}
+		}
 	}
 }
 
