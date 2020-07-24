@@ -82,7 +82,7 @@ $privacyLinky ="/privacy-policy";
     <div class="container0">
         
         <header uk-sticky="offset: 0">
-            <div class="grid-container">
+            <div class="container">
                 
                 <nav class="uk-navbar" id="navbar" >
                     <div class="uk-navbar-left">

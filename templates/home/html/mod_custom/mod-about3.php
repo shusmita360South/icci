@@ -11,12 +11,11 @@ defined('_JEXEC') or die;
 ?>
 
 
-<div class="mod-custom mod-about section-padding-tb" id="about" >
-	<div class="grid-container">
+<div class="mod-custom mod-about-3 section-padding-tb">
+	<div class="grid-container-small">
 		<div uk-grid>
 			<div class="uk-width-1-1 uk-width-1-2@s">
 				<div class="content">
-					<h2><?php echo $module->title; ?></h2>
 					<?php echo $module->content; ?>
 				</div>
 			</div>

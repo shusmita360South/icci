@@ -92,8 +92,54 @@
 		}
 	}
 }
+.mod-about {
+	.content {
+		max-width: 580px;
+		p {
+			max-width: 415px;
+		}
+	}
+}
+.mod-about-2 {
+	.video-wrap {
+		border-radius: 20px;
+		position: relative;
+		img {
+			border-radius: 20px;
+		}
+		.play {
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
 
+		}
+		svg {
+			fill {
+				@extend .transition300ms;
+			}
+			
+		}
+		a:hover {
+			svg {
+				.circle{
+					fill: $white;
+				}
+				.arrow {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
 
+.mod-about-3 {
+	ul {
+	  columns: 2;
+	  -webkit-columns: 2;
+	  -moz-columns: 2;
+	}
+}
 
 .article-default {
 	@media only screen and (max-width: 1000px) {

@@ -5,7 +5,7 @@
   -o-transition: all 0s ease-in-out;
 }
 
-.transition300ms, .uk-offcanvas .uk-navbar-nav > li.deeper:after, header .uk-navbar-nav > li > a, header .uk-navbar-nav > li > span, header .uk-navbar-nav > li > .nav-child > li a, header .uk-navbar-nav > li > .nav-child, header .logo img, header, .button {
+.transition300ms, .mod-about-2 .video-wrap svg fill, .uk-offcanvas .uk-navbar-nav > li.deeper:after, header .uk-navbar-nav > li > a, header .uk-navbar-nav > li > span, header .uk-navbar-nav > li > .nav-child > li a, header .uk-navbar-nav > li > .nav-child, header .logo img, header, .button {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -37,7 +37,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  color: #000;
+  color: #5A5A5A;
   height: auto !important;
   font-size: 16px;
   line-height: 30px;
@@ -305,7 +305,7 @@ p, .p {
   font-weight: normal;
   line-height: 30px;
   margin: 12px 0 16px 0;
-  color: #000;
+  color: #5A5A5A;
 }
 p.mid, .p.mid {
   font-size: 14px;
@@ -373,19 +373,17 @@ li.mid {
 
 .grid-container-small {
   width: 100%;
-  max-width: 1440px;
-  padding-left: 120px;
-  padding-right: 120px;
+  max-width: 950px;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   margin-right: auto;
   margin-left: auto;
 }
-@media only screen and (max-width: 1470px) {
+@media only screen and (max-width: 980px) {
   .grid-container-small {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -433,9 +431,10 @@ li.mid {
   line-height: 46px;
   letter-spacing: 1px;
   font-family: "Roboto", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   z-index: 1;
+  font-weight: bold;
   overflow: hidden;
   position: relative;
 }
@@ -480,7 +479,7 @@ li.mid {
 }
 
 .light-bg {
-  background: #FBFBFB;
+  background: #EDFAFF;
 }
 
 .white-bg {
@@ -645,10 +644,10 @@ ul.uk-accordion li {
 }
 
 .alert-danger {
-  color: #EF6F23;
+  color: #ED1C1C;
 }
 .alert-danger p {
-  color: #EF6F23;
+  color: #ED1C1C;
   font-size: 18px;
 }
 
@@ -683,6 +682,14 @@ header {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media only screen and (max-width: 1950px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 header .logo img {
   width: 282px;
@@ -1175,6 +1182,42 @@ header .menu-btn {
 }
 .mod-banner .content .content-inner h1 {
   color: #FFF;
+}
+
+.mod-about .content {
+  max-width: 580px;
+}
+.mod-about .content p {
+  max-width: 415px;
+}
+
+.mod-about-2 .video-wrap {
+  border-radius: 20px;
+  position: relative;
+}
+.mod-about-2 .video-wrap img {
+  border-radius: 20px;
+}
+.mod-about-2 .video-wrap .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.mod-about-2 .video-wrap a:hover svg .circle {
+  fill: #FFF;
+}
+.mod-about-2 .video-wrap a:hover svg .arrow {
+  fill: #ED1C1C;
+}
+
+.mod-about-3 ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -11,17 +11,13 @@ defined('_JEXEC') or die;
 ?>
 
 
-<div class="mod-custom mod-about section-padding-tb" id="about" >
-	<div class="grid-container">
+<div class="mod-custom mod-about-2 section-padding-tb bg-white">
+	<div class="grid-container-small">
 		<div uk-grid>
-			<div class="uk-width-1-1 uk-width-1-2@s">
-				<div class="content">
-					<h2><?php echo $module->title; ?></h2>
+			<div class="uk-width-1-1">
+				<div class="content center">
 					<?php echo $module->content; ?>
 				</div>
-			</div>
-			<div class="uk-width-1-1 uk-width-1-2@s">
-				<img src="<?php echo $params->get('backgroundimage'); ?>"/>
 			</div>
 		</div>
 	</div>

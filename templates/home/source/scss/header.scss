@@ -10,7 +10,12 @@ header {
 	box-sizing: border-box;
 	width: 100%;
 	@extend .transition300ms;
-	
+	padding-left: 50px;
+	padding-right: 50px;
+	@media only screen and (max-width: 1950px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.logo {
 		img {
 			width: 282px;
