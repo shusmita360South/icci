@@ -13,17 +13,17 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 ?>
 
 
-<div class="mod_banners mod_partner section-padding-tb bg-white center">
+<div class="mod_banners mod_partner section-padding-tb light-bg center">
 		<div class="grid-container">
 			<h2><?php echo $module->title; ?></h2>
 			<?php if($headerText):?>
-				<p><?php echo $headerText?></p>
+				<p class="intro"><?php echo $headerText?></p>
 			<?php endif; ?>
 		
 			<div class="banneritem-grid uk-margin-medium-top center">
 				<div uk-grid class=" uk-flex-center">
 				<?php foreach ($list as $item) : ?>
-					<div class="banneritem uk-width-1-3 uk-width-1-3@s uk-width-1-6@m">
+					<div class="banneritem uk-width-1-3 uk-width-1-6@s uk-width-auto@m">
 						<?php $link = JRoute::_('index.php?option=com_banners&task=click&id=' . $item->id); ?>
 					
 						<?php $imageurl = $item->params->get('imageurl'); ?>
