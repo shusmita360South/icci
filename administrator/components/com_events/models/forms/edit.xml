@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" default="0" label="COM_EVENTS_FORM_LBL_EDIT_ID"
+		readonly="true" class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC" />
+    <field name="created_by" type="createdby" default="" 
+		label="COM_EVENTS_FORM_LBL_EDIT_CREATED_BY"
+		description="COM_EVENTS_FORM_DESC_EDIT_CREATED_BY" />
+
+    <field name="catid" type="sql" class="inputbox"
+		label="COM_EVENTS_FORM_LBL_EDIT_CATID"
+		description="COM_EVENTS_FORM_DESC_EDIT_CATID" 
+		query="SELECT 0 AS `id`, '- Select Category -' AS `title` UNION SELECT `id`, `title` FROM `#__events_categories` where state = 1" key_field="id" value_field="title"
+		/>
+    <field name="title" type="text" size="40" class="inputbox"
+		label="COM_EVENTS_FORM_LBL_EDIT_TITLE"
+		description="COM_EVENTS_FORM_DESC_EDIT_TITLE" 
+		required="true" 
+		filter="raw" />
+    <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset" />
+    <field name="checked_out_time" type="hidden" filter="unset" />
+    <field 
+        name="subtitle" 
+        type="text" 
+        filter="raw"
+        label="COM_EVENTS_FORM_LBL_EDIT_SUBTITLE"
+    />
+    <field 
+        name="intro" 
+        type="textarea" 
+        filter="raw"
+        label="COM_EVENTS_FORM_LBL_EDIT_INTRO"
+    />
+    <field 
+        name="date" 
+        type="calendar" 
+        default="2020-01-01" 
+        label="COM_PRESSRELEASES_FORM_LBL_EDIT_DATE" 
+        description=""
+        class="input-small" 
+        filter="user_utc"
+        showtime="false" 
+        todaybutton="false" 
+        filltable="false" 
+        translateformat="true" 
+    />
+    <field 
+        name="stime" 
+        type="calendar" 
+        default="2020-01-01" 
+        description=""
+        class="input-medium" 
+        required="true" 
+        filter="user_utc"
+        format="%Y-%m-%d %H:%M:%S"
+        singleheader="true" 
+        showtime="true" 
+        timeformat="12" 
+        todaybutton="true" 
+        weeknumbers="true"
+        filltable="true" 
+        minyear="-3" maxyear="5"
+        label="COM_EVENTS_FORM_LBL_EDIT_STIME"
+    />
+     <field 
+        name="etime" 
+        type="calendar" 
+        default="2020-01-01" 
+        description=""
+        class="input-medium" 
+        required="true" 
+        filter="user_utc"
+        format="%Y-%m-%d %H:%M:%S"
+        singleheader="true" 
+        showtime="true" 
+        timeformat="12" 
+        todaybutton="true" 
+        weeknumbers="true"
+        filltable="true" 
+        minyear="-3" maxyear="5"
+        label="COM_EVENTS_FORM_LBL_EDIT_ETIME"
+    />
+
+    <field name="body" type="editor" buttons="true"
+        class="inputbox"
+        filter="raw"
+        label="COM_EVENTS_FORM_LBL_EDIT_BODY"
+        description="COM_EVENTS_FORM_DESC_EDIT_BODY" />
+    <field name="image" type="thumb" size="40" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_IMAGE1"
+        description="COM_EVENTS_FORM_DESC_EDIT_IMAGE1" 
+        required="false"
+        filter="raw"
+        width="1920"
+        height="700"  />
+    <field name="locationtitle" type="text" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_LOCATIONT"
+        />
+    <field name="location" type="text" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_LOCATION"
+        />
+    <field name="memberfee" type="text" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_MFEE"
+        />
+    <field name="nonmemberfee" type="text" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_NMFEE"
+        />
+    <field 
+        name="link" 
+        type="text" 
+        filter="raw"
+        label="COM_EVENTS_FORM_LBL_EDIT_LINK"
+    />
+    <field 
+        name="host" type="Repeatable" icon="list" 
+        label="COM_EVENTS_FORM_LBL_EDIT_HLOGO" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field name="image" type="media" size="20" class="inputbox" 
+                    label="Logo"
+                    filter="raw" 
+                />
+                
+            </fieldset>
+        </fields>
+    </field>
+    <field 
+        name="partners" type="Repeatable" icon="list" 
+        label="COM_EVENTS_FORM_LBL_EDIT_PLOGO" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field name="imagep" type="media" size="20" class="inputbox" 
+                    label="Logo"
+                    filter="raw" 
+                />
+                
+            </fieldset>
+        </fields>
+    </field>
+    <field 
+        name="faq" type="Repeatable" icon="list" 
+        label="COM_EVENTS_FORM_LBL_EDIT_FAQ" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field name="question" type="text" class="inputbox"
+                label="Question"
+                />
+                <field name="answer" type="textarea" class="inputbox"
+                label="Answer"
+                />
+                
+            </fieldset>
+        </fields>
+    </field>
+    <field
+        name="relatedevents"
+        type="sql"
+        label="COM_EVENTS_FORM_LBL_EDIT_RELATEDEVENTS"
+        multiple="multiple"
+        description=""
+        default=""
+        query="SELECT 0 AS `id`, '- Select Projects -' AS `title` UNION SELECT `id`, `title` FROM `#__events_items`" 
+        key_field="id" 
+        value_field="title"
+    />
+
+  </fieldset>
+</form>
