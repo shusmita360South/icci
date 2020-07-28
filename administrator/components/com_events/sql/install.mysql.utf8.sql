@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `#__events_items` (
 `checked_out_time` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
 `created_by` INT(11)  NOT NULL ,
 `catid` INT(11)  NOT NULL ,
+`type` INT(11)  NOT NULL ,
 `title` VARCHAR(255)  NOT NULL ,
 `subtitle` VARCHAR(255)  NOT NULL ,
 `intro` VARCHAR(255)  NOT NULL ,

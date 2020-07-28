@@ -132,7 +132,7 @@ $privacyLinky ="/privacy-policy";
                     <div class="uk-grid" data-uk-grid >
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-2-6@m newsletter-outer">
                             
-                            <h3>Subscribe to our newsletters</h3>
+                            <h4>Subscribe to our newsletters</h4>
                             <form action="https://multiworks.us17.list-manage.com/subscribe/post?u=bcf2386ff78d9047bf3aabf9d&amp;id=75d689336e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     
                                 <div class="uk-margin">
@@ -158,18 +158,18 @@ $privacyLinky ="/privacy-policy";
                         </div>
                         
                         <div class="uk-width-1-1 uk-margin-auto-left uk-width-auto@s uk-width-1-6@m">
-                            <h3 class="orange">About</h3>
+                            <h4 class="orange">About</h4>
                             <jdoc:include type="modules" name="footermenu1" />
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">
-                            <h3 class="orange">Membership</h3>
+                            <h4 class="orange">Membership</h4>
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
-                            <h3 class="orange">Services</h3>    
+                            <h4 class="orange">Services</h4>    
                             <jdoc:include type="modules" name="footermenu2" />       
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
-                            <h3 class="orange">Events</h3>    
+                            <h4 class="orange">Events</h4>    
                             <jdoc:include type="modules" name="footermenu3" />       
                         </div>
                         

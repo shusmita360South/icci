@@ -46,7 +46,7 @@ a {
   color: $text-color;
   text-decoration: none;
   &:hover {
-  	//color: $blue;
+  	color: $blue;
   }
 }
 button, a {
@@ -123,11 +123,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
 	font-family: $font1;
-	font-size: 66px;
-	line-height: 77px;
+	font-size: 45px;
+	line-height: 55px;
 	letter-spacing: 0px;
-	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	@media only screen and (max-width: 1470px) {
 		
 	}
@@ -143,8 +142,8 @@ h2, .h2 {
 	font-family: $font1;
 	font-size: 37px;
 	line-height: 50px;
-	font-weight: bold;
 	letter-spacing: 0;
+	margin-bottom: 10px;
 	@media only screen and (max-width: 1470px) {
 		font-size: 30px;
 		line-height: 40px;
@@ -161,7 +160,7 @@ h2, .h2 {
 }
 h3, .h3 {
 	font-family: $font1; 
-	font-size: 21px;
+	font-size: 28px;
 	line-height: 36px;
 	margin-bottom: 10px;
 	font-weight: 500;
@@ -183,6 +182,7 @@ h4, .h4{
 	font-size: 21px;
 	line-height: 36px;
 	margin-bottom: 10px;
+	font-weight: 500;
 	@media only screen and (max-width: 1470px) {
 		font-size: 20px;
 		line-height: 29px;
@@ -197,11 +197,22 @@ h4, .h4{
 	}
 }
 h5, .h5{
-	font-family: $font1;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 19px;
+	font-family: $font1; 
+	font-size: 21px;
+	line-height: 36px;
 	margin-bottom: 10px;
+	@media only screen and (max-width: 1470px) {
+		font-size: 20px;
+		line-height: 29px;
+	}
+	@media only screen and (max-width: 768px) {
+		font-size: 19px;
+		line-height: 29px;
+	}
+	@media only screen and (max-width: 639px) {
+		font-size: 18px;
+		line-height: 29px;
+	}
 
 }
 h6, .h6{
@@ -269,6 +280,17 @@ li{
 	-o-transition: all .3s ease-in-out;
 	margin-right: auto; margin-left: auto; 
 	@media only screen and (max-width: 1470px) {
+		padding-left: $mobile-padding-lr;
+		padding-right: $mobile-padding-lr;
+	}
+}
+.grid-container-medium {
+	width: 100%; max-width: 1200px; 
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	margin-right: auto; margin-left: auto; 
+	@media only screen and (max-width: 1230px) {
 		padding-left: $mobile-padding-lr;
 		padding-right: $mobile-padding-lr;
 	}
@@ -378,8 +400,8 @@ li{
 .white-bg {
 	background: $white;
 }
-.strong {
-	font-weight: 600;
+.strong, strong {
+	font-weight: 500;
 }
 
 .section-padding-top {
