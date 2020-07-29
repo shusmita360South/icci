@@ -1495,7 +1495,7 @@ ul.uk-accordion .uk-accordion-content {
   max-height: 65px;
 }
 
-.js-filter .uk-subnav {
+.events-list .js-filter .uk-subnav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1505,6 +1505,41 @@ ul.uk-accordion .uk-accordion-content {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.events-list .filter-original {
+  height: 0;
+  opacity: 0;
+}
+.events-list #filter-btn {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.events-list .select-outer {
+  border: 1px solid #000;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+.events-list .uk-select {
+  border: none;
+  color: #000;
+  background: transparent;
+  height: 46px;
+  line-height: 46px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1537,7 +1572,7 @@ footer .logo {
 footer .logo img {
   width: 257px;
 }
-footer .footer-top h3 {
+footer .footer-top h4 {
   color: #FFF;
 }
 footer .footer-top p, footer .footer-top a, footer .footer-top span {

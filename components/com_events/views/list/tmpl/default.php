@@ -37,7 +37,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
       <h1 class="center"><?php echo $pageTitle;?></h1>
 
 
-      <div uk-grid id="filter-btn">
+      <div uk-grid id="filter-btn" class="">
         <?php 
             $allCats['slug'] = array();
             $allCats['title'] = array();
@@ -66,7 +66,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
             <select class="filter-select-days uk-select">
               <option value="0">Weekdays</option>
 
-              <?php print_r($allDays); foreach ($allDays['slug'] as $key=>$allDay): ?>
+              <?php foreach ($allDays['slug'] as $key=>$allDay): ?>
                 <option value="<?php echo $allDays['slug'][$key];?>"><?php echo $allDays['title'][$key];?></option>
               <?php endforeach;?>
             </select>
@@ -97,8 +97,8 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
         
       </div>
 
-      <div class="filter-original" uk-filter="target: .js-filter">
-        <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+      <div class="" uk-filter="target: .js-filter">
+        <div class="filter-original uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
             <div>
                 <ul class="uk-subnav uk-subnav-pill" uk-margin>
                     <li id="day-0" uk-filter-control="group: data-day"><a href="#">Weekdays</a></li>
