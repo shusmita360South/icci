@@ -309,7 +309,7 @@ ul.uk-accordion {
 		margin-bottom: 10px;
 	}
 	.content-date {
-		width: 50px;
+		width: 25px;
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
@@ -320,6 +320,7 @@ ul.uk-accordion {
 			line-height: 25px;
 			color: $text-color;
 			margin: 0;
+			text-align: center;
 		}
 		.month{
 			font-style: normal;
@@ -331,6 +332,8 @@ ul.uk-accordion {
 			margin: 0;
 			margin-top: 8px;
 			margin-bottom: 8px;
+			text-align: center;
+			width: 26px;
 		}
 	}
 	a:hover {
@@ -339,6 +342,19 @@ ul.uk-accordion {
 		}
 	}
 	
+}
+.events-detail {
+	.banneritem {
+		img {
+			max-height: 65px;
+		}
+	}
+}
+.js-filter {
+	.uk-subnav {
+		display: flex;
+		flex-direction: column;
+	}
 }
 .article-default {
 	@media only screen and (max-width: 1000px) {

@@ -44,7 +44,7 @@ if(isset($item->relatedevents) ) {
             <h2 class="uk-margin-medium-top">FAQs</h2>
             <ul uk-accordion>
                 <?php foreach ($itemQs as $key=>$itemFAQ) : ?>
-                    <li class="accordion-list uk-open">
+                    <li class="accordion-list <?php echo $key==0 ? 'uk-open':''?>">
                         <a class="uk-accordion-title" href="#"><?php echo $itemFAQ; ?></a>
                         <div class="uk-accordion-content">
                             <p>
@@ -142,7 +142,7 @@ if(isset($item->relatedevents) ) {
   </div>
 </div>
 <?php if($item->relatedevents):?>
-<div class="events-list section-padding-tb light-bg">
+<div class="events-related section-padding-tb light-bg">
   <div class="grid-container">
     <h2 class="center">Other Events you may like</h2>
     <div uk-grid class="uk-margin-medium-top">

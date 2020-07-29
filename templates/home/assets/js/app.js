@@ -92,24 +92,15 @@ $(document).ready(function() {
     //================Project Filter==============================
     //=============================================================
 
-    $('.project-list .filter-select').on('change', function() {
+    $('#filter-btn .filter-select-catid').on('change', function() {
         var filterClass =$(this).val();
-        if (filterClass == "") {
-            $('.project-item').show();
-        } else {
-            $('.project-item').hide();
-            $('.project-item.'+filterClass).show();
-        }  
-        var otherSelectBox = $(".project-list .filter-select").not(this);
-            
-        if (filterClass != "") {
-            otherSelectBox.addClass('otherSelectBox');
-            $(this).removeClass('otherSelectBox');
-            setTimeout(function(){
-                $('.otherSelectBox').prop('selectedIndex',0);
-                
-            }, 100);
-        }
+        $('.filter-original .uk-subnav li#catid-'+filterClass).trigger( "click" );
+
+    });
+
+    $('#filter-btn .filter-select-type').on('change', function() {
+        var filterClass =$(this).val();
+        $('.filter-original .uk-subnav li#type-'+filterClass).trigger( "click" );
 
     });
     

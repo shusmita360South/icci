@@ -67,15 +67,15 @@ $document->addStyleSheet('components/com_events/assets/css/events.css');
           <div class="control-label"><?php echo $this->form->getLabel('intro'); ?></div>
           <div class="controls"><?php echo $this->form->getInput('intro'); ?></div>
         </div>
-      
-        
-        <!--  
+ 
         <div class="control-group">
           <div class="control-label"><?php echo $this->form->getLabel('catid'); ?></div>
           <div class="controls"><?php echo $this->form->getInput('catid'); ?></div>
         </div>
-        -->
-       
+        <div class="control-group">
+          <div class="control-label"><?php echo $this->form->getLabel('type'); ?></div>
+          <div class="controls"><?php echo $this->form->getInput('type'); ?></div>
+        </div>
        
         <div class="control-group">
           <div class="control-label"><?php echo $this->form->getLabel('stime'); ?></div>

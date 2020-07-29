@@ -117,6 +117,21 @@ abstract class EventsHelper
 		return $rows;
 		
 	}
+	public static function getType($id)
+	{
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+
+		$query->select('*');
+		$query->from('#__events_types');
+		$query->where('id = '.$id);
+
+        $db->setQuery($query->__toString());
+		$rows = $db->loadObject();
+
+		return $rows;
+		
+	}
 
 	public static function getPageIntro()
 	{
