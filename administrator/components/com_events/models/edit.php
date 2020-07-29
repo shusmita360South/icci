@@ -84,6 +84,7 @@ class EventsModeledit extends JModelAdmin
 				endif;
 			endforeach;
 			$data->catid = implode(',',$array);
+			$data->relatedevents = explode(',', $data->relatedevents);
 			
 		}
 
@@ -130,9 +131,15 @@ class EventsModeledit extends JModelAdmin
 
 		}
 	}
+	
 	public function save($data)
 	{
 
+	    if (is_array($data['relatedevents']))
+	    {
+	        $data['relatedevents'] = implode(',', $data['relatedevents']);
+	    }
+	   
 	    return parent::save($data);
 	}
 

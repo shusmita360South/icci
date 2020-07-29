@@ -2,7 +2,6 @@
 # no direct access
 defined('_JEXEC') or die;
 $doc  = JFactory::getDocument();
-//$doc->addScript('https://www.google.com/recaptcha/api.js');
 $doc->addScript('https://addevent.com/libs/atc/1.6.1/atc.min.js');
 #echo '<pre>'; print_r($this->items); echo '</pre>';
 $item = $this->items;
@@ -16,12 +15,9 @@ $modTitle = 'Breadcrumbs';
 $_mod_breadcrumb = JModuleHelper::getModule($modName, $modTitle);
 $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
 
-//contact form response code
-if (isset($_SESSION['response_code'])) {
-  $response_code = $_SESSION['response_code'];
-  unset($_SESSION['response_code']);
-} else {
-  $response_code = 0;
+//related events
+if(isset($item->relatedevents) ) {
+  $relatedEvents = EventsHelper::getRelatedEvents($item->relatedevents );
 }
 ?>
 <div class="page-header-1 light-bg" style="background-image: url(<?php echo  JURI::base().$item->image;?>)">
@@ -94,17 +90,17 @@ if (isset($_SESSION['response_code'])) {
             $sdate=date_create($item->stime);
             $ddate = date_format($sdate,"l jS F Y");
 
-            $edate=date_create($item->stime);
+            $edate=date_create($item->etime);
 
           ?> 
           <div class="card-1 article-default">
             <p>
               <span class="icon icon-calender"></span> <?php echo $ddate;?><br/>
-              <span class="icon icon-time"></span> <?php echo $ddate;?><br/>
+              <span class="icon icon-time"></span> <?php echo date_format($sdate,"H:i")." - ".date_format($edate,"H:i");?><br/>
               <span class="icon icon-location"></span> <strong><?php echo $item->locationtitle;?></strong><br/><span class="location"><?php echo $item->location;?></span>
               <div title="Add to Calendar" class="addeventatc">
                   Add to Calendar
-                  <span class="start"><?php echo date_format($sdate,"d-m-Y H:i:s");;?></span>
+                  <span class="start"><?php echo date_format($sdate,"d-m-Y H:i:s");?></span>
                   <span class="end"><?php echo date_format($edate,"d-m-Y H:i:s");?></span>
                   <span class="timezone">Australia/Victoria</span>
                   <span class="title"><?php echo $item->title;?></span>
@@ -145,6 +141,50 @@ if (isset($_SESSION['response_code'])) {
     </div>
   </div>
 </div>
+<?php if($item->relatedevents):?>
+<div class="events-list section-padding-tb light-bg">
+  <div class="grid-container">
+    <h2 class="center">Other Events you may like</h2>
+    <div uk-grid class="uk-margin-medium-top">
+      <?php foreach ($relatedEvents as $relatedEvent): ?>
+    
+        <?php
+          $linky = JURI::base().substr(JRoute::_('index.php?option=com_projects&view=details&id='.$relatedEvent->id.':'.JFilterOutput::stringURLSafe($relatedEvent->title).'&Itemid='.$itemid),strlen(JURI::base(true))+1); 
+          //$cats = EventsHelper::getCategories($relatedEvent->id);
+            $sdate=date_create($relatedEvent->stime);
+            $ddate = date_format($sdate,"l jS F Y");
+
+            $edate=date_create($relatedEvent->etime);
+       
+        ?>
+      
+        <div class="card-event uk-width-1-1 uk-width-1-4@s<?php //foreach ($cats as  $cat) {echo " ".str_replace(' ','-',strtolower($cat[0]));}?>">
+            <a href="<?php echo $linky;?>">
+              <div class="item ">
+                  <div class="image">
+                    <img src="<?php echo $relatedEvent->thumb;?>"/>     
+                  </div>
+                  <div class="content white-bg">
+                    <div class="content-date">
+                      <p class="month"><?php echo date_format($sdate,"M");?></p>
+                      <p class="day"><?php echo date_format($sdate,"j");?></p>
+                    </div>
+                    <div class="content-content">
+                      <h6><?php echo $relatedEvent->title; ?></h6>
+                      <p class="time"><?php echo date_format($sdate,"H:i")." - ".date_format($edate,"H:i");?></p>
+                      <p><?php echo $relatedEvent->intro; ?></p>
+                      <p class="readmore">Read More</p>
+                    </div>
+                  </div>
+  
+              </div>
+            </a>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</div>
+<?php endif;?>
 
 
 

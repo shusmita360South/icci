@@ -277,6 +277,69 @@ ul.uk-accordion {
 		height: 14px;
 	}
 }
+.card-event {
+	.item {
+		border-radius: 15px;
+		overflow: hidden;
+		background: $white;
+		height: 100%;
+		position: relative;
+	}
+	.content {
+		padding:20px; 
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 55px;
+		
+	}
+	.content-content {
+
+		.readmore {
+			position: absolute;
+			margin-bottom: 0;
+			bottom: 25px;
+		}
+	}
+	
+	.time {
+		font-size: 11px;
+		line-height: 17px;
+		color: $text-color;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.content-date {
+		width: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		margin-right: 20px;
+		.day  {
+			font-weight: bold;
+			font-size: 21px;
+			line-height: 25px;
+			color: $text-color;
+			margin: 0;
+		}
+		.month{
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 14px;
+			color: $red;
+			text-transform: uppercase;
+			margin: 0;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+	}
+	a:hover {
+		.readmore {
+			color: $blue;
+		}
+	}
+	
+}
 .article-default {
 	@media only screen and (max-width: 1000px) {
 		overflow: hidden;

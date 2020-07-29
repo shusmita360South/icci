@@ -217,11 +217,10 @@ h5, .h5{
 }
 h6, .h6{
 	font-family: $font1;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 19px;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 30px;
+	font-weight: 500;
 }
 
 p, .p{
@@ -379,6 +378,14 @@ li{
 	}
 	
 }
+.readmore {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	color: $text-color;
+	text-transform: uppercase;
+}
 .white {
 	color: $white;
 }
@@ -386,9 +393,6 @@ li{
 	color: $blue;
 }
 
-.bg-blue {
-	background: $blue;
-}
 
 .dark-bg {
 	background: $dark-bg;

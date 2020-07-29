@@ -313,11 +313,10 @@ h5, .h5 {
 
 h6, .h6 {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 19px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+  font-weight: 500;
 }
 
 p, .p {
@@ -499,16 +498,21 @@ li.mid {
   color: #FFF;
 }
 
+.readmore {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  text-transform: uppercase;
+}
+
 .white {
   color: #FFF;
 }
 
 .blue {
   color: #009FE3;
-}
-
-.bg-blue {
-  background: #009FE3;
 }
 
 .dark-bg {
@@ -1410,6 +1414,77 @@ ul.uk-accordion .uk-accordion-content {
   background: url(../images/icon/time-blue.svg);
   width: 14px;
   height: 14px;
+}
+
+.card-event .item {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #FFF;
+  height: 100%;
+  position: relative;
+}
+.card-event .content {
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 55px;
+}
+.card-event .content-content .readmore {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 25px;
+}
+.card-event .time {
+  font-size: 11px;
+  line-height: 17px;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.card-event .content-date {
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-right: 20px;
+}
+.card-event .content-date .day {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  color: #000;
+  margin: 0;
+}
+.card-event .content-date .month {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ED1C1C;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.card-event a:hover .readmore {
+  color: #009FE3;
 }
 
 @media only screen and (max-width: 1000px) {

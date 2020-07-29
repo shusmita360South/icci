@@ -170,7 +170,7 @@ abstract class EventsHelper
 	}
 	
 
-	public static function getEvents() {
+	public static function getRelatedEvents() {
 		$db  = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select('*')
@@ -182,6 +182,9 @@ abstract class EventsHelper
 
 		return $events;
 	}	
+
+
+
 
 	
 	

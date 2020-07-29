@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `#__events_items` (
 `etime`  datetime NOT NULL,
 `body` TEXT NOT NULL ,
 `image` VARCHAR(255)  NOT NULL ,
+`thumb` VARCHAR(255)  NOT NULL ,
 `location` VARCHAR(255)  NOT NULL ,
 `memberfee` VARCHAR(255)  NOT NULL ,
 `nonmemberfee` VARCHAR(255)  NOT NULL ,

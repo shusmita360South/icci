@@ -113,6 +113,13 @@
         filter="raw"
         width="1920"
         height="700"  />
+    <field name="thumb" type="thumb" size="40" class="inputbox"
+        label="COM_EVENTS_FORM_LBL_EDIT_THUMB"
+        description="COM_EVENTS_FORM_DESC_EDIT_THUMB" 
+        required="false"
+        filter="raw"
+        width="780"
+        height="400"  />
     <field name="locationtitle" type="text" class="inputbox"
         label="COM_EVENTS_FORM_LBL_EDIT_LOCATIONT"
         />

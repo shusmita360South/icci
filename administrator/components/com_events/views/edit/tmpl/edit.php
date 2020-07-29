@@ -128,6 +128,10 @@ $document->addStyleSheet('components/com_events/assets/css/events.css');
           <div class="controls"><?php echo $this->form->getInput('body'); ?></div>
         </div>
         <div class="control-group">
+          <div class="control-label"><?php echo $this->form->getLabel('thumb'); ?></div>
+          <div class="controls"><?php echo $this->form->getInput('thumb'); ?></div>
+        </div>
+        <div class="control-group">
           <div class="control-label"><?php echo $this->form->getLabel('image'); ?></div>
           <div class="controls"><?php echo $this->form->getInput('image'); ?></div>
         </div>
