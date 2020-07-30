@@ -1542,6 +1542,74 @@ ul.uk-accordion .uk-accordion-content {
   text-transform: uppercase;
 }
 
+.mod-events {
+  /**
+   *  Progress Bar
+   */
+}
+.mod-events .top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mod-events .top h2 {
+  display: inline-block;
+}
+.mod-events .top #filter-btn {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+.mod-events .slide {
+  padding: 20px;
+}
+.mod-events .slick-track {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.mod-events .slick-slide {
+  height: inherit !important;
+}
+.mod-events .progress {
+  display: block;
+  width: -webkit-calc(50% - 20px);
+  width: calc(50% - 20px);
+  height: 2px;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: #d2d2d2;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(black));
+  background-image: -webkit-linear-gradient(left, black, black);
+  background-image: -o-linear-gradient(left, black, black);
+  background-image: linear-gradient(to right, black, black);
+  background-repeat: no-repeat;
+  -webkit-background-size: 0 100%;
+          background-size: 0 100%;
+  -webkit-transition: background-size 0.4s ease-in-out;
+       -o-transition: background-size 0.4s ease-in-out;
+          transition: background-size 0.4s ease-in-out;
+}
+.mod-events .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @media only screen and (max-width: 1000px) {
   .article-default {
     overflow: hidden;
