@@ -95,13 +95,19 @@ $(document).ready(function() {
     $('#filter-btn .filter-select-catid').on('change', function() {
         var filterClass =$(this).val();
         $('.filter-original .uk-subnav li#catid-'+filterClass).trigger( "click" );
-
+        $('.filter span#catid-'+filterClass).trigger( "click" );
     });
 
     $('#filter-btn .filter-select-type').on('change', function() {
         var filterClass =$(this).val();
         $('.filter-original .uk-subnav li#type-'+filterClass).trigger( "click" );
+        $('.filter span#type-'+filterClass).trigger( "click" );
+    });
 
+    $('#filter-btn .filter-select-days').on('change', function() {
+        var filterClass =$(this).val();
+        $('.filter-original .uk-subnav li#day-'+filterClass).trigger( "click" );
+        $('.filter span#day-'+filterClass).trigger( "click" );
     });
     
    
@@ -133,6 +139,30 @@ $(document).ready(function() {
             }
         }
     });
+
+    //=============================================================
+    //===============event slider==============================
+    //=============================================================
+
+    $('.slick').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+    });
+     
+      
+    $('form.filter span').on('click', function() {
+        var filterClass = $(this).data('value');
+        $('.filter-class').text(filterClass);
+        $('.slick').slick('slickUnfilter');
+        $('.slick').slick('slickFilter', filterClass);
+    });
+      
+  
+
+
 
 
 });
