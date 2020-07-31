@@ -848,7 +848,7 @@ header .uk-navbar-nav > li > .nav-child {
           transform: translateX(-50%);
   left: 50%;
   white-space: nowrap;
-  background: #000;
+  background: #FFF;
 }
 header .uk-navbar-nav > li > .nav-child > li:first-child a {
   padding-top: 15px;

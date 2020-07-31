@@ -118,7 +118,7 @@ header {
 			transform: translateX(-50%);
 			left: 50%;
 			white-space: nowrap;
-			background: $dark-bg;
+			background: $white;
 			@extend .transition300ms;
 			> li:first-child {
 				a {
