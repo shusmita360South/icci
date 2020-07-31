@@ -1258,6 +1258,29 @@ header .menu-btn {
   margin-bottom: 10px;
 }
 
+.page-header-2 {
+  text-align: center;
+}
+.page-header-2 h5 {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header-2-image {
+  position: relative;
+}
+.page-header-2-image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #EDFAFF;
+  height: 60%;
+  width: 100%;
+  z-index: -1;
+}
+
 .mod-about .content {
   max-width: 580px;
 }
@@ -1608,6 +1631,47 @@ ul.uk-accordion .uk-accordion-content {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.mod-services .top {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mod-services .grid-container-medium {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.mod-services .item {
+  padding: 50px 20px 20px 20px;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.mod-services .item:hover {
+  background: #FFF;
+}
+.mod-services .item:hover .readmore {
+  opacity: 1;
+}
+.mod-services .item .image {
+  height: 200px;
+  vertical-align: bottom;
+  display: inline-block;
+}
+.mod-services .readmore {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  opacity: 0;
+}
+.mod-services .content {
+  padding-bottom: 55px;
 }
 
 @media only screen and (max-width: 1000px) {

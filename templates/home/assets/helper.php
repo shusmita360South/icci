@@ -40,6 +40,18 @@ class TempHelper
 
 		return $services;
 	}	
+	public static function getServices() {
+		$db  = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')
+		    ->from($db->quoteName('#__services_items'))
+		    ->where($db->quoteName('state') . ' = 1');
+		$query->order('ordering DESC');
+		$db->setQuery($query);
+		$services = $db->loadObjectList();
+
+		return $services;
+	}	
 	public static function getCategories($id)
 	{
 		$db = JFactory::getDbo();

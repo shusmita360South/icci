@@ -119,6 +119,27 @@
 		margin-bottom: 10px;
 	}
 }
+.page-header-2 {
+	text-align: center;
+	h5 {
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.page-header-2-image {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		background: $light-bg;
+		height: 60%;
+		width: 100%;
+		z-index: -1;
+	}
+}
 .mod-about {
 	.content {
 		max-width: 580px;
@@ -447,6 +468,48 @@ ul.uk-accordion {
 	}
 
 
+}
+.mod-services {
+	.top {
+		text-align: center;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.grid-container-medium {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+	.item {
+		padding: 50px 20px 20px 20px;
+		text-align: center;
+		
+		height: 100%;
+		position: relative;
+		border-radius: 15px;
+		&:hover {
+			background: $white;
+			.readmore {
+				opacity: 1;
+			}
+		}
+		.image {
+			height: 200px;
+			vertical-align: bottom;
+			display: inline-block;
+		}
+	}
+	.readmore {
+		position: absolute;
+		margin-bottom: 0;
+		bottom: 30px;\width: 100%;
+		text-align: center;
+		left: 0;
+		opacity: 0;
+	}
+	.content {
+		padding-bottom: 55px;
+	}
 }
 .article-default {
 	@media only screen and (max-width: 1000px) {
