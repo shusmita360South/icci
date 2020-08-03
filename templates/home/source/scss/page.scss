@@ -297,6 +297,11 @@ ul.uk-accordion {
 		width: 14px;
 		height: 14px;
 	}
+	&.icon-download {
+		background: url(../images/icon/download-blue.svg);
+		width: 15px;
+		height: 15px;
+	}
 }
 .card-event {
 	.item {
@@ -495,8 +500,10 @@ ul.uk-accordion {
 		}
 		.image {
 			height: 200px;
-			vertical-align: bottom;
-			display: inline-block;
+			display: flex;
+			width: 100%;
+			align-items: end;
+			justify-content: center;
 		}
 	}
 	.readmore {
@@ -579,6 +586,18 @@ ul.uk-accordion {
 	.layout4 {
 		img {
 			margin-bottom: 10px;
+		}
+	}
+}
+.annual-reports {
+	.button + .button {
+		margin-left: 30px;
+	}
+	.button {
+		.icon {
+			margin-right: 10px;
+			top: 3px;
+			display: inline-block;
 		}
 	}
 }

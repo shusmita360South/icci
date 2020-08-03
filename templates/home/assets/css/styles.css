@@ -1439,6 +1439,11 @@ ul.uk-accordion .uk-accordion-content {
   width: 14px;
   height: 14px;
 }
+.icon.icon-download {
+  background: url(../images/icon/download-blue.svg);
+  width: 15px;
+  height: 15px;
+}
 
 .card-event .item {
   border-radius: 15px;
@@ -1658,8 +1663,19 @@ ul.uk-accordion .uk-accordion-content {
 }
 .mod-services .item .image {
   height: 200px;
-  vertical-align: bottom;
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .mod-services .readmore {
   position: absolute;
@@ -1691,6 +1707,59 @@ ul.uk-accordion .uk-accordion-content {
 }
 .article-default h3 {
   margin-bottom: 16px;
+}
+
+.generalpages-detail .layout2 .article-default {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.generalpages-detail .layout2 img {
+  border-radius: 15px;
+}
+.generalpages-detail .layout3 .article-default {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.generalpages-detail .layout3 img {
+  border-radius: 15px;
+}
+.generalpages-detail .layout3 .content-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.generalpages-detail .layout3 .layout3-grid:nth-child(odd) .content-left {
+  margin-right: 100px;
+}
+.generalpages-detail .layout3 .layout3-grid:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.generalpages-detail .layout3 .layout3-grid:nth-child(even) .content-left {
+  margin-left: 100px;
+}
+.generalpages-detail .layout4 img {
+  margin-bottom: 10px;
+}
+
+.annual-reports .button + .button {
+  margin-left: 30px;
+}
+.annual-reports .button .icon {
+  margin-right: 10px;
+  top: 3px;
+  display: inline-block;
 }
 
 footer {
