@@ -20,28 +20,25 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
   $relatedGeneralpages = GeneralpagesHelper::getRelatedGeneralpages($item->relatedgeneralpages );
 }*/
 ?>
-<div class="page-header-2 light-bg section-padding-top section-padding-bottom-half">
+
+<div class="generalpages-detail layout1 section-padding-tb">
   <div class="grid-container-medium">
-    
-    <h1><?php echo $item->title;?></h1>
-    <h5><?php echo $item->intro;?></h5>
+    <div uk-grid>
+      <div class="uk-width-1-1 uk-width-1-3@s">
+        <div class="content-left">
+          <h2><?php echo $item->subtitle1;?></h2>
+        </div>
+      </div>
+      <div class="uk-width-1-1 uk-width-2-3@s">
+        <div class="content-right">
+          <div class="article-default">
+            <?php echo $item->body1;?>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="page-header-2-image uk-text-center">
-  <img src="<?php echo $item->image1;?>"/>
-</div>
-
-
-<?php 
-if($item->template == 1) {
-  echo $this->loadTemplate('general');
-}
- 
-elseif($item->template == 2) {
-  echo $this->loadTemplate('aboutus');
-}
-?>
-
 
 
 

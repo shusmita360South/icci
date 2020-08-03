@@ -60,6 +60,10 @@ $document->addStyleSheet('components/com_generalpages/assets/css/generalpages.cs
           <div class="controls"><?php echo $this->form->getInput('title'); ?></div>
         </div> 
         <div class="control-group">
+          <div class="control-label"><?php echo $this->form->getLabel('template'); ?></div>
+          <div class="controls"><?php echo $this->form->getInput('template'); ?></div>
+        </div>
+        <div class="control-group">
           <div class="control-label"><?php echo $this->form->getLabel('intro'); ?></div>
           <div class="controls"><?php echo $this->form->getInput('intro'); ?></div>
         </div>

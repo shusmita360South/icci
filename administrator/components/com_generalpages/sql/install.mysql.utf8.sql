@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `#__generalpages_items` (
 `cards` TEXT NOT NULL ,
 `videolink` VARCHAR(255)  NOT NULL ,
 `relatedevents` VARCHAR(255)  NOT NULL ,
+`template` INT(11)  NOT NULL ,
 
 PRIMARY KEY (`id`)
 ) DEFAULT COLLATE=utf8_general_ci;

@@ -40,6 +40,21 @@
         filter="raw"
         label="COM_GENERALPAGES_FORM_LBL_EDIT_INTRO"
     />
+    <field
+        name="template"
+        type="list"
+        label="Template"
+        class="inputbox"
+        size="1"
+        default="1">
+      <option value="1">General Pages</option>
+      <option value="2">About Us</option>
+      <option value="3">Layout 3</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset" />
+    <field name="checked_out_time" type="hidden" filter="unset" />
+
+
     <field name="image1" type="media" size="40" class="inputbox"
         label="COM_GENERALPAGES_FORM_LBL_EDIT_IMAGE1"
         description="COM_GENERALPAGES_FORM_DESC_EDIT_IMAGE1" 
@@ -82,7 +97,7 @@
     />
     <field 
         name="twocolsbody" type="Repeatable" icon="list" 
-        label="COM_GENERALPAGES_FORM_LBL_EDIT_HLOGO" 
+        label="Two Colums Layout" 
         default=""
         filter="raw">
         <fields name="params">
@@ -100,12 +115,10 @@
                     filter="raw"
                     label="Intro"
                 />
-                <field name="twocolsbodythumb" type="thumb" size="40" class="inputbox"
-                label="Image"
+                <field name="twocolsbodythumb" type="media" size="40" class="inputbox"
+                label="Image(580x430)"
                 required="false"
-                filter="raw"
-                width="580"
-                height="430"  />
+                filter="raw"  />
                 
             </fieldset>
         </fields>
