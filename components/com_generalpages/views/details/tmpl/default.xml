@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+     <layout title="Detail" option="View">
+          <message>Displays the Detail</message>
+     </layout>
+     <fields name="params">
+          <fieldset name="basic" addfieldpath="/components/com_generalpages/models/fields">
+               <field name="pid" type="generalpages"
+					label="Page"
+					description="Select Page"></field>
+          </fieldset>
+     </fields>
+</metadata>

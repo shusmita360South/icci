@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" default="0" label="COM_GENERALPAGES_FORM_LBL_EDIT_ID"
+		readonly="true" class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC" />
+    <field name="created_by" type="createdby" default="" 
+		label="COM_GENERALPAGES_FORM_LBL_EDIT_CREATED_BY"
+		description="COM_GENERALPAGES_FORM_DESC_EDIT_CREATED_BY" />
+
+    <field name="catid" type="sql" class="inputbox"
+		label="COM_GENERALPAGES_FORM_LBL_EDIT_CATID"
+		description="COM_GENERALPAGES_FORM_DESC_EDIT_CATID" 
+		query="SELECT 0 AS `id`, '- Select Category -' AS `title` UNION SELECT `id`, `title` FROM `#__generalpages_categories` where state = 1" key_field="id" value_field="title"
+		/>
+    
+    <field name="title" type="text" size="40" class="inputbox"
+		label="COM_GENERALPAGES_FORM_LBL_EDIT_TITLE"
+		description="COM_GENERALPAGES_FORM_DESC_EDIT_TITLE" 
+		required="true" 
+		filter="raw" />
+    <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset" />
+    <field name="checked_out_time" type="hidden" filter="unset" />
+    
+   
+    <field 
+        name="intro" 
+        type="textarea" 
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_INTRO"
+    />
+    <field name="image1" type="media" size="40" class="inputbox"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_IMAGE1"
+        description="COM_GENERALPAGES_FORM_DESC_EDIT_IMAGE1" 
+        required="false"
+        filter="raw"
+    />
+    <field 
+        name="subtitle1" 
+        type="text" 
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_SUBTITLE1"
+    />
+    <field name="body1" type="editor" buttons="true"
+        class="inputbox"
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_BODY1"
+        description="COM_GENERALPAGES_FORM_DESC_EDIT_BODY1" />
+    <field 
+        name="subtitle2" 
+        type="text" 
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_SUBTITLE2"
+    />
+    <field name="body2" type="editor" buttons="true"
+        class="inputbox"
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_BODY2"
+        description="COM_GENERALPAGES_FORM_DESC_EDIT_BODY2" />
+    <field name="image2" type="media" size="40" class="inputbox"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_IMAGE2"
+        description="COM_GENERALPAGES_FORM_DESC_EDIT_IMAGE2" 
+        required="false"
+        filter="raw"
+    />
+    <field 
+        name="videolink" 
+        type="text" 
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_VIDEOLINK"
+    />
+    <field 
+        name="twocolsbody" type="Repeatable" icon="list" 
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_HLOGO" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field 
+                    name="twocolsbodytitle" 
+                    type="text" 
+                    filter="raw"
+                    label="Title"
+                />
+                <field 
+                    name="twocolsbodyintro" 
+                    type="textarea" 
+                    filter="raw"
+                    label="Intro"
+                />
+                <field name="twocolsbodythumb" type="thumb" size="40" class="inputbox"
+                label="Image"
+                required="false"
+                filter="raw"
+                width="580"
+                height="430"  />
+                
+            </fieldset>
+        </fields>
+    </field>
+    <field 
+        name="cardstitle" 
+        type="text" 
+        filter="raw"
+        label="Card Title"
+    />
+    <field 
+        name="cardsintro" 
+        type="textarea" 
+        filter="raw"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_INTRO"
+    />
+    <field 
+        name="cards" type="Repeatable" icon="list" 
+        label="Cards" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field 
+                    name="cardstitle" 
+                    type="text" 
+                    filter="raw"
+                    label="Title"
+                />
+                <field 
+                    name="cardsintro" 
+                    type="textarea" 
+                    filter="raw"
+                    label="Intro"
+                />
+                <field name="cardsthumb" type="media" size="40" class="inputbox"
+                label="Image"
+                required="false"
+                filter="raw"
+                 />
+                
+            </fieldset>
+        </fields>
+    </field>
+    <field
+        name="relatedevents"
+        type="sql"
+        label="COM_GENERALPAGES_FORM_LBL_EDIT_RELATEDGENERALPAGES"
+        multiple="multiple"
+        description=""
+        default=""
+        query="SELECT 0 AS `id`, '- Select Projects -' AS `title` UNION SELECT `id`, `title` FROM `#__events_items`" 
+        key_field="id" 
+        value_field="title"
+    />
+   
+  </fieldset>
+</form>
