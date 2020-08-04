@@ -789,6 +789,9 @@ header .icon-outer {
           justify-content: center;
   margin-left: 10px;
 }
+header .icon-outer:hover {
+  background: #009FE3;
+}
 header .icon-outer span {
   color: #FFF;
 }
@@ -1518,6 +1521,48 @@ ul.uk-accordion .uk-accordion-content {
 .card-event a:hover .readmore {
   color: #009FE3;
 }
+.card-event .subtitle {
+  margin-top: 0;
+}
+.card-event .icon-outer {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card-event .icon-outer:hover {
+  background: #009FE3;
+}
+.card-event .icon-outer span {
+  color: #FFF;
+}
+.card-event ._icon-outer + ._icon-outer {
+  margin-left: 5px;
+}
+.card-event ._icon-outer {
+  display: inline-block;
+}
+
+.card-staff .content {
+  padding-bottom: 25px;
+}
+.card-staff .content .subtitle {
+  margin-bottom: 0;
+}
 
 .events-detail .banneritem img {
   max-height: 65px;
@@ -1677,6 +1722,9 @@ ul.uk-accordion .uk-accordion-content {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.mod-services .item .image img {
+  height: 200px;
+}
 .mod-services .readmore {
   position: absolute;
   margin-bottom: 0;
@@ -1784,6 +1832,11 @@ ul.uk-accordion .uk-accordion-content {
   margin-right: 10px;
   top: 3px;
   display: inline-block;
+}
+
+.com_services .page-header-2-image img {
+  max-width: 700px;
+  max-height: 500px;
 }
 
 footer {

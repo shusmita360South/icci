@@ -367,7 +367,42 @@ ul.uk-accordion {
 			color: $blue;
 		}
 	}
+	.subtitle {
+		margin-top: 0;
+	}
+	.icon-outer{
+		display: inline-block;
+		background-repeat: no-repeat;
+		width: 30px;
+		height: 30px;
+		background: #000;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		
+		&:hover {
+			background: $blue;
+		}
+		span {
+			color: $white;
+		}
+	}
+	._icon-outer + ._icon-outer {
+		margin-left: 5px;
+	}
+	._icon-outer {
+		display: inline-block;
+	}
 	
+}
+.card-staff {
+	.content {
+		padding-bottom: 25px;
+		.subtitle {
+			margin-bottom: 0;
+		}
+	}
 }
 .events-detail {
 	.banneritem {
@@ -504,6 +539,9 @@ ul.uk-accordion {
 			width: 100%;
 			align-items: end;
 			justify-content: center;
+			img {
+				height: 200px;
+			}
 		}
 	}
 	.readmore {
@@ -619,6 +657,14 @@ ul.uk-accordion {
 			margin-right: 10px;
 			top: 3px;
 			display: inline-block;
+		}
+	}
+}
+.com_services {
+	.page-header-2-image {
+		img {
+			max-width: 700px;
+			max-height: 500px;
 		}
 	}
 }
