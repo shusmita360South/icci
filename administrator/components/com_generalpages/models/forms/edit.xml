@@ -164,6 +164,47 @@
             </fieldset>
         </fields>
     </field>
+     <field 
+        name="cardstitle2" 
+        type="text" 
+        filter="raw"
+        label="Card Title 2"
+    />
+    <field 
+        name="cardsintro2" 
+        type="textarea" 
+        filter="raw"
+        label="Card Intro 2"
+    />
+    <field 
+        name="cards2" type="Repeatable" icon="list" 
+        label="Cards 2" 
+        default=""
+        filter="raw">
+        <fields name="params">
+            <fieldset hidden="false" name="uses_modal" repeat="true">
+                
+                <field 
+                    name="cards2title" 
+                    type="text" 
+                    filter="raw"
+                    label="Title"
+                />
+                <field 
+                    name="cards2intro" 
+                    type="textarea" 
+                    filter="raw"
+                    label="Intro"
+                />
+                <field name="cards2thumb" type="media" size="40" class="inputbox"
+                label="Image"
+                required="false"
+                filter="raw"
+                 />
+                
+            </fieldset>
+        </fields>
+    </field>
     <field
         name="relatedevents"
         type="sql"

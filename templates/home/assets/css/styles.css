@@ -1749,8 +1749,32 @@ ul.uk-accordion .uk-accordion-content {
 .generalpages-detail .layout3 .layout3-grid:nth-child(even) .content-left {
   margin-left: 100px;
 }
-.generalpages-detail .layout4 img {
+.generalpages-detail .layout4 img, .generalpages-detail .layout5 img {
   margin-bottom: 10px;
+  margin-bottom: 10px;
+  height: 84px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.generalpages-detail .layout4 .readmore, .generalpages-detail .layout5 .readmore {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.generalpages-detail .layout4 .content, .generalpages-detail .layout5 .content {
+  height: 100%;
+  position: relative;
+  padding-bottom: 10px;
+}
+.generalpages-detail .layout4 .intro, .generalpages-detail .layout5 .intro {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .annual-reports .button + .button {
