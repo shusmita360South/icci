@@ -5,7 +5,7 @@
   -o-transition: all 0s ease-in-out;
 }
 
-.transition300ms, .mod-about-2 .video-wrap svg fill, .uk-offcanvas .uk-navbar-nav > li.deeper:after, header .uk-navbar-nav > li > a, header .uk-navbar-nav > li > span, header .uk-navbar-nav > li > .nav-child > li a, header .uk-navbar-nav > li > .nav-child, header .logo img, header, .button {
+.transition300ms, .video-wrap svg fill, .uk-offcanvas .uk-navbar-nav > li.deeper:after, header .uk-navbar-nav > li > a, header .uk-navbar-nav > li > span, header .uk-navbar-nav > li > .nav-child > li a, header .uk-navbar-nav > li > .nav-child, header .logo img, header, .button {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1243,6 +1243,10 @@ header .menu-btn {
       -ms-flex-item-align: center;
           align-self: center;
 }
+.banneritem img {
+  max-width: 240px;
+  max-height: 105px;
+}
 
 .page-header-1 {
   padding-top: 300px;
@@ -1291,14 +1295,14 @@ header .menu-btn {
   max-width: 415px;
 }
 
-.mod-about-2 .video-wrap {
+.video-wrap {
   border-radius: 20px;
   position: relative;
 }
-.mod-about-2 .video-wrap img {
+.video-wrap img {
   border-radius: 20px;
 }
-.mod-about-2 .video-wrap .play {
+.video-wrap .play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1307,10 +1311,10 @@ header .menu-btn {
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.mod-about-2 .video-wrap a:hover svg .circle {
+.video-wrap a:hover svg .circle {
   fill: #FFF;
 }
-.mod-about-2 .video-wrap a:hover svg .arrow {
+.video-wrap a:hover svg .arrow {
   fill: #ED1C1C;
 }
 
@@ -1448,14 +1452,18 @@ ul.uk-accordion .uk-accordion-content {
   height: 15px;
 }
 
-.card-event .item {
+.card-event2 .item {
+  border: 1px solid #ccc;
+}
+
+.card-event .item, .card-event2 .item {
   border-radius: 15px;
   overflow: hidden;
   background: #FFF;
   height: 100%;
   position: relative;
 }
-.card-event .content {
+.card-event .content, .card-event2 .content {
   padding: 20px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1468,19 +1476,19 @@ ul.uk-accordion .uk-accordion-content {
           flex-direction: row;
   padding-bottom: 55px;
 }
-.card-event .content-content .readmore {
+.card-event .content-content .readmore, .card-event2 .content-content .readmore {
   position: absolute;
   margin-bottom: 0;
   bottom: 25px;
 }
-.card-event .time {
+.card-event .time, .card-event2 .time {
   font-size: 11px;
   line-height: 17px;
   color: #000;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-.card-event .content-date {
+.card-event .content-date, .card-event2 .content-date {
   width: 25px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1497,7 +1505,7 @@ ul.uk-accordion .uk-accordion-content {
           justify-content: start;
   margin-right: 20px;
 }
-.card-event .content-date .day {
+.card-event .content-date .day, .card-event2 .content-date .day {
   font-weight: bold;
   font-size: 21px;
   line-height: 25px;
@@ -1505,7 +1513,7 @@ ul.uk-accordion .uk-accordion-content {
   margin: 0;
   text-align: center;
 }
-.card-event .content-date .month {
+.card-event .content-date .month, .card-event2 .content-date .month {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -1518,13 +1526,13 @@ ul.uk-accordion .uk-accordion-content {
   text-align: center;
   width: 26px;
 }
-.card-event a:hover .readmore {
+.card-event a:hover .readmore, .card-event2 a:hover .readmore {
   color: #009FE3;
 }
-.card-event .subtitle {
+.card-event .subtitle, .card-event2 .subtitle {
   margin-top: 0;
 }
-.card-event .icon-outer {
+.card-event .icon-outer, .card-event2 .icon-outer {
   display: inline-block;
   background-repeat: no-repeat;
   width: 30px;
@@ -1544,16 +1552,16 @@ ul.uk-accordion .uk-accordion-content {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.card-event .icon-outer:hover {
+.card-event .icon-outer:hover, .card-event2 .icon-outer:hover {
   background: #009FE3;
 }
-.card-event .icon-outer span {
+.card-event .icon-outer span, .card-event2 .icon-outer span {
   color: #FFF;
 }
-.card-event ._icon-outer + ._icon-outer {
+.card-event ._icon-outer + ._icon-outer, .card-event2 ._icon-outer + ._icon-outer {
   margin-left: 5px;
 }
-.card-event ._icon-outer {
+.card-event ._icon-outer, .card-event2 ._icon-outer {
   display: inline-block;
 }
 

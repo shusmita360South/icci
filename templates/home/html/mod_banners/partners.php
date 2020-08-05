@@ -13,7 +13,7 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 ?>
 
 
-<div class="mod_banners mod_partner section-padding-tb light-bg center">
+<div class="mod_banners mod_partner section-padding-tb center <?php echo $moduleclass_sfx; ?> ">
 		<div class="grid-container">
 			<h2><?php echo $module->title; ?></h2>
 			<?php if($headerText):?>

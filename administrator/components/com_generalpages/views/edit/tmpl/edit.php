@@ -91,7 +91,7 @@ $document->addStyleSheet('components/com_generalpages/assets/css/generalpages.cs
           <li class=""><a href="#layout2" data-toggle="tab">Layout 2</a></li>
           <li class=""><a href="#layout3" data-toggle="tab">Layout 3</a></li>
           <li class=""><a href="#layout4" data-toggle="tab">Layout 4</a></li>
-          <li class=""><a href="#layout5" data-toggle="tab">Layout 5</a></li>
+          
         </ul>
         <div class="tab-content" id="myTabContent">
 
@@ -143,7 +143,7 @@ $document->addStyleSheet('components/com_generalpages/assets/css/generalpages.cs
               <div class="controls"><?php echo $this->form->getInput('cards'); ?></div>
             </div>
           </div>
-
+          <!--
           <div id="layout5" class="tab-pane">
             <div class="control-group">
               <div class="control-label"><?php echo $this->form->getLabel('cardstitle2'); ?></div>
@@ -158,6 +158,7 @@ $document->addStyleSheet('components/com_generalpages/assets/css/generalpages.cs
               <div class="controls"><?php echo $this->form->getInput('cards2'); ?></div>
             </div>
           </div>
+        -->
 
 
         </div>

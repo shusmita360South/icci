@@ -39,9 +39,9 @@ $itemid = 111;
 
 <div class="mod-custom mod-events events-list section-padding-tb <?php echo $moduleclass_sfx; ?>" >
 	<div class="grid-container">
-    <div class="top">
-      <h2><?php echo $module->title; ?></h2>
-	  	<div uk-grid id="filter-btn" class="">
+    <div class="top0">
+      <h2 class="center"><?php echo $module->title; ?></h2>
+	  	<!--<div uk-grid id="filter-btn" class="">
 	    	<div class="uk-width-1-2 uk-width-auto@s">
 	          <div class="select-outer">
 	            <select class="filter-select-days uk-select">
@@ -74,7 +74,7 @@ $itemid = 111;
 	            </select>
 	          </div>
 	        </div>
-	    </div>
+	    </div>-->
     </div>
 		<!--filter original-->
 
@@ -114,7 +114,7 @@ $itemid = 111;
        
         ?>
       
-        <div class="slide catid catid-<?php echo $item->catid;?> type type-<?php echo $item->type;?> day- day-<?php echo date_format($sdate,"D");?> card-event">
+        <div class="slide catid catid-<?php echo $item->catid;?> type type-<?php echo $item->type;?> day- day-<?php echo date_format($sdate,"D");?> card-event card-event2">
             <a href="<?php echo $linky;?>">
               <div class="item ">
                   <div class="image">
@@ -139,11 +139,11 @@ $itemid = 111;
       <?php endforeach; ?>
     </div>
 
-    <div class="progress uk-margin-medium-top" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+    <!--<div class="progress uk-margin-medium-top" role="progressbar" aria-valuemin="0" aria-valuemax="100">
         <span class="slider__label sr-only"></span>
     </div>
 
-    <a href="" class="button uk-margin-medium-top">VIEW ALL EVENTS</a>
+    <a href="" class="button uk-margin-medium-top">VIEW ALL EVENTS</a>-->
       
 
 	</div>

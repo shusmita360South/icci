@@ -100,6 +100,10 @@
 .banneritem {
 	    display: flex;
     	align-self: center;
+    	img {
+    		max-width: 240px;
+    		max-height: 105px;
+    	}
 
 	}
 .page-header-1 {
@@ -148,7 +152,7 @@
 		}
 	}
 }
-.mod-about-2 {
+//.mod-about-2 {
 	.video-wrap {
 		border-radius: 20px;
 		position: relative;
@@ -179,7 +183,7 @@
 			}
 		}
 	}
-}
+//}
 
 .mod-about-3 {
 	ul {
@@ -303,7 +307,13 @@ ul.uk-accordion {
 		height: 15px;
 	}
 }
-.card-event {
+.card-event2 {
+	.item {
+
+		border: 1px solid #ccc;
+	}
+}
+.card-event, .card-event2 {
 	.item {
 		border-radius: 15px;
 		overflow: hidden;
