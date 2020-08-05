@@ -27,6 +27,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
     <h5><?php echo $item->intro;?></h5>
   </div>
 </div>
+<?php if($item->image1):?>
 <div class="page-header-2-image uk-text-center">
   	
   	<?php if($item->videolink):?>
@@ -46,18 +47,23 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
 	<?php endif;?>
 
 </div>
-
+<?php endif;?>
 
 <?php 
 if($item->template == 1) {
   echo $this->loadTemplate('general');
 }
- 
 elseif($item->template == 2) {
   echo $this->loadTemplate('aboutus');
 }
 elseif($item->template == 3) {
   echo $this->loadTemplate('trueitaliantaste');
+}
+elseif($item->template == 4) {
+  echo $this->loadTemplate('hostaneventform');
+}
+elseif($item->template == 5) {
+  echo $this->loadTemplate('sponsorform');
 }
 ?>
 

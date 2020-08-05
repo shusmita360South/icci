@@ -50,6 +50,8 @@
       <option value="1">General Pages</option>
       <option value="2">About Us</option>
       <option value="3">True Italian Taste</option>
+      <option value="4">Host an Event Form</option>
+      <option value="5">Sponsor Form</option>
     </field>
     <field name="checked_out" type="hidden" filter="unset" />
     <field name="checked_out_time" type="hidden" filter="unset" />

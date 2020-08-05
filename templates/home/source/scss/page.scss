@@ -678,3 +678,31 @@ ul.uk-accordion {
 		}
 	}
 }
+.form-outer {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		background: $light-bg;
+		height: 100px;
+		width: 100%;
+		//z-index: -1;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		bottom:0;
+		left: 0;
+		background: #F9F9F9;
+		height: calc(100% - 100px);
+		width: 100%;
+		z-index: -1;
+	}
+	.grid-container-small {
+		z-index: 1;
+		position: relative;
+		padding: 50px;
+	}
+}

@@ -476,8 +476,8 @@ li.mid {
   position: relative;
 }
 .button:hover, .button:focus {
-  background: #FFF;
-  color: #009FE3;
+  background: #009FE3;
+  color: #FFF;
 }
 .button.btn-blue {
   background: #009FE3;
@@ -526,6 +526,10 @@ li.mid {
 
 .white-bg {
   background: #FFF;
+}
+
+.grey-bg {
+  background: #F9F9F9;
 }
 
 .strong, strong {
@@ -851,7 +855,7 @@ header .uk-navbar-nav > li > .nav-child {
           transform: translateX(-50%);
   left: 50%;
   white-space: nowrap;
-  background: #FFF;
+  background: #F9F9F9;
 }
 header .uk-navbar-nav > li > .nav-child > li:first-child a {
   padding-top: 15px;
@@ -1845,6 +1849,35 @@ ul.uk-accordion .uk-accordion-content {
 .com_services .page-header-2-image img {
   max-width: 700px;
   max-height: 500px;
+}
+
+.form-outer {
+  position: relative;
+}
+.form-outer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #EDFAFF;
+  height: 100px;
+  width: 100%;
+}
+.form-outer:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #F9F9F9;
+  height: -webkit-calc(100% - 100px);
+  height: calc(100% - 100px);
+  width: 100%;
+  z-index: -1;
+}
+.form-outer .grid-container-small {
+  z-index: 1;
+  position: relative;
+  padding: 50px;
 }
 
 footer {

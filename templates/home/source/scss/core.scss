@@ -352,8 +352,8 @@ li{
 	position: relative;
 	
 	&:hover, &:focus {
-		background: $white;
-		color: $blue;
+		background: $blue;
+		color: $white;
 		
 	}
 	&.btn-blue {
@@ -404,6 +404,9 @@ li{
 
 .white-bg {
 	background: $white;
+}
+.grey-bg {
+	background: $grey-bg
 }
 .strong, strong {
 	font-weight: 500;
