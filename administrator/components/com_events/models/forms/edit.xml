@@ -15,8 +15,8 @@
 		/>
     
     <field name="type" type="sql" class="inputbox"
-        label="COM_EVENTS_FORM_LBL_EDIT_CATID"
-        description="COM_EVENTS_FORM_DESC_EDIT_CATID" 
+        label="Type"
+        description="" 
         query="SELECT 0 AS `id`, '- Select Type -' AS `title` UNION SELECT `id`, `title` FROM `#__events_types` where state = 1" key_field="id" value_field="title"
         />
     <field name="title" type="text" size="40" class="inputbox"

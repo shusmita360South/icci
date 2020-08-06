@@ -126,7 +126,7 @@ if(isset($item->relatedevents) ) {
               width="340"
               height="220"
               frameborder="0" style="border:0"
-              src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvavqTeZXc48iALmnGfypI6ZuJ1jNW-lE
                 &q=<?php echo $item->location;?>" allowfullscreen>
             </iframe>
           </div>
