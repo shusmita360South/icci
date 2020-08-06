@@ -706,3 +706,50 @@ ul.uk-accordion {
 		padding: 50px;
 	}
 }
+.mod-map {
+	#map {
+	  height: 100%;
+	}
+
+	.icon-outer {
+		.icon {
+			width: 84px;
+			height: 84px;
+			background-color: #FFF;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			border-radius: 15px;
+			&.icon-network {
+				background-image: url(../images/icon/network.svg);
+			}
+			&.icon-members {
+				background-image: url(../images/icon/members.svg);
+			}
+			&.icon-country {
+				background-image: url(../images/icon/country.svg);
+			}
+			&.icon-business {
+				background-image: url(../images/icon/business.svg);
+			}
+		}
+	}
+	.item {
+		display: flex;
+		.item-content {
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+			justify-content: center;
+		}
+		h2, p {
+			display: inline-block;
+			margin: 0;
+		}
+		h2 {
+			line-height: 37px;
+		}
+	}
+	.item + .item {
+		margin-top: 20px;
+	}
+}

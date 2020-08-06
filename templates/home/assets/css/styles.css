@@ -1880,6 +1880,62 @@ ul.uk-accordion .uk-accordion-content {
   padding: 50px;
 }
 
+.mod-map #map {
+  height: 100%;
+}
+.mod-map .icon-outer .icon {
+  width: 84px;
+  height: 84px;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 15px;
+}
+.mod-map .icon-outer .icon.icon-network {
+  background-image: url(../images/icon/network.svg);
+}
+.mod-map .icon-outer .icon.icon-members {
+  background-image: url(../images/icon/members.svg);
+}
+.mod-map .icon-outer .icon.icon-country {
+  background-image: url(../images/icon/country.svg);
+}
+.mod-map .icon-outer .icon.icon-business {
+  background-image: url(../images/icon/business.svg);
+}
+.mod-map .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mod-map .item .item-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mod-map .item h2, .mod-map .item p {
+  display: inline-block;
+  margin: 0;
+}
+.mod-map .item h2 {
+  line-height: 37px;
+}
+.mod-map .item + .item {
+  margin-top: 20px;
+}
+
 footer {
   background: #000;
 }
