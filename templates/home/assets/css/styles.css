@@ -1850,6 +1850,11 @@ ul.uk-accordion .uk-accordion-content {
   margin-left: auto;
   margin-right: auto;
 }
+.generalpages-detail .layout-cta {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .annual-reports .button + .button {
   margin-left: 30px;
@@ -2037,6 +2042,21 @@ ul.uk-accordion .uk-accordion-content {
   max-width: 330px;
   margin-left: auto;
   margin-right: auto;
+}
+.mod-membership .card-member {
+  position: relative;
+}
+.mod-membership .card-member .button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.mod-membership .caption {
+  padding: 50px 70px 120px 70px;
 }
 .mod-membership .card-member-bottom {
   background: #F4F4F4;

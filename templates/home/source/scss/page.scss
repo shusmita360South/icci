@@ -670,6 +670,11 @@ ul.uk-accordion {
 
 		}
 	}
+	.layout-cta {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 .annual-reports {
 	.button + .button {
@@ -839,6 +844,20 @@ ul.uk-accordion {
 		max-width: 330px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.card-member { 
+
+		position: relative;
+
+		.button {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.caption {
+		padding: 50px 70px 120px 70px;
 	}
 	.card-member-bottom {
 		background: #F4F4F4;

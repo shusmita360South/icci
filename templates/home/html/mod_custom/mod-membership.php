@@ -23,7 +23,7 @@ $itemid = 152;
     </div>
 		
 		  
-		<div class="member-levels uk-margin-medium-top section-padding-bottom">
+		<div class="member-levels uk-margin-medium-top">
       <div uk-grid>
         <?php 
           $i = 1; 
@@ -37,31 +37,31 @@ $itemid = 152;
            
             ?>
               <div class="uk-width-1-1 uk-width-1-3@s rsm_container">
-                <div class="thumbnail card-member center">
-                  <img src="<?php echo $imagesrc; ?>"/>
-                  <div class="caption">
-                    <h3 class="rsm_title"><?php echo $item->name; ?></h3>
-                    
-                    <?php echo $item->description; ?>
-                    <h2 class="rsm_title">$<?php echo $price; ?></h2>
-                    <p class="subtitle">Annual Membership</p>
-                    <div class="clearfix"></div>
-                    <div class="row-fluid">
-                      <div class="btn-group">
+                <div>
+                  <div class="thumbnail card-member center">
+                    <img src="<?php echo $imagesrc; ?>"/>
+                    <div class="caption">
+                      <h3 class="rsm_title"><?php echo $item->name; ?></h3>
+                      
+                      <?php echo $item->description; ?>
+                      <h2 class="rsm_title">$<?php echo $price; ?></h2>
+                      <p class="subtitle">Annual Membership</p>
+                      <div class="clearfix"></div>
+
+                          
+
+                            <a href="<?php echo $apply_link; ?>" class="button">Join Now</a>
+
                         
-
-                          <a href="<?php echo $apply_link; ?>" class="button uk-margin-medium-top">Join Now</a>
-
-                      </div>
+                      <div class="clearfix"></div>
                     </div>
-                    <div class="clearfix"></div>
                   </div>
-                </div>
-                <div class="card-member-bottom">
-                  <a href="/membership/levels">
-                    <span>See what’s included</span>
-                    <i class="icon icon-eye"></i>
-                  </a>
+                  <div class="card-member-bottom">
+                    <a href="/membership/levels">
+                      <span>See what’s included</span>
+                      <i class="icon icon-eye"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
 

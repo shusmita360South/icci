@@ -65,6 +65,9 @@ elseif($item->template == 4) {
 elseif($item->template == 5) {
   echo $this->loadTemplate('sponsorform');
 }
+elseif($item->template == 6) {
+  echo $this->loadTemplate('benefits');
+}
 ?>
 
 

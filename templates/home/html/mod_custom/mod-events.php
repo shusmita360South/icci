@@ -143,7 +143,7 @@ $itemid = 111;
         <span class="slider__label sr-only"></span>
     </div>
 
-    <a href="" class="button uk-margin-medium-top">VIEW ALL EVENTS</a>
+    <a href="/events/upcoming-events" class="button uk-margin-medium-top">VIEW ALL EVENTS</a>
       
 
 	</div>
