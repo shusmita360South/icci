@@ -1581,6 +1581,7 @@ ul.uk-accordion .uk-accordion-content {
   border-radius: 15px;
   overflow: hidden;
   border: 1px solid #D6D6D6;
+  height: 100%;
 }
 .card-member .caption {
   padding: 50px 70px;
@@ -1964,6 +1965,72 @@ ul.uk-accordion .uk-accordion-content {
 .member-levels-list .grid-container {
   z-index: 1;
   position: relative;
+}
+.member-levels-list .caption {
+  padding: 10px;
+  padding-bottom: 60px;
+}
+.member-levels-list .card-member-outer {
+  border-right: 1px solid #D6D6D6;
+  border-radius: 0 15px 0 0;
+}
+.member-levels-list .card-member {
+  border: 0px;
+  position: relative;
+}
+.member-levels-list .card-member .button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.member-levels-list .card-member-benefit-outer {
+  border: 1px solid #D6D6D6;
+  border-radius: 15px 0 15px 15px;
+  overflow: hidden;
+}
+.member-levels-list .card-member-benefit-outer p {
+  padding: 10px;
+  margin: 0;
+}
+.member-levels-list .card-member-benefit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.member-levels-list .card-member-benefit i {
+  color: #009FE3;
+}
+.member-levels-list .rsm_container {
+  border-left: 1px solid #D6D6D6;
+  border-radius: 15px 0 0 0;
+}
+.member-levels-list .member-benefit-col {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .mod-membership .top {

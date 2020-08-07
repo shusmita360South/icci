@@ -132,6 +132,32 @@ class TempHelper
 		return 'index.php?option=com_rsmembership&task=subscribe'.$catidurl.$membershipurl.$Itemidurl;
 	}
 
+	public static function getMemberExtras() {
+		$db  = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')
+		    ->from($db->quoteName('#__rsmembership_extras'))
+		    ->where($db->quoteName('published') . ' = 1');
+		$query->order('ordering DESC');
+		$db->setQuery($query);
+		$extras = $db->loadObjectList();
+
+		return $extras;
+	}
+	public static function getMemberItemExtra($itemId, $extraId) {
+		$db  = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')
+		    ->from($db->quoteName('#__rsmembership_membership_extras'))
+		    ->where($db->quoteName('extra_id') . '='.$extraId)
+		    ->where($db->quoteName('membership_id'). '=' . $itemId);
+		$db->setQuery($query);
+		$extras = $db->loadObject();
+
+		if ($extras)
+			return '<i uk-icon="icon: check; ratio: 1.5"></i>';
+	}
+
 	
 }
 

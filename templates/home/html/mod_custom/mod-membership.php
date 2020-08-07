@@ -70,6 +70,6 @@ $itemid = 152;
       </div>
 
   	</div>
-	
+	</div>
 </div>
 

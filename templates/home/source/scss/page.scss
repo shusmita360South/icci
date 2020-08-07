@@ -419,6 +419,7 @@ ul.uk-accordion {
 	border-radius: 15px;
 	overflow: hidden;
 	border: 1px solid $grid-border-2;
+	height: 100%;
 	.caption {
 	    padding: 50px 70px;
 	}
@@ -780,6 +781,57 @@ ul.uk-accordion {
 	.grid-container {
 		z-index: 1;
 		position: relative;
+	}
+	.caption{
+		padding: 10px;
+		padding-bottom: 60px;
+		
+	}
+	.card-member-outer {
+		border-right: 1px solid $grid-border-2;
+		border-radius: 0 15px 0 0;
+	}
+	.card-member { 
+		border: 0px;
+
+		position: relative;
+
+		.button {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.card-member-benefit-outer {
+		border: 1px solid $grid-border-2;
+		border-radius: 15px 0 15px 15px;
+		overflow: hidden;
+		p {
+			padding: 10px;
+			margin: 0;
+		}
+	}
+	.card-member-benefit {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		justify-content: center;
+		i { color: $blue;}
+	}
+	.rsm_container {
+		//.caption {
+			border-left: 1px solid $grid-border-2;
+			border-radius: 15px 0 0 0;
+
+		//}
+		
+		
+	}
+	.member-benefit-col {
+		align-items: flex-end;
+		display: flex;
+		justify-content: start;
 	}
 }
 .mod-membership {
