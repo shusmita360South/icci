@@ -781,3 +781,5 @@ en-GB.plg_fields_calendar.ini
 en-GB.plg_fields_calendar.sys.ini
 en-GB.plg_fields_checkboxes.ini
 en-GB.plg_fields_checkboxes.sys.ini
+
+/components/com_rsmembership/assets/*
