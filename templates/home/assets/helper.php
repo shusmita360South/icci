@@ -52,6 +52,18 @@ class TempHelper
 
 		return $services;
 	}	
+	public static function getMemberlevels() {
+		$db  = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		$query->select('*')
+		    ->from($db->quoteName('#__rsmembership_memberships'))
+		    ->where($db->quoteName('published') . ' = 1');
+		$query->order('ordering DESC');
+		$db->setQuery($query);
+		$services = $db->loadObjectList();
+
+		return $services;
+	}
 	public static function getCategories($id)
 	{
 		$db = JFactory::getDbo();
@@ -100,7 +112,25 @@ class TempHelper
 		
 	}
 
-	
+	public static function Subscribe( $catid, $membership_id, $membership_name, $Itemid ) 
+	{
+		$catidurl = '';
+		
+
+		$membershipurl = '';
+		if ( $membership_id ) 
+		{
+			$membershipurl = '&cid='.$membership_id.':'.JFilterOutput::stringURLSafe($membership_name);
+		}
+
+		$Itemidurl = '';
+		if ( $Itemid ) 
+		{
+			$Itemidurl = '&Itemid='.$Itemid;
+		}
+
+		return 'index.php?option=com_rsmembership&task=subscribe'.$catidurl.$membershipurl.$Itemidurl;
+	}
 
 	
 }

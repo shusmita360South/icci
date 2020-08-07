@@ -1576,6 +1576,19 @@ ul.uk-accordion .uk-accordion-content {
   margin-bottom: 0;
 }
 
+.card-member {
+  padding: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #D6D6D6;
+}
+.card-member .caption {
+  padding: 50px 70px;
+}
+.card-member .subtitle {
+  margin-top: -20px;
+}
+
 .events-detail .banneritem img {
   max-height: 65px;
 }
@@ -1934,6 +1947,57 @@ ul.uk-accordion .uk-accordion-content {
 }
 .mod-map .item + .item {
   margin-top: 20px;
+}
+
+.member-levels-list {
+  position: relative;
+}
+.member-levels-list:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #EDFAFF;
+  height: 100px;
+  width: 100%;
+}
+.member-levels-list .grid-container {
+  z-index: 1;
+  position: relative;
+}
+
+.mod-membership .top {
+  max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mod-membership .card-member-bottom {
+  background: #F4F4F4;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+.mod-membership .card-member-bottom a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mod-membership .card-member-bottom a:hover .icon-eye {
+  background: url(../images/icon/eye-blue.svg);
+}
+.mod-membership .icon-eye {
+  background: url(../images/icon/eye.svg);
+  width: 25px;
+  height: 18px;
 }
 
 footer {

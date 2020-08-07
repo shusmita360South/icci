@@ -414,6 +414,18 @@ ul.uk-accordion {
 		}
 	}
 }
+.card-member {
+	padding: 0;
+	border-radius: 15px;
+	overflow: hidden;
+	border: 1px solid $grid-border-2;
+	.caption {
+	    padding: 50px 70px;
+	}
+	.subtitle {
+		margin-top: -20px;
+	}
+}
 .events-detail {
 	.banneritem {
 		img {
@@ -751,5 +763,50 @@ ul.uk-accordion {
 	}
 	.item + .item {
 		margin-top: 20px;
+	}
+}
+.member-levels-list {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		background: $light-bg;
+		height: 100px;
+		width: 100%;
+		//z-index: -1;
+	}
+	.grid-container {
+		z-index: 1;
+		position: relative;
+	}
+}
+.mod-membership {
+	.top {
+		max-width: 330px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.card-member-bottom {
+		background: #F4F4F4;
+		border-radius: 15px;
+		padding: 15px 20px;
+		margin-top: 20px;
+		a{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&:hover {
+				.icon-eye {
+					background: url(../images/icon/eye-blue.svg);
+				}
+			}
+		}
+	}
+	.icon-eye {
+		background: url(../images/icon/eye.svg);
+		width: 25px;
+		height: 18px;
 	}
 }
