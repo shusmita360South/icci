@@ -102,7 +102,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                         <div class="uk-form-controls">
 
                             <div class="uk-form-label">First Name*</div>
-                            <input type="text" name="c_fname" id="c_fname" class="required uk-input" value="<?php echo isset($_SESSION['c_fname']) ? $_SESSION['c_fname'] : ''; ?>" />
+                            <input required type="text" name="c_fname" id="c_fname" class="uk-input" value="<?php echo isset($_SESSION['c_fname']) ? $_SESSION['c_fname'] : ''; ?>" />
                              
                         </div>
                     </div>
@@ -112,7 +112,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                         <div class="uk-form-controls">
 
                               <div class="uk-form-label">Last Name*</div>
-                              <input type="text" name="c_lname" id="c_lname" class="required uk-input" value="<?php echo isset($_SESSION['c_lname']) ? $_SESSION['c_lname'] : ''; ?>" />
+                              <input required  type="text" name="c_lname" id="c_lname" class=" uk-input" value="<?php echo isset($_SESSION['c_lname']) ? $_SESSION['c_lname'] : ''; ?>" />
                             
                         </div>
                     </div>
@@ -131,7 +131,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                     <div class="uk-margin">
                         <div class="uk-form-controls">
                               <div class="uk-form-label">Email*</div>
-                              <input type="email" name="c_email" id="c_email" class="required uk-input" value="<?php echo isset($_SESSION['c_email']) ? $_SESSION['c_email'] : ''; ?>" />
+                              <input required  type="email" name="c_email" id="c_email" class=" uk-input" value="<?php echo isset($_SESSION['c_email']) ? $_SESSION['c_email'] : ''; ?>" />
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                     <div class="uk-margin">
                         <div class="uk-form-controls">
                               <div class="uk-form-label">Organization/Business*</div>
-                              <input type="text" name="c_company" id="c_company" class="required uk-input" value="<?php echo isset($_SESSION['c_company']) ? $_SESSION['c_company'] : ''; ?>" />
+                              <input required type="text" name="c_company" id="c_company" class=" uk-input" value="<?php echo isset($_SESSION['c_company']) ? $_SESSION['c_company'] : ''; ?>" />
                               
                         </div>
                     </div>

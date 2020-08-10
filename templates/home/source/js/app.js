@@ -173,6 +173,48 @@ $(document).ready(function() {
     });
       
   
+    $('.logo-upload-btn').on('click', function() {
+
+        var logofile = $('input.memberlogo')[0].files[0];
+        var demoImageSrc;
+        var demoImage = document.querySelector('img#imgContainer');
+        $('#imgContainer').css("display", "none");
+        var file = document.querySelector('input[type=file]').files[0];
+        var reader = new FileReader();
+        reader.onload = function (event) {
+            demoImage.src = reader.result;
+            demoImageSrc = event.target.result;
+        }
+        reader.readAsDataURL(file);
+        setTimeout(function(){
+            $('#imgContainer').show();
+            $.ajax({
+                url: '/index.php?option=com_contactform&task=form.rsmembership_logouplod',
+                type: "POST",
+                data: {"logofilename": logofile['name'], "logofilesize": logofile['size'], "logofiletype": logofile['type'], "logofiledata": demoImage.src},
+          
+                success: function(data)
+
+                    {
+                        console.log(data);
+                        if(data=='invalid')
+                        {
+                         // invalid file format.
+                            $("#err").html("Invalid File !").fadeIn();
+                        }
+                        else
+                        {
+                            
+                        }
+                    },
+                error: function(e) 
+                    {
+                        $("#err").html(e).fadeIn();
+                    }          
+            });
+        }, 30);
+
+    });
 
 
 

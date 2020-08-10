@@ -348,6 +348,7 @@ li{
 	z-index: 1;
 	font-weight: bold;
 	overflow: hidden;
+	cursor: pointer;
 	@extend .transition300ms;
 	position: relative;
 	

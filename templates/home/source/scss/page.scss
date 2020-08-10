@@ -723,6 +723,13 @@ ul.uk-accordion {
 		position: relative;
 		padding: 50px;
 	}
+	input:required:focus {
+	  border: 1px solid red;
+	}
+	label.error{
+	    color: red;
+	    font-size: 12px;
+	}
 }
 .mod-map {
 	#map {
@@ -879,5 +886,38 @@ ul.uk-accordion {
 		background: url(../images/icon/eye.svg);
 		width: 25px;
 		height: 18px;
+	}
+}
+#rsm_subscribe_login_form, #rsm_subscribe_default_form {
+	.uk-input{
+		width: 300px;
+		margin-bottom: 10px;
+		height: 40px;
+		vertical-align: middle;
+		display: inline-block;
+		padding: 0 10px;
+		background: #fff;
+		color: #666;
+		border: 1px solid #e5e5e5;
+		transition: .2s ease-in-out;
+		    transition-property: all;
+		transition-property: color,background-color,border;
+		box-sizing: border-box;
+		margin: 0;
+		margin-bottom: 10px;
+		border-radius: 0;
+		font: inherit;
+		box-sizing: border-box;
+	}
+	input, select, textarea{
+		@extend .uk-input;
+	}
+	input[type=file] {
+		border: none;
+		padding-left: 0;
+		width: 220px;
+	}
+	#imgContainer {
+		max-width: 100px;
 	}
 }

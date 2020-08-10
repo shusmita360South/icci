@@ -22,11 +22,13 @@ class ContactformControllerForm extends ContactformController
 	 * Proxy for getModel.
 	 * @since	1.6
 	 */
-	public function getModel($name = 'Form', $prefix = 'ContactformModel')
+	
+
+	public function getModel($name = '', $prefix = '', $config = array('ignore_request' => true))
 	{
-		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
-		return $model;
+		return parent::getModel($name, $prefix, array('ignore_request' => false));
 	}
+
 
 	
 	public function contact_submit()
@@ -565,6 +567,93 @@ class ContactformControllerForm extends ContactformController
 			JFactory::getApplication()->redirect( $linky );
 			die;
 		}
+	}
+
+	public function rsmembership_logouplod()
+	{
+		// Check for request forgeries.
+        #		JSession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
+
+
+		$config    = JFactory::getConfig();
+		$sitename  = $config->get('sitename');
+		$siteemail = $config->get('mailfrom');
+
+		$db 		= JFactory::getDBO();
+
+		$logofilename = $_POST['logofilename'];
+		$logofilesize = $_POST['logofilesize'];
+		$logofiletype = $_POST['logofiletype'];
+		$logofiledata = $_POST['logofiledata'];
+
+		echo $logofiledata;
+
+		$fileuploadsuccess = "";
+		$fileuploaderror = "";
+		$target_logo_file = JPATH_ROOT.'/images/logo/'.basename($logofilename);
+		$uploadOk = 1;
+		if ($logofilename != ""){
+			
+			$cFileType = pathinfo($target_logo_file ,PATHINFO_EXTENSION);
+			
+			// Check if file already exists
+			if (basename($logofilename) != "") {
+				if (file_exists($target_logo_file)) {
+				    $fileuploaderror =  "Sorry, file already exists.";
+				    $uploadOk = 0;
+				}
+			}
+			// Check file size
+			if ($logofilesize > 2000000 ) {
+			    $fileuploaderror = "Sorry, your file is too large.";
+			    $uploadOk = 0;
+			}
+			// Allow certain file formats
+			if (basename($logofilename) != ""){
+				if($cFileType != "png" && $cFileType != "jpg" ) {
+			    	$fileuploaderror= "Sorry, only .png .jpg files are allowed.";
+			    	$uploadOk = 0;
+				}
+			}
+			
+			// Check if $uploadOk is set to 0 by an error
+			if ($uploadOk == 0) {
+			    $fileuploaderror = $fileuploaderror;
+			// if everything is ok, try to upload file
+			} else {
+				$target_logo_file_new = JPATH_ROOT.'/images/logo/'.basename($logofilename);
+
+				$logofile = fopen( $target_logo_file_new, 'wb' ); 
+
+			    // split the string on commas
+			    // $data[ 0 ] == "data:image/png;base64"
+			    // $data[ 1 ] == <actual base64 string>
+			    $data = explode( ',', $logofiledata );
+
+			    // we could add validation here with ensuring count( $data ) > 1
+			    fwrite( $logofile, base64_decode( $data[ 1 ] ) );
+
+			    // clean up the file resource
+			    fclose( $logofile ); 
+
+
+			    /*if (move_uploaded_file($_FILES["memberlogo"]["tmp_name"], $target_logo_file_new)) {
+			        $fileuploadsuccess = "Your file has been uploaded.";
+
+			    } else {
+			        $fileuploaderror = "Sorry, there was an error uploading your file.";
+			    }*/
+			    
+			}
+		}
+
+		$return['error'] =  $fileuploaderror ;
+		$return['success'] =  $fileuploadsuccess ;
+
+		header("Content-Type: application/json");
+		echo json_encode($return); exit;
+
+
 	}
 	
 }
