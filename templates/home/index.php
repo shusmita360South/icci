@@ -163,14 +163,15 @@ $privacyLinky ="/privacy-policy";
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">
                             <h4 class="orange">Membership</h4>
+                            <jdoc:include type="modules" name="footermenu2" />
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
                             <h4 class="orange">Services</h4>    
-                            <jdoc:include type="modules" name="footermenu2" />       
+                            <jdoc:include type="modules" name="footermenu3" />       
                         </div>
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
                             <h4 class="orange">Events</h4>    
-                            <jdoc:include type="modules" name="footermenu3" />       
+                            <jdoc:include type="modules" name="footermenu4" />       
                         </div>
                         
                     </div>

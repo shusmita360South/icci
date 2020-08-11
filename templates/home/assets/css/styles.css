@@ -2275,6 +2275,7 @@ footer .footer-top .uk-navbar-nav > li > a {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-transform: capitalize;
+  font-weight: normal;
 }
 footer .footer-top .totop {
   text-align: right;
@@ -2384,6 +2385,9 @@ footer .footer-middle .icon-outer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 10px;
+}
+footer .footer-middle .icon-outer:hover {
+  background: #009FE3;
 }
 footer .footer-middle .icon-outer span {
   color: #000;

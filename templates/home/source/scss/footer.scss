@@ -63,6 +63,7 @@ footer {
 			font-family: $font1;
 			font-size: 16px;
 			text-transform: capitalize;
+			font-weight: normal;
 			
 		}
 		.totop {
@@ -154,7 +155,7 @@ footer {
 			justify-content:center;
 			margin-left: 10px;
 			&:hover {
-				
+				background: $blue;
 			}
 			span {
 				color: #000;
