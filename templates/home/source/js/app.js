@@ -178,7 +178,7 @@ $(document).ready(function() {
         var logofile = $('input.memberlogo')[0].files[0];
         var demoImageSrc;
         var demoImage = document.querySelector('img#imgContainer');
-        $('#imgContainer').css("display", "none");
+
         var file = document.querySelector('input[type=file]').files[0];
         var reader = new FileReader();
         reader.onload = function (event) {
@@ -187,7 +187,7 @@ $(document).ready(function() {
         }
         reader.readAsDataURL(file);
         setTimeout(function(){
-            $('#imgContainer').show();
+            $('#imgContainer').addClass('show');
             $.ajax({
                 url: '/index.php?option=com_contactform&task=form.rsmembership_logouplod',
                 type: "POST",

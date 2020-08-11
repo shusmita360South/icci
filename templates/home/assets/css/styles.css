@@ -2132,6 +2132,10 @@ ul.uk-accordion .uk-accordion-content {
 }
 #rsm_subscribe_login_form #imgContainer, #rsm_subscribe_default_form #imgContainer {
   max-width: 100px;
+  opacity: 0;
+}
+#rsm_subscribe_login_form #imgContainer.show, #rsm_subscribe_default_form #imgContainer.show {
+  opacity: 1;
 }
 
 footer {
