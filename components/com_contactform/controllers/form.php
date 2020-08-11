@@ -636,6 +636,26 @@ class ContactformControllerForm extends ContactformController
 			    // clean up the file resource
 			    fclose( $logofile ); 
 
+			    $query = $db->getQuery(true);
+
+			    $userId = 206;
+			    // Fields to update.
+				
+				$fields = array($db->quoteName('f19') . " = '{$logofilename}'");
+
+				// Conditions for which records should be updated.
+				 
+
+			    $query->update($db->quoteName('#__rsmembership_subscribers'))->set($fields)->where('user_id='.$userId);
+
+				$db->setQuery($query);
+
+				if ($result = $db->execute())
+					{
+						echo "Logo case successfully changed!";
+					}
+
+
 
 			    /*if (move_uploaded_file($_FILES["memberlogo"]["tmp_name"], $target_logo_file_new)) {
 			        $fileuploadsuccess = "Your file has been uploaded.";
