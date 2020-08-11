@@ -326,6 +326,9 @@ ul.uk-accordion {
 		display: flex;
 		flex-direction: row;
 		padding-bottom: 55px;
+		&.no-padding-bottom {
+			padding-bottom: 30px;
+		}
 		
 	}
 	.content-content {
@@ -405,6 +408,24 @@ ul.uk-accordion {
 		display: inline-block;
 	}
 	
+}
+.card-directory {
+	.image {
+		height: 200px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid $grid-border-2;
+	}
+	.content-content {
+		p{
+			display: flex;
+			align-items: start;
+		}
+		.icon-top {
+			margin-top: 4px;
+			margin-right: 10px;
+		}
+	}
 }
 .card-staff {
 	.content {
@@ -923,5 +944,44 @@ ul.uk-accordion {
 		&.show {
 			opacity: 1;
 		}
+	}
+}
+.directory-list {
+	form {
+		display: flex;
+		justify-content: center;
+	}
+	.button {
+		border-radius: 0 30px 30px 0;
+		height: 40px;
+		line-height: 40px;
+	}
+	#keyword-input {
+		width: 400px;
+		border-radius: 30px 0 0 30px;
+	}
+	.uk-select {
+		width: auto;
+	}
+	.gz-alphanumeric-btn {
+		display: flex;
+		justify-content: center;
+		.gz-alpha-btns {
+			color: $blue;
+			background-color: #0000000a;
+			border:1px solid $grid-border-2;
+			padding: 0px 6px;
+			width: 30px;
+			text-align: center;
+			box-sizing: border-box;
+			&.active {
+				color: $white;
+				background: $blue;
+			}
+			&.all {
+				width: 40px;
+			}
+		}
+
 	}
 }

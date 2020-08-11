@@ -1481,6 +1481,9 @@ ul.uk-accordion .uk-accordion-content {
           flex-direction: row;
   padding-bottom: 55px;
 }
+.card-event .content.no-padding-bottom, .card-event2 .content.no-padding-bottom {
+  padding-bottom: 30px;
+}
 .card-event .content-content .readmore, .card-event2 .content-content .readmore {
   position: absolute;
   margin-bottom: 0;
@@ -1568,6 +1571,33 @@ ul.uk-accordion .uk-accordion-content {
 }
 .card-event ._icon-outer, .card-event2 ._icon-outer {
   display: inline-block;
+}
+
+.card-directory .image {
+  height: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #D6D6D6;
+}
+.card-directory .content-content p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.card-directory .content-content .icon-top {
+  margin-top: 4px;
+  margin-right: 10px;
 }
 
 .card-staff .content {
@@ -2136,6 +2166,57 @@ ul.uk-accordion .uk-accordion-content {
 }
 #rsm_subscribe_login_form #imgContainer.show, #rsm_subscribe_default_form #imgContainer.show {
   opacity: 1;
+}
+
+.directory-list form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.directory-list .button {
+  border-radius: 0 30px 30px 0;
+  height: 40px;
+  line-height: 40px;
+}
+.directory-list #keyword-input {
+  width: 400px;
+  border-radius: 30px 0 0 30px;
+}
+.directory-list .uk-select {
+  width: auto;
+}
+.directory-list .gz-alphanumeric-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.directory-list .gz-alphanumeric-btn .gz-alpha-btns {
+  color: #009FE3;
+  background-color: #0000000a;
+  border: 1px solid #D6D6D6;
+  padding: 0px 6px;
+  width: 30px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.directory-list .gz-alphanumeric-btn .gz-alpha-btns.active {
+  color: #FFF;
+  background: #009FE3;
+}
+.directory-list .gz-alphanumeric-btn .gz-alpha-btns.all {
+  width: 40px;
 }
 
 footer {

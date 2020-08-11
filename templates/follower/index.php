@@ -91,7 +91,7 @@ $privacyLinky ="/privacy-policy";
                     
                     <div class="uk-navbar-right">
                         <jdoc:include type="modules" name="mainmenu" /> 
-                        <a href="" class="button btn-blue menu-btn">Join Now</a>
+                        <a href="/membership/levels" class="button btn-blue menu-btn">Join Now</a>
                         <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
                         <a href="<?php echo $this->params->get('linkedin');?>"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
                         <a href="<?php echo $this->params->get('instagram');?>"><span class="icon-outer"><span uk-icon="icon: instagram"></span></span></a>
