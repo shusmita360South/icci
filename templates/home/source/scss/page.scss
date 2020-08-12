@@ -130,6 +130,14 @@
 	padding-bottom: 300px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@media only screen and (max-width: 1470px) {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+	@media only screen and (max-width: 1100px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 	p,h1,h4, a {
 		color: $white;
 	}
@@ -151,6 +159,10 @@
 	}
 }
 .page-header-2-image {
+
+	img {
+		border-radius: 15px;
+	}
 	position: relative;
 	&:before {
 		content: "";
@@ -506,12 +518,15 @@ ul.uk-accordion {
 		padding-bottom: 30px;
 		display: flex;
 		justify-content: center;
+		@media only screen and (max-width: 639px) {
+			padding-top: 20px;
+		}
 		>div {
 			@media only screen and (max-width: 639px) {
-				padding-left: 0;
 				margin-top: 10px;
 			}
 		}
+		
 	}
 	.select-outer {
 		border: 1px solid #000;
@@ -560,6 +575,12 @@ ul.uk-accordion {
 			}
 			@media only screen and (max-width: 639px) {
 				margin-top: 0px;
+			}
+			>div {
+				@media only screen and (max-width: 639px) {
+					padding-left: 0;
+					margin-top: 10px;
+				}
 			}
 		}
 	}
@@ -726,6 +747,13 @@ ul.uk-accordion {
 			&:nth-child(odd) {
 			  .content-left {
 			  	margin-right: 100px;
+			  	@media only screen and (max-width: 800px) {
+			  		margin-right: 50px;
+			  	}
+			  	@media only screen and (max-width: 639px) {
+			  		margin-right: 0px;
+			  		text-align: center;
+			  	}
 			  }
 			}
 
@@ -733,6 +761,13 @@ ul.uk-accordion {
 			  flex-direction: row-reverse;
 			  .content-left {
 			  	margin-left: 100px;
+			  	@media only screen and (max-width: 800px) {
+			  		margin-left: 50px;
+			  	}
+			  	@media only screen and (max-width: 639px) {
+			  		margin-left: 0px;
+			  		text-align: center;
+			  	}
 			  }
 			}
 		}
@@ -772,8 +807,15 @@ ul.uk-accordion {
 .annual-reports {
 	.button + .button {
 		margin-left: 30px;
+		@media only screen and (max-width:639px) {
+			margin-left: 10px;
+		}
 	}
 	.button {
+		@media only screen and (max-width:639px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		.icon {
 			margin-right: 10px;
 			top: 3px;
@@ -791,6 +833,9 @@ ul.uk-accordion {
 }
 .form-outer {
 	position: relative;
+	@media only screen and (max-width:639px) {
+		padding-bottom: 0;
+	}
 	&:before {
 		content: "";
 		position: absolute;
@@ -827,6 +872,9 @@ ul.uk-accordion {
 .mod-map {
 	#map {
 	  height: 100%;
+	  @media only screen and (max-width:639px) {
+	  	height: 400px;
+	  }
 	}
 
 	.icon-outer {
@@ -1031,15 +1079,28 @@ ul.uk-accordion {
 	form {
 		display: flex;
 		justify-content: center;
+		@media only screen and (max-width: 639px) {
+			flex-direction: column;
+		}
 	}
 	.button {
 		border-radius: 0 30px 30px 0;
 		height: 40px;
 		line-height: 40px;
+		@media only screen and (max-width: 768px) {
+			padding-left: 20px;
+		}
+		@media only screen and (max-width: 639px) {
+			border-radius: 0 0px 15px 15px;
+		}
 	}
 	#keyword-input {
 		width: 400px;
 		border-radius: 30px 0 0 30px;
+		@media only screen and (max-width: 639px) {
+			width: 100%;
+			border-radius: 15px 15px 0 0;
+		}
 	}
 	.uk-select {
 		width: auto;
@@ -1047,6 +1108,8 @@ ul.uk-accordion {
 	.gz-alphanumeric-btn {
 		display: flex;
 		justify-content: center;
+		width: 100%;
+		overflow-x: auto;
 		.gz-alpha-btns {
 			color: $blue;
 			background-color: #0000000a;

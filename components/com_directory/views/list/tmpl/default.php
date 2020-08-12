@@ -37,7 +37,7 @@ $keyword = JRequest::getVar('keyword');
       <h1 class="center"><?php echo $pageTitle;?></h1>
 
       <form class="uk-margin-medium-top">
-        <input name="keyword" class="uk-input" id="keyword-input" type="text" value="<?php echo $keyword?>"/>
+        <input name="keyword" placeholder="Keyword" class="uk-input" id="keyword-input" type="text" value="<?php echo $keyword?>"/>
 
         <select name="category" class="uk-select chosen-select">
           <option value="">All Category</option>

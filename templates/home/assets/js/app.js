@@ -81,10 +81,10 @@ $(document).ready(function() {
     //================Mobile menu===============================
     //=============================================================
 
-    $('.uk-offcanvas .deeper').on('click', function(event) {
+    $('.uk-offcanvas .deeper > span, .uk-offcanvas .deeper > a').on('click', function(event) {
         event.preventDefault();
-        $(this).toggleClass('expanded');
-        $(this).find('.nav-child').toggleClass('hide');
+        $(this).parent().toggleClass('expanded');
+        $(this).next('.nav-child').toggleClass('hide');
     });
 
 

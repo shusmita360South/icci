@@ -391,6 +391,7 @@ header {
 		padding: 0 15px;
 		min-height: 40px;
 		display: inline-block;
+		width: 100%;
 		&:hover, &:focus,&:active{
 			color: $blue;
 		}

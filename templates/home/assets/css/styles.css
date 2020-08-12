@@ -129,25 +129,25 @@ input::-moz-focus-inner {
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #000 !important;
-  opacity: 1;
+  opacity: 0.7 !important;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #000;
-  opacity: 1;
+  opacity: 0.7 !important;
 }
 
 ::-ms-input-placeholder {
   /* IE 10+ */
   color: #000;
-  opacity: 1;
+  opacity: 0.7 !important;
 }
 
 ::-moz-placeholder {
   /* Firefox 18- */
   color: #000;
-  opacity: 1;
+  opacity: 0.7 !important;
 }
 
 .uk-input::-webkit-input-placeholder, #rsm_subscribe_login_form input::-webkit-input-placeholder, #rsm_subscribe_login_form select::-webkit-input-placeholder, #rsm_subscribe_login_form textarea::-webkit-input-placeholder, #rsm_subscribe_default_form input::-webkit-input-placeholder, #rsm_subscribe_default_form select::-webkit-input-placeholder, #rsm_subscribe_default_form textarea::-webkit-input-placeholder {
@@ -1115,6 +1115,7 @@ header .menu-btn {
   padding: 0 15px;
   min-height: 40px;
   display: inline-block;
+  width: 100%;
 }
 .uk-offcanvas .uk-navbar-nav > li > a:hover, .uk-offcanvas .uk-navbar-nav > li > a:focus, .uk-offcanvas .uk-navbar-nav > li > a:active, .uk-offcanvas .uk-navbar-nav > li > span:hover, .uk-offcanvas .uk-navbar-nav > li > span:focus, .uk-offcanvas .uk-navbar-nav > li > span:active {
   color: #009FE3;
@@ -1330,6 +1331,18 @@ header .menu-btn {
   -webkit-background-size: cover;
           background-size: cover;
 }
+@media only screen and (max-width: 1470px) {
+  .page-header-1 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .page-header-1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .page-header-1 p, .page-header-1 h1, .page-header-1 h4, .page-header-1 a {
   color: #FFF;
 }
@@ -1351,6 +1364,9 @@ header .menu-btn {
 
 .page-header-2-image {
   position: relative;
+}
+.page-header-2-image img {
+  border-radius: 15px;
 }
 .page-header-2-image:before {
   content: "";
@@ -1743,8 +1759,12 @@ ul.uk-accordion .uk-accordion-content {
           justify-content: center;
 }
 @media only screen and (max-width: 639px) {
+  .events-list #filter-btn {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 639px) {
   .events-list #filter-btn > div {
-    padding-left: 0;
     margin-top: 10px;
   }
 }
@@ -1818,6 +1838,12 @@ ul.uk-accordion .uk-accordion-content {
 @media only screen and (max-width: 639px) {
   .mod-events .top #filter-btn {
     margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .mod-events .top #filter-btn > div {
+    padding-left: 0;
+    margin-top: 10px;
   }
 }
 .mod-events .slide {
@@ -1992,6 +2018,17 @@ ul.uk-accordion .uk-accordion-content {
 .generalpages-detail .layout3 .layout3-grid:nth-child(odd) .content-left {
   margin-right: 100px;
 }
+@media only screen and (max-width: 800px) {
+  .generalpages-detail .layout3 .layout3-grid:nth-child(odd) .content-left {
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .generalpages-detail .layout3 .layout3-grid:nth-child(odd) .content-left {
+    margin-right: 0px;
+    text-align: center;
+  }
+}
 .generalpages-detail .layout3 .layout3-grid:nth-child(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -2001,6 +2038,17 @@ ul.uk-accordion .uk-accordion-content {
 }
 .generalpages-detail .layout3 .layout3-grid:nth-child(even) .content-left {
   margin-left: 100px;
+}
+@media only screen and (max-width: 800px) {
+  .generalpages-detail .layout3 .layout3-grid:nth-child(even) .content-left {
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .generalpages-detail .layout3 .layout3-grid:nth-child(even) .content-left {
+    margin-left: 0px;
+    text-align: center;
+  }
 }
 .generalpages-detail .layout4 img, .generalpages-detail .layout5 img {
   margin-bottom: 10px;
@@ -2038,6 +2086,17 @@ ul.uk-accordion .uk-accordion-content {
 .annual-reports .button + .button {
   margin-left: 30px;
 }
+@media only screen and (max-width: 639px) {
+  .annual-reports .button + .button {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .annual-reports .button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .annual-reports .button .icon {
   margin-right: 10px;
   top: 3px;
@@ -2051,6 +2110,11 @@ ul.uk-accordion .uk-accordion-content {
 
 .form-outer {
   position: relative;
+}
+@media only screen and (max-width: 639px) {
+  .form-outer {
+    padding-bottom: 0;
+  }
 }
 .form-outer:before {
   content: "";
@@ -2087,6 +2151,11 @@ ul.uk-accordion .uk-accordion-content {
 
 .mod-map #map {
   height: 100%;
+}
+@media only screen and (max-width: 639px) {
+  .mod-map #map {
+    height: 400px;
+  }
 }
 .mod-map .icon-outer .icon {
   width: 84px;
@@ -2341,14 +2410,39 @@ ul.uk-accordion .uk-accordion-content {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media only screen and (max-width: 639px) {
+  .directory-list form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .directory-list .button {
   border-radius: 0 30px 30px 0;
   height: 40px;
   line-height: 40px;
 }
+@media only screen and (max-width: 768px) {
+  .directory-list .button {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .directory-list .button {
+    border-radius: 0 0px 15px 15px;
+  }
+}
 .directory-list #keyword-input {
   width: 400px;
   border-radius: 30px 0 0 30px;
+}
+@media only screen and (max-width: 639px) {
+  .directory-list #keyword-input {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
 }
 .directory-list .uk-select {
   width: auto;
@@ -2362,6 +2456,8 @@ ul.uk-accordion .uk-accordion-content {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  overflow-x: auto;
 }
 .directory-list .gz-alphanumeric-btn .gz-alpha-btns {
   color: #009FE3;

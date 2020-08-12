@@ -29,7 +29,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
 </div>
 <?php if($item->image1):?>
 <div class="page-header-2-image uk-text-center">
-  	
+  <div class="grid-container">
   	<?php if($item->videolink):?>
 	  	<div class="video-wrap">
 	  		<a class="video-btn image-outer" href="<?php echo $item->videolink;?>"> 
@@ -45,7 +45,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
 	<?php else: ?>
 		<img src="<?php echo $item->image1;?>"/>
 	<?php endif;?>
-
+  </div>
 </div>
 <?php endif;?>
 

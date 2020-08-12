@@ -61,7 +61,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
             $allDays['slug'] = array ('Mon','Tue','Wed','Thu','Fri','Sat','SUN');
             $allDays['title'] = array ('MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY');
         ?>
-        <div class="uk-width-1-2 uk-width-auto@s">
+        <div class="uk-width-1-1 uk-width-auto@s">
           <div class="select-outer">
             <select class="filter-select-days uk-select">
               <option value="0">Weekdays</option>
@@ -73,7 +73,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
           </div>
         </div>
         
-        <div class="uk-width-1-2 uk-width-auto@s">
+        <div class="uk-width-1-1 uk-width-auto@s">
           <div class="select-outer">
             <select class="filter-select-type uk-select">
               <option value="0">Event Types</option>
@@ -84,7 +84,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
           </div>
         </div>
 
-        <div class="uk-width-1-2 uk-width-auto@s">
+        <div class="uk-width-1-1 uk-width-auto@s">
           <div class="select-outer">
             <select class="filter-select-catid uk-select">
               <option value="0">Any Category</option>
