@@ -51,8 +51,6 @@ class EventsModelList extends JModelList {
 		$query->from($db->quoteName('#__events_items', 'ni'));
 		$query->join('LEFT', $db->quoteName('#__events_categories', 'nc') . ' ON (' . $db->quoteName('ni.catid') . ' = ' . $db->quoteName('nc.id') . ')');
 		$query->where('ni.state = 1');
-
-
 		if($this->typeId) {
 			$query->where('ni.catid = ' . $db->quote($this->typeId));
 		}

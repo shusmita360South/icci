@@ -111,6 +111,9 @@ $itemid = 111;
             $ddate = date_format($sdate,"l jS F Y");
 
             $edate=date_create($item->etime);
+            $date_now = date("Y-m-d"); 
+
+            if ($date_now < date_format($sdate,"Y-m-d")) :
        
         ?>
       
@@ -136,6 +139,7 @@ $itemid = 111;
               </div>
             </a>
         </div>
+      <?php endif; ?>
       <?php endforeach; ?>
     </div>
 

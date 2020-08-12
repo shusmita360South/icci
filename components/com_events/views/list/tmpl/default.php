@@ -131,35 +131,39 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
             <?php
               $linky = JURI::base().substr(JRoute::_('index.php?option=com_events&view=details&id='.$item->id.':'.JFilterOutput::stringURLSafe($item->title).'&Itemid='.$itemid),strlen(JURI::base(true))+1);
 
-                $sdate=date_create($item->stime);
-                $ddate = date_format($sdate,"l jS F Y");
+              $sdate=date_create($item->stime);
+              $ddate = date_format($sdate,"l jS F Y");
 
-                $edate=date_create($item->etime);
+              $edate=date_create($item->etime);
+              $date_now = date("Y-m-d"); 
+
+              if ($date_now < date_format($sdate,"Y-m-d")) :
            
             ?>
           
-            <div data-day="<?php echo date_format($sdate,"D");;?>" data-catid="<?php echo $item->catid;?>" data-type="<?php echo $item->type;?>" class="card-event uk-width-1-1 uk-width-1-4@s">
-                <a href="<?php echo $linky;?>">
-                  <div class="item ">
-                      <div class="image">
-                        <img src="<?php echo $item->thumb;?>"/>     
-                      </div>
-                      <div class="content white-bg">
-                        <div class="content-date">
-                          <p class="month"><?php echo date_format($sdate,"M");?></p>
-                          <p class="day"><?php echo date_format($sdate,"j");?></p>
+              <div data-day="<?php echo date_format($sdate,"D");;?>" data-catid="<?php echo $item->catid;?>" data-type="<?php echo $item->type;?>" class="card-event uk-width-1-1 uk-width-1-4@s">
+                  <a href="<?php echo $linky;?>">
+                    <div class="item ">
+                        <div class="image">
+                          <img src="<?php echo $item->thumb;?>"/>     
                         </div>
-                        <div class="content-content">
-                          <h6><?php echo $item->title; ?></h6>
-                          <p class="time"><?php echo date_format($sdate,"H:i")." - ".date_format($edate,"H:i");?></p>
-                          <p><?php echo $item->intro; ?></p>
-                          <p class="readmore">Read More</p>
+                        <div class="content white-bg">
+                          <div class="content-date">
+                            <p class="month"><?php echo date_format($sdate,"M");?></p>
+                            <p class="day"><?php echo date_format($sdate,"j");?></p>
+                          </div>
+                          <div class="content-content">
+                            <h6><?php echo $item->title; ?></h6>
+                            <p class="time"><?php echo date_format($sdate,"H:i")." - ".date_format($edate,"H:i");?></p>
+                            <p><?php echo $item->intro; ?></p>
+                            <p class="readmore">Read More</p>
+                          </div>
                         </div>
-                      </div>
-      
-                  </div>
-                </a>
-            </div>
+        
+                    </div>
+                  </a>
+              </div>
+            <?php endif; ?>
           <?php endforeach; ?>
         </div>
 

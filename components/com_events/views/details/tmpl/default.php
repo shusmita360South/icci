@@ -121,7 +121,8 @@ if(isset($item->relatedevents) ) {
           </div>
           <h3 class="uk-margin-medium-top">Event Location</h3>
           <div class="card-map">
-           
+            <?php echo $item->locationtitle;?>
+            <?php if($item->location):?>
             <iframe
               width="340"
               height="220"
@@ -129,6 +130,7 @@ if(isset($item->relatedevents) ) {
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvavqTeZXc48iALmnGfypI6ZuJ1jNW-lE
                 &q=<?php echo $item->location;?>" allowfullscreen>
             </iframe>
+            <?php endif;?>
           </div>
           <h3 class="uk-margin-medium-top">Share with friends</h3>
           <div class="card-share">
