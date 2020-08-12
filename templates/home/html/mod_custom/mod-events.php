@@ -12,6 +12,7 @@ require_once JPATH_BASE . '/templates/home/assets/helper.php';
 $helper = new TempHelper();
 $list = $helper->getEvents();
 $itemid = 111;
+
 ?>
 <?php 
     $allCats['slug'] = array();
@@ -105,6 +106,7 @@ $itemid = 111;
 		 	<?php foreach ($list as $item): ?>
         
         <?php
+          $countItem = 0;
           $linky = JURI::base().substr(JRoute::_('index.php?option=com_events&view=details&id='.$item->id.':'.JFilterOutput::stringURLSafe($item->title).'&Itemid='.$itemid),strlen(JURI::base(true))+1);
 
             $sdate=date_create($item->stime);
@@ -114,6 +116,7 @@ $itemid = 111;
             $date_now = date("Y-m-d"); 
 
             if ($date_now < date_format($sdate,"Y-m-d")) :
+              $countItem++;
        
         ?>
       
@@ -142,10 +145,11 @@ $itemid = 111;
       <?php endif; ?>
       <?php endforeach; ?>
     </div>
-
-    <div class="progress uk-margin-medium-top" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-        <span class="slider__label sr-only"></span>
-    </div>
+    <?php if($countItem > 4): ?>
+      <div class="progress uk-margin-medium-top" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <span class="slider__label sr-only"></span>
+      </div>
+    <?php endif; ?>
 
     <a href="/events/upcoming-events" class="button uk-margin-medium-top">VIEW ALL EVENTS</a>
       
