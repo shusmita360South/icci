@@ -99,6 +99,10 @@ a:hover {
   color: #009FE3;
 }
 
+em {
+  color: #000;
+}
+
 button, a {
   cursor: pointer;
   outline: 0;

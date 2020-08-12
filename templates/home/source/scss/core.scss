@@ -49,6 +49,9 @@ a {
   	color: $blue;
   }
 }
+em {
+    color: $text-color;
+}
 button, a {
 	cursor: pointer;
 	outline:0;
