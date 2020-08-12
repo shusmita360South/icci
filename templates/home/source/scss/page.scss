@@ -921,6 +921,11 @@ ul.uk-accordion {
 }
 .member-levels-list {
 	position: relative;
+	.subtitle {
+		@media only screen and (max-width: 639px) {
+			font-size: 10px;
+		}
+	}
 	&:before {
 		content: "";
 		position: absolute;
@@ -930,6 +935,9 @@ ul.uk-accordion {
 		height: 100px;
 		width: 100%;
 		//z-index: -1;
+		@media only screen and (max-width: 639px) {
+			height: 30px;
+		}
 	}
 	.grid-container {
 		z-index: 1;
@@ -985,6 +993,16 @@ ul.uk-accordion {
 		align-items: flex-end;
 		display: flex;
 		justify-content: start;
+	}
+	h2.rsm_title {
+		@media only screen and (max-width: 639px) {
+	    	font-size: 110% !important;
+	    }
+	}
+	h3.rsm_title {
+		@media only screen and (max-width: 639px) {
+	    	font-size: 14px;
+	    }
 	}
 }
 .mod-membership {

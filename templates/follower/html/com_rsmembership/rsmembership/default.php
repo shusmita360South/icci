@@ -31,7 +31,7 @@ $extras = $helper->getMemberExtras();
 	
 	<div class="grid-container">
 		<div uk-grid class="uk-grid-collapse card-member-outer">
-			<div class="uk-width-1-1 uk-width-1-4@s member-benefit-col"><h3>Member Benefits</h3></div>
+			<div class="uk-visible@s uk-width-1-4@s member-benefit-col"><h3>Member Benefits</h3></div>
 			<?php 
 			$i = 1; 
 			foreach ($this->items as $item) 
@@ -57,13 +57,13 @@ $extras = $helper->getMemberExtras();
 				
 				$item->description = str_replace(array_keys($placeholders), array_values($placeholders), $item->description);
 				?>
-					<div class="uk-width-1-1 uk-width-1-4@s rsm_container<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
+					<div class="uk-width-1-3 uk-width-1-4@s rsm_container<?php echo $this->escape($this->params->get('pageclass_sfx')); ?>">
 						<div class="thumbnail card-member center">
 							<?php echo $image; ?>
 							<div class="caption">
 								<h3 class="rsm_title"><a href="<?php echo $link; ?>"><?php echo $item->name; ?></a></h3>
 								
-								<?php echo $item->description; ?>
+								<div class="uk-visible@s"><?php echo $item->description; ?></div>
 								<h2 class="rsm_title"><?php echo $price; ?></h2>
 								<p class="subtitle">Annual Membership</p>
 								<div class="clearfix"></div>
@@ -96,7 +96,7 @@ $extras = $helper->getMemberExtras();
 					$itemExtra = $helper->getMemberItemExtra($item->id,$extra->id );
 
 				?>
-						<div class="uk-width-1-1 uk-width-1-4@s">
+						<div class="uk-width-1-3 uk-width-1-4@s">
 							<div class="thumbnail card-member-benefit center">
 								<?php print_r($itemExtra);?>
 							</div>

@@ -2217,6 +2217,11 @@ ul.uk-accordion .uk-accordion-content {
 .member-levels-list {
   position: relative;
 }
+@media only screen and (max-width: 639px) {
+  .member-levels-list .subtitle {
+    font-size: 10px;
+  }
+}
 .member-levels-list:before {
   content: "";
   position: absolute;
@@ -2225,6 +2230,11 @@ ul.uk-accordion .uk-accordion-content {
   background: #EDFAFF;
   height: 100px;
   width: 100%;
+}
+@media only screen and (max-width: 639px) {
+  .member-levels-list:before {
+    height: 30px;
+  }
 }
 .member-levels-list .grid-container {
   z-index: 1;
@@ -2295,6 +2305,16 @@ ul.uk-accordion .uk-accordion-content {
   -webkit-justify-content: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+@media only screen and (max-width: 639px) {
+  .member-levels-list h2.rsm_title {
+    font-size: 110% !important;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .member-levels-list h3.rsm_title {
+    font-size: 14px;
+  }
 }
 
 .mod-membership .top {
