@@ -2509,6 +2509,9 @@ footer .footer-top p:first-child {
 footer .footer-top a:hover {
   color: #009FE3;
 }
+footer .footer-top .newsletter-outer {
+  max-width: 467px;
+}
 footer .footer-top .menu-btn {
   font-size: 14px;
 }
