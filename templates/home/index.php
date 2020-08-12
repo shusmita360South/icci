@@ -133,11 +133,11 @@ $privacyLinky ="/privacy-policy";
                         <div class="uk-width-1-1 uk-width-auto@s uk-width-2-6@m newsletter-outer">
                             
                             <h4>Subscribe to our newsletters</h4>
-                            <form action="https://multiworks.us17.list-manage.com/subscribe/post?u=bcf2386ff78d9047bf3aabf9d&amp;id=75d689336e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <form action="https://italcham.us14.list-manage.com/subscribe/post?u=e77767e9869f5167a9a3c2fff&amp;id=bdb1b7f344" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     
                                 <div class="uk-margin">
                                     <div class="uk-form-controls">
-                                        
+                                       
                                         <input type="email" value="" name="EMAIL" class="uk-input required email" id="mce-EMAIL" placeholder="youremail@example.com"><input class="submit" type="submit" value='' name="subscribe" id="mc-embedded-subscribe" >
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@ $privacyLinky ="/privacy-policy";
         </div>
     </div>
 </main>
-
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script src="<?php echo $tpath; ?>/assets/js/app.js"></script>
 
 </body>
