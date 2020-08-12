@@ -42,7 +42,7 @@ $itemid = 111;
     <div class="top">
       <h2><?php echo $module->title; ?></h2>
 	  	<div uk-grid id="filter-btn" class="">
-	    	<div class="uk-width-1-2 uk-width-auto@s">
+	    	<div class="uk-width-1-1 uk-width-auto@s">
 	          <div class="select-outer">
 	            <select class="filter-select-days uk-select">
 	              <option value="">Weekdays</option>
@@ -53,7 +53,7 @@ $itemid = 111;
 	          </div>
 	        </div>
 	        
-	        <div class="uk-width-1-2 uk-width-auto@s">
+	        <div class="uk-width-1-1 uk-width-auto@s">
 	          <div class="select-outer">
 	            <select class="filter-select-type uk-select">
 	              <option value="">Event Types</option>
@@ -64,7 +64,7 @@ $itemid = 111;
 	          </div>
 	        </div>
 
-	        <div class="uk-width-1-2 uk-width-auto@s">
+	        <div class="uk-width-1-1 uk-width-auto@s">
 	          <div class="select-outer">
 	            <select class="filter-select-catid uk-select">
 	              <option value="">Any Category</option>

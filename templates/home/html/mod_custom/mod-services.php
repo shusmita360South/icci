@@ -31,7 +31,7 @@ $itemid = 104;
        
         ?>
       
-        <div class="uk-width-1-2 uk-width-1-3@s">
+        <div class="uk-width-1-1 uk-width-1-3@s">
             <a href="<?php echo $linky;?>">
               <div class="item">
                   <div class="image">

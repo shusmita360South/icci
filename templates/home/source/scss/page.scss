@@ -69,14 +69,30 @@
 }
 .mod-banner {
 	position: relative;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 80px);
 	background-image: url('/images/hero.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: 50%;
 	h1 {
 		font-size: 66px;
 		line-height: 77px;
 		font-weight: bold;
+
+		@media only screen and (max-width: 1470px) {
+			font-size: 56px;
+			line-height: 67px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 46px;
+			line-height: 57px;
+		}
+		@media only screen and (max-width: 639px) {
+			font-size: 36px;
+			line-height: 47px;	
+		}
 	}
 	.content {
 		position: absolute;
@@ -103,6 +119,9 @@
     	img {
     		max-width: 240px;
     		max-height: 105px;
+    		@media only screen and (max-width: 639px) {
+    			width: 100%;
+    		}
     	}
 
 	}
@@ -151,6 +170,11 @@
 			max-width: 415px;
 		}
 	}
+	.uk-grid {
+		@media only screen and (max-width: 639px) {
+			flex-direction: column-reverse;
+		}
+	}
 }
 //.mod-about-2 {
 	.video-wrap {
@@ -164,6 +188,12 @@
 			top:50%;
 			left:50%;
 			transform: translate(-50%,-50%);
+			svg {
+				@media only screen and (max-width: 639px) {
+					width: 60px;
+					height: 60px;
+				}
+			}
 
 		}
 		svg {
@@ -190,6 +220,11 @@
 	  columns: 2;
 	  -webkit-columns: 2;
 	  -moz-columns: 2;
+	}
+	img {
+		@media only screen and (max-width: 639px) {
+    		display: none;
+    	}
 	}
 }
 .mod_partner {
@@ -445,7 +480,7 @@ ul.uk-accordion {
 	    padding: 50px 70px;
 	}
 	.subtitle {
-		margin-top: -20px;
+		margin-top: -17px;
 	}
 }
 .events-detail {
@@ -471,12 +506,22 @@ ul.uk-accordion {
 		padding-bottom: 30px;
 		display: flex;
 		justify-content: center;
+		>div {
+			@media only screen and (max-width: 639px) {
+				padding-left: 0;
+				margin-top: 10px;
+			}
+		}
 	}
 	.select-outer {
 		border: 1px solid #000;
 		padding-left: 20px;
 		padding-right: 20px;
 		border-radius: 20px;
+		@media only screen and (max-width: 800px) {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
 	}
 	.uk-select {
 		border: none;
@@ -499,6 +544,9 @@ ul.uk-accordion {
 	.top {
 		display: flex;
 		align-items: center;
+		@media only screen and (max-width: 910px) {
+			flex-direction: column;
+		}
 		h2 {
 			display: inline-block;
 		}
@@ -506,11 +554,21 @@ ul.uk-accordion {
 			padding: 0;
 			display: flex;
 			margin-left: auto;
+			@media only screen and (max-width: 910px) {
+				margin-right: auto;
+				margin-top: 30px;
+			}
+			@media only screen and (max-width: 639px) {
+				margin-top: 0px;
+			}
 		}
 	}
 	.slide {
 		
 			padding: 20px;
+			@media only screen and (max-width: 480px) {
+				padding: 0px;
+			}
 		
 		
 	}
@@ -539,6 +597,9 @@ ul.uk-accordion {
 	  background-size: 0 100%;
 	  
 	  transition: background-size .4s ease-in-out;
+	  @media only screen and (max-width: 480px) {
+				display: none;
+			}
 	}
 	.sr-only {
 	  position: absolute;
@@ -563,6 +624,10 @@ ul.uk-accordion {
 	.grid-container-medium {
 		padding-left: 60px;
 		padding-right: 60px;
+		@media only screen and (max-width: 1230px) {
+			padding-left: $mobile-padding-lr;
+			padding-right: $mobile-padding-lr;
+		}
 	}
 	.item {
 		padding: 50px 20px 20px 20px;
@@ -571,6 +636,10 @@ ul.uk-accordion {
 		height: 100%;
 		position: relative;
 		border-radius: 15px;
+		@media only screen and (max-width:639px) {
+			background: $white;
+
+		}
 		&:hover {
 			background: $white;
 			.readmore {
@@ -595,6 +664,9 @@ ul.uk-accordion {
 		text-align: center;
 		left: 0;
 		opacity: 0;
+		@media only screen and (max-width:639px) {
+			opacity: 1;
+		}
 	}
 	.content {
 		padding-bottom: 55px;
@@ -882,10 +954,19 @@ ul.uk-accordion {
 			bottom: 50px;
 			left: 50%;
 			transform: translateX(-50%);
+			@media only screen and (max-width: 800px) {
+				bottom: 30px;
+			}
 		}
 	}
 	.caption {
 		padding: 50px 70px 120px 70px;
+		@media only screen and (max-width: 1200px) {
+			padding: 40px 40px 100px 40px;
+		}
+		@media only screen and (max-width: 800px) {
+			padding: 20px 20px 80px 20px;
+		}
 	}
 	.card-member-bottom {
 		background: #F4F4F4;

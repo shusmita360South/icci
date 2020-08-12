@@ -91,7 +91,7 @@ $privacyLinky ="/privacy-policy";
                     
                     <div class="uk-navbar-right">
                         <jdoc:include type="modules" name="mainmenu" /> 
-                        <a href="/membership/levels" class="button btn-blue menu-btn">Join Now</a>
+                        <a href="/membership/levels" class="button btn-blue menu-btn uk-visible@m">Join Now</a>
                         <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
                         <a href="<?php echo $this->params->get('linkedin');?>"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
                         <a href="<?php echo $this->params->get('instagram');?>"><span class="icon-outer"><span uk-icon="icon: instagram"></span></span></a>
@@ -117,7 +117,7 @@ $privacyLinky ="/privacy-policy";
         <jdoc:include type="modules" name="position-2" /> 
         
 
-        <footer>
+       <footer>
 
             <div class="footer-top section-padding-top">
 
@@ -157,20 +157,21 @@ $privacyLinky ="/privacy-policy";
                             <!--End mc_embed_signup-->
                         </div>
                         
-                        <div class="uk-width-1-1 uk-margin-auto-left uk-width-auto@s uk-width-1-6@m">
+                        <div class="uk-width-1-1 uk-margin-auto-left uk-width-1-4@s uk-width-1-6@m hidden-tablet">
                             <h4 class="orange">About</h4>
                             <jdoc:include type="modules" name="footermenu1" />
                         </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">
+                        <div class="uk-width-1-1 uk-width-1-4@s uk-width-1-6@m hidden-tablet">
                             <h4 class="orange">Membership</h4>
+                            <jdoc:include type="modules" name="footermenu2" />
                         </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
+                        <div class="uk-width-1-1 uk-width-1-4@s uk-width-1-6@m hidden-tablet">    
                             <h4 class="orange">Services</h4>    
-                            <jdoc:include type="modules" name="footermenu2" />       
-                        </div>
-                        <div class="uk-width-1-1 uk-width-auto@s uk-width-1-6@m hidden-tablet">    
-                            <h4 class="orange">Events</h4>    
                             <jdoc:include type="modules" name="footermenu3" />       
+                        </div>
+                        <div class="uk-width-1-1 uk-width-1-4@s uk-width-1-6@m hidden-tablet">    
+                            <h4 class="orange">Events</h4>    
+                            <jdoc:include type="modules" name="footermenu4" />       
                         </div>
                         
                     </div>
@@ -180,7 +181,7 @@ $privacyLinky ="/privacy-policy";
             </div>
             <div class="footer-middle uk-margin-medium-top">
                 <div class="grid-container">
-                    <div class="footer-copyright">
+                    <div class="footer-copyright-top">
                         <span class="copy"><a href="/privacy-policy">Privacy Policy</a> <a href="/t-c">T&Cs</a></span>
                         <span class="web"> 
                             <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>

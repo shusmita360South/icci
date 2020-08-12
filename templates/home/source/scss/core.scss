@@ -129,13 +129,16 @@ h1, .h1 {
 	margin-bottom: 10px;
 	margin-top: -10px;
 	@media only screen and (max-width: 1470px) {
-		
+		font-size: 40px;
+		line-height: 50px;
 	}
 	@media only screen and (max-width: 768px) {
-		
+		font-size: 35px;
+		line-height: 45px;
 	}
 	@media only screen and (max-width: 639px) {
-		
+		font-size: 30px;
+		line-height: 40px;
 	}
 	
 }
@@ -351,6 +354,10 @@ li{
 	cursor: pointer;
 	@extend .transition300ms;
 	position: relative;
+	@media only screen and (max-width: 1200px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 	
 	&:hover, &:focus {
 		background: $blue;

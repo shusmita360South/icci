@@ -27,8 +27,8 @@ header {
 				width: 240px;
 			}
 
-			@media only screen and (max-width: 1320px) {
-				width: 230px;
+			@media only screen and (max-width: 1200px) {
+				width: 200px;
 			}
 			@media only screen and (max-width: 639px) {
 				width: 200px;
@@ -58,6 +58,9 @@ header {
 		align-items: center;
 		justify-content:center;
 		margin-left: 10px;
+		@media only screen and (max-width: 1090px) {
+			display: none;
+		}
 		&:hover {
 			background: $blue;
 		}
@@ -86,18 +89,18 @@ header {
 			position: relative;
 			&:after {
 				content: "";
-				background: url(../images/icon/arrow-white.svg) no-repeat;
+				background: url(../images/icon/arrow-down.svg) no-repeat;
 				display: inline-block;
 				width: 6px;
 				height: 9px;
 				background-size: 100%;
 				margin-left: 8px;
+				margin-top: 8px;
 				background-repeat: no-repeat;
-				transform: rotate(90deg);
 			}
 			&:hover {
 				&:after {
-					background: url(../images/icon/arrow.svg) no-repeat;
+					background: url(../images/icon/arrow-down-blue.svg) no-repeat;
 					width: 6px;
 					height: 9px;
 					background-size: 100%;
@@ -212,6 +215,12 @@ header {
 		text-transform: capitalize;
 		padding: 0 15px;
 		@extend .transition300ms;
+		@media only screen and (max-width: 1300px) {
+			padding: 0 8px;
+		}
+		@media only screen and (max-width: 1200px) {
+			font-size: 16px;
+		}
 		
 		&:hover, &:focus,&:active{
 			border-radius: 18px;
@@ -229,7 +238,7 @@ header {
 		color: $blue;
 		&:after {
 			content: "";
-			background-image: url(../images/icon/arrow.svg);
+			background-image: url(../images/icon/arrow-down.svg);
 			width: 6px;
 			height: 9px;
 			background-size: 100%;
@@ -246,6 +255,9 @@ header {
 	.menu-btn {
 		margin-left: 30px;
 		margin-right: 25px;
+		@media only screen and (max-width: 1090px) {
+			margin-right: 0;
+		}
 	}
 }
 .uk-navbar-nav {
@@ -341,7 +353,7 @@ header {
 				height: 0; 
 				border-left: 5px solid transparent;
 				border-right: 5px solid transparent;
-				border-top: 5px solid $text-color;
+				border-top: 5px solid $white;
 				@extend .transition300ms;
 				position: absolute;
 				right: 0;
@@ -371,12 +383,14 @@ header {
 	.uk-navbar-nav > li > a, .uk-navbar-nav > li > span {
 		min-height: 40px;
 		justify-content: left;
-		color: $text-color;
+		color: $white;
 		font-family: $font1;
 		text-transform: capitalize;
 		font-size: 22px;
 		font-weight: bold;
 		padding: 0 15px;
+		min-height: 40px;
+		display: inline-block;
 		&:hover, &:focus,&:active{
 			color: $blue;
 		}

@@ -120,9 +120,19 @@ footer {
 		.grid-container {
 			border-top: 1px solid $grid-border;
 		}
+		.footer-copyright-top {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			@media only screen and (max-width: 768px) {
+				padding-top: 0px;
+			}
+		}
 		.footer-copyright {
 			padding-top: 20px;
 			padding-bottom: 20px;
+			@media only screen and (max-width: 768px) {
+
+			}
 			@media only screen and (max-width: 639px) {
 				display: flex;
 				flex-direction: column;
