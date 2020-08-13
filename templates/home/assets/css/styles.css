@@ -2106,6 +2106,12 @@ ul.uk-accordion .uk-accordion-content {
   top: 3px;
   display: inline-block;
 }
+.annual-reports .button:hover .icon {
+  color: #FFF;
+}
+.annual-reports .button:hover .icon-download {
+  background: url(../images/icon/download.svg);
+}
 
 .com_services .page-header-2-image img {
   max-width: 700px;
@@ -2267,7 +2273,7 @@ ul.uk-accordion .uk-accordion-content {
   overflow: hidden;
 }
 .member-levels-list .card-member-benefit-outer p {
-  padding: 10px;
+  padding: 15px 20px;
   margin: 0;
 }
 .member-levels-list .card-member-benefit {
