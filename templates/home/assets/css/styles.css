@@ -2271,10 +2271,12 @@ ul.uk-accordion .uk-accordion-content {
   border: 1px solid #D6D6D6;
   border-radius: 15px 0 15px 15px;
   overflow: hidden;
+  border-bottom: 0;
 }
 .member-levels-list .card-member-benefit-outer p {
   padding: 15px 20px;
   margin: 0;
+  border-bottom: 1px solid #D6D6D6;
 }
 .member-levels-list .card-member-benefit {
   display: -webkit-box;
@@ -2290,6 +2292,8 @@ ul.uk-accordion .uk-accordion-content {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom: 1px solid #D6D6D6;
+  border-left: 1px solid #D6D6D6;
 }
 .member-levels-list .card-member-benefit i {
   color: #009FE3;

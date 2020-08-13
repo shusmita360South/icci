@@ -976,9 +976,11 @@ ul.uk-accordion {
 		border: 1px solid $grid-border-2;
 		border-radius: 15px 0 15px 15px;
 		overflow: hidden;
+		border-bottom: 0;
 		p {
 			padding: 15px 20px;
 			margin: 0;
+			border-bottom: 1px solid $grid-border-2;
 		}
 	}
 	.card-member-benefit {
@@ -986,6 +988,8 @@ ul.uk-accordion {
 		align-items: center;
 		height: 100%;
 		justify-content: center;
+		border-bottom: 1px solid $grid-border-2;
+		border-left: 1px solid $grid-border-2;
 		i { color: $blue;}
 	}
 	.rsm_container {
