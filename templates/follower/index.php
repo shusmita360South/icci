@@ -182,7 +182,7 @@ $privacyLinky ="/privacy-policy";
             <div class="footer-middle uk-margin-medium-top">
                 <div class="grid-container">
                     <div class="footer-copyright-top">
-                        <span class="copy"><a href="/privacy-policy">Privacy Policy</a> <a href="/t-c">T&Cs</a></span>
+                        <span class="copy"><a href="/privacy-policy">Privacy Policy</a></span>
                         <span class="web"> 
                             <a href="<?php echo $this->params->get('facebook');?>"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
                             <a href="<?php echo $this->params->get('linkedin');?>"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
