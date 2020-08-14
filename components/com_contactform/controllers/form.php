@@ -141,7 +141,7 @@ class ContactformControllerForm extends ContactformController
 
 			
 			$emailfrom				= $siteemail;
-			$emailfromname			= 'CYDA Website Enquiry';
+			$emailfromname			= 'ICCI Melbourne Website Enquiry';
 			$replyto				= $email;
 			$replytoname			= $fname;
 			$bcc					= "360@360south.com.au";
@@ -217,7 +217,12 @@ class ContactformControllerForm extends ContactformController
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="100" align="left" valign="top">Name:</td>
-					<td align="left" valign="top">'. $fname .'</td>
+					<td align="left" valign="top">'. $fname .' '.$lname.'</td>
+				</tr>
+				<tr><td>&nbsp;</td><td></td></tr>
+				<tr>
+					<td align="left" valign="top">Job Title:</td>
+					<td align="left" valign="top">'. $jtitle .'</td>
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
 				<tr>
@@ -231,10 +236,21 @@ class ContactformControllerForm extends ContactformController
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
 				<tr>
-					<td align="left" valign="top">Reason:</td>
+					<td align="left" valign="top">Company:</td>
+					<td align="left" valign="top">'. $company .'</td>
+				</tr>
+				<tr><td>&nbsp;</td><td></td></tr>
+				<tr>
+					<td align="left" valign="top">Is your company a member of ICCI Melbourne?</td>
+					<td align="left" valign="top">'. $member .'</td>
+				</tr>
+				<tr><td>&nbsp;</td><td></td></tr>
+				<tr>
+					<td align="left" valign="top">Which audiences are you most interested in?</td>
 					<td align="left" valign="top">'. $reason  .'</td>
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
+				
 				
 			</table>
 			</body>
@@ -411,7 +427,7 @@ class ContactformControllerForm extends ContactformController
 
 			
 			$emailfrom				= $siteemail;
-			$emailfromname			= 'CYDA Website Enquiry';
+			$emailfromname			= 'ICCI Melbourne Website Enquiry';
 			$replyto				= $email;
 			$replytoname			= $fname;
 			$bcc					= "360@360south.com.au";
@@ -481,7 +497,12 @@ class ContactformControllerForm extends ContactformController
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="100" align="left" valign="top">Name:</td>
-					<td align="left" valign="top">'. $fname .'</td>
+					<td align="left" valign="top">'. $fname .' '.$lname.'</td>
+				</tr>
+				<tr><td>&nbsp;</td><td></td></tr>
+				<tr>
+					<td align="left" valign="top">Job Title:</td>
+					<td align="left" valign="top">'. $jtitle .'</td>
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
 				<tr>
@@ -495,10 +516,16 @@ class ContactformControllerForm extends ContactformController
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
 				<tr>
-					<td align="left" valign="top">Reason:</td>
-					<td align="left" valign="top">'. $reason  .'</td>
+					<td align="left" valign="top">Company:</td>
+					<td align="left" valign="top">'. $company .'</td>
 				</tr>
 				<tr><td>&nbsp;</td><td></td></tr>
+				<tr>
+					<td align="left" valign="top">Is your company a member of ICCI Melbourne?</td>
+					<td align="left" valign="top">'. $member .'</td>
+				</tr>
+				<tr><td>&nbsp;</td><td></td></tr>
+				
 				
 			</table>
 			</body>
