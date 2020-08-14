@@ -943,6 +943,9 @@ ul.uk-accordion {
 		height: 100px;
 		width: 100%;
 		//z-index: -1;
+		@media only screen and (max-width: 800px) {
+			height: 50px;
+		}
 		@media only screen and (max-width: 639px) {
 			height: 30px;
 		}
@@ -952,8 +955,8 @@ ul.uk-accordion {
 		position: relative;
 	}
 	.caption{
-		padding: 10px;
-		padding-bottom: 60px;
+		padding: 30px 10px;
+		padding-bottom: 80px;
 		
 	}
 	.card-member-outer {
@@ -967,7 +970,7 @@ ul.uk-accordion {
 
 		.button {
 			position: absolute;
-			bottom: 20px;
+			bottom: 35px;
 			left: 50%;
 			transform: translateX(-50%);
 		}
@@ -1005,6 +1008,7 @@ ul.uk-accordion {
 		align-items: flex-end;
 		display: flex;
 		justify-content: start;
+		padding-bottom: 20px;
 	}
 	h2.rsm_title {
 		@media only screen and (max-width: 639px) {
