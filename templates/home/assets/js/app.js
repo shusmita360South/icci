@@ -221,6 +221,7 @@ $(document).ready(function() {
 
                     {
                         console.log(data);
+                        $('#imgLogoContainer').attr("src","/images/logo/"+logofile['name']);
                         if(data=='invalid')
                         {
                          // invalid file format.
@@ -232,7 +233,9 @@ $(document).ready(function() {
                         }
                     },
                 error: function(e) 
+
                     {
+                        console.log("error");
                         $("#err").html(e).fadeIn();
                     }          
             });
