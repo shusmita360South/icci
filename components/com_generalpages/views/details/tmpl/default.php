@@ -68,6 +68,9 @@ elseif($item->template == 5) {
 elseif($item->template == 6) {
   echo $this->loadTemplate('benefits');
 }
+elseif($item->template == 7) {
+  echo $this->loadTemplate('contactform');
+}
 ?>
 
 

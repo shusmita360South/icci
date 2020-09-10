@@ -53,6 +53,7 @@
       <option value="4">Host an Event Form</option>
       <option value="5">Sponsor Form</option>
       <option value="6">Membership Benefits</option>
+      <option value="7">Contact Form</option>
     </field>
     <field name="checked_out" type="hidden" filter="unset" />
     <field name="checked_out_time" type="hidden" filter="unset" />

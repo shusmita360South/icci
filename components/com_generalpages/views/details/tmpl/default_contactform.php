@@ -31,7 +31,7 @@ $db     = JFactory::getDBO();
 $query    = $db->getQuery(true);
 $query->select('*')
           ->from('#__contactform_items')
-          ->where('id = 1');
+          ->where('id = 3');
 $db->setQuery($query);
 $contact_form = $db->loadObject();
 
@@ -117,16 +117,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                         </div>
                     </div>
                 </div>
-                <div class="uk-width-1-1 uk-width-1-2@s">
-                    <div class="uk-margin">
-                        <div class="uk-form-controls">
-
-                              <div class="uk-form-label">Job Title</div>
-                              <input type="text" name="c_jtitle" id="c_jtitle" class="uk-input" value="<?php echo isset($_SESSION['c_jtitle']) ? $_SESSION['c_jtitle'] : ''; ?>" />
-                            
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="uk-width-1-1 uk-width-1-2@s">
                     <div class="uk-margin">
                         <div class="uk-form-controls">
@@ -143,48 +134,12 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                         </div>
                     </div>
                 </div>
-                <div class="uk-width-1-1 uk-width-1-2@s">
-                    <div class="uk-margin">
-                        <div class="uk-form-controls">
-                              <div class="uk-form-label">Organization/Business*</div>
-                              <input required type="text" name="c_company" id="c_company" class=" uk-input" value="<?php echo isset($_SESSION['c_company']) ? $_SESSION['c_company'] : ''; ?>" />
-                              
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-1-1 uk-width-1-2@s">
-                    <div class="uk-margin">
-                        <div class="uk-form-controls">
-                             <div class="uk-form-label">Is your company a member of ICCI Melbourne?</div>
-                            <select class="uk-select chosen-select" name="c_member" id="c_member">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                                
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                
 
-                <div class="uk-width-1-1 uk-width-1-2@s">
-                    <div class="uk-margin">
-                        <div class="uk-form-controls">
-                            <div class="uk-form-label">Which audiences are you most interested in?</div>
-                            <select class="uk-select chosen-select" name="c_reason" id="c_reason">
-                                <option value="Option 1">Option 1</option>
-                                <option value="Option 2">Option 2</option>
-                                
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
                 <div class="uk-width-1-1 uk-width-1-1@s">
                     <div class="uk-margin">
                         <div class="uk-form-controls">
-                            <div class="uk-form-label">Description</div>
+                            <div class="uk-form-label">Message</div>
                             <textarea name="c_message" id="c_message" rows="5" placeholder="" class="uk-textarea" ><?php if (isset($_SESSION['c_message'])) echo $_SESSION['c_message']; ?></textarea>
                         </div>
                     </div>
@@ -207,7 +162,7 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                 </div>
             </div>
             <input type="hidden" name="option" value="com_contactform" />
-            <input type="hidden" name="task" value="form.contact_hostsubmit" />
+            <input type="hidden" name="task" value="form.contact_submit" />
             <?php echo JHtml::_('form.token'); ?>
         </form>
     </div>
