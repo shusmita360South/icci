@@ -20,7 +20,7 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 				<p class="intro"><?php echo $headerText?></p>
 			<?php endif; ?>
 		
-			<div class="banneritem-grid uk-margin-medium-top center">
+			<div class="banneritem-grid center">
 				<div uk-grid class=" uk-flex-center">
 				<?php foreach ($list as $item) : ?>
 					<div class="banneritem uk-width-1-3 uk-width-1-6@s uk-width-auto@m">
