@@ -299,6 +299,58 @@ else
 		            $("label[for=" + $(this).attr('id') + "]").addClass('active btn-success');
 		        }
 		    });
+		    ///////////////////////////////////////////////////////////////////// 
+		    ///////////////////media upload membership form//////////////////////
+		    /////////////////////////////////////////////////////////////////////
+
+		    $('.logo-upload-btn').on('click', function() {
+
+		        var logofile = $('input.memberlogo')[0].files[0];
+		        var demoImageSrc;
+		        var demoImage = document.querySelector('img#imgContainer');
+
+		        var file = document.querySelector('input[type=file]').files[0];
+		        var reader = new FileReader();
+		        reader.onload = function (event) {
+		            demoImage.src = reader.result;
+		            demoImageSrc = event.target.result;
+		        }
+		        reader.readAsDataURL(file);
+		        $('#imgContainer').addClass('hide');
+		        setTimeout(function(){
+		            
+		            $.ajax({
+		                url: '/index.php?option=com_contactform&task=form.rsmembership_logouplod',
+		                type: "POST",
+		                data: {"logofilename": logofile['name'], "logofilesize": logofile['size'], "logofiletype": logofile['type'], "logofiledata": demoImage.src},
+		          
+		                success: function(data)
+
+		                    {
+		                        console.log(data['error']);
+		                      	 
+		                        if(data['error'])
+		                        {
+		                         // invalid file format.
+		                            $(".logo-upload-error").html(data['error']).fadeIn();
+		                        }
+		                        else
+		                        {
+		                            //$('#imgContainer').addClass('show');
+		                            $('#imgLogoContainer').attr("src","/images/logo/"+data['file']);
+		                        }
+		                    },
+		                error: function(e) 
+		                    {
+		                        $("#err").html(e).fadeIn();
+		                        alert('upload error');
+		                    }          
+		            });
+		        }, 30);
+
+		    }); //END: media upload membership form
+
+
 		});
 	}(window.jQuery)
 	</script>

@@ -857,7 +857,6 @@ class ContactformControllerForm extends ContactformController
 		$logofiletype = $_POST['logofiletype'];
 		$logofiledata = $_POST['logofiledata'];
 
-		echo $logofiledata;
 
 		$fileuploadsuccess = "";
 		$fileuploaderror = "";
@@ -906,27 +905,32 @@ class ContactformControllerForm extends ContactformController
 
 			    // clean up the file resource
 			    fclose( $logofile ); 
-			    $fileuploadsuccess  = $logofilename;
+			   
 
-			    // $query = $db->getQuery(true);
+			    $query = $db->getQuery(true);
 
-			    //$userId = 206;
-			    // Fields to update.
-				
-				//$fields = array($db->quoteName('f19') . " = '{$logofilename}'");
+			    $userId = 206;
+			
+
+				// Fields to update.
+				$fields = array(
+				    $db->quoteName('f22') . ' = ' . $db->quote($logofilename)
+				);
 
 				// Conditions for which records should be updated.
-				 
+				$conditions = array(
+				    $db->quoteName('user_id') . ' = 206'
+				);
 
-			    //$query->update($db->quoteName('#__rsmembership_subscribers'))->set($fields)->where('user_id='.$userId);
+				$query->update($db->quoteName('#__rsmembership_subscribers'))->set($fields)->where($conditions);
 
-				//$db->setQuery($query);
+				$db->setQuery($query);
 
-				/*if ($result = $db->execute())
+				if ($result = $db->execute())
 					{
-						echo "Logo case successfully changed!";
+						$fileuploadsuccess = "Logo successfully uploaded";
 					}
-				*/
+				
 
 
 			    /*if (move_uploaded_file($_FILES["memberlogo"]["tmp_name"], $target_logo_file_new)) {
@@ -940,10 +944,10 @@ class ContactformControllerForm extends ContactformController
 		}
 
 
-		$return = array('error'=>$fileuploaderror, 'success'=>"success");
+		$return = array('error'=>$fileuploaderror, 'success'=>$fileuploadsuccess, 'file'=>$logofilename);
 		//$return['logofilename'] =  $logofilename ;
 
-		//header("Content-Type: application/json");
+		header("Content-Type: application/json");
 		echo json_encode($return); exit;
 
 

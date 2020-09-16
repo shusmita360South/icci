@@ -227,7 +227,7 @@ $(document).ready(function() {
                 success: function(data)
 
                     {
-                        console.log(data);
+                        console.log(data['error']);
                         $('#imgLogoContainer').attr("src","/images/logo/"+logofile['name']);
                         if(data=='invalid')
                         {
