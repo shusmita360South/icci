@@ -64,7 +64,7 @@ JText::script('COM_RSMEMBERSHIP_THERE_WAS_AN_ERROR');
 		<?php } ?>
 			<form enctype="multipart/form-data" method="post" class="rsmembership_form" action="<?php echo JRoute::_('index.php?option=com_rsmembership&task=validatesubscribe'); ?>" name="membershipForm" onsubmit="return RSMembership.subscribe.validate_subscribe(this);" id="rsm_subscribe_default_form">
 				<div class="item-page">
-					<h3 class="page-header"><?php echo JText::_('COM_RSMEMBERSHIP_ACCOUNT_INFORMATION'); ?></h3>
+					
 					<table cellpadding="0" cellspacing="0" border="0" width="100%" class="rsmembership_form_table">
 						<?php if ($this->choose_username) { ?>
 						<tr>

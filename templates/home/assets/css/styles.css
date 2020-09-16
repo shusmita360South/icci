@@ -2117,6 +2117,9 @@ ul.uk-accordion .uk-accordion-content {
   max-width: 700px;
   max-height: 500px;
 }
+.com_services.view-details .mod-about-2.bg-white {
+  background: #EDFAFF;
+}
 
 .form-outer {
   position: relative;

@@ -838,6 +838,11 @@ ul.uk-accordion {
 			max-height: 500px;
 		}
 	}
+	&.view-details {
+		.mod-about-2.bg-white {
+			background: $light-bg;
+		}
+	}
 }
 .form-outer {
 	position: relative;

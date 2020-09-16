@@ -169,11 +169,8 @@ $doc->addScript('https://www.google.com/recaptcha/api.js');
                     <div class="uk-margin">
                         <div class="uk-form-controls">
                             <div class="uk-form-label">Which audiences are you most interested in?</div>
-                            <select class="uk-select chosen-select" name="c_reason" id="c_reason">
-                                <option value="Option 1">Option 1</option>
-                                <option value="Option 2">Option 2</option>
-                                
-                            </select>
+                            
+                            <input required type="text" name="c_reason" id="c_reason" class=" uk-input" value="<?php echo isset($_SESSION['c_reason']) ? $_SESSION['c_reason'] : ''; ?>" />
                         </div>
                     </div>
                 </div>
