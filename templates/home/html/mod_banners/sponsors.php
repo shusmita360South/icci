@@ -13,8 +13,8 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 ?>
 
 
-<div class="mod_banners mod_partner section-padding-tb center <?php echo $moduleclass_sfx; ?> ">
-		<div class="grid-container">
+<div class="mod_banners mod_partner generalpages-detail section-padding-tb center <?php echo $moduleclass_sfx; ?> ">
+		<div class="grid-container layout4">
 			<h2><?php echo $module->title; ?></h2>
 			<?php if($headerText):?>
 				<p class="intro"><?php echo $headerText?></p>
