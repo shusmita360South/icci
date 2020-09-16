@@ -55,7 +55,7 @@ $mod_breadcrumb = JModuleHelper::renderModule($_mod_breadcrumb);
       <?php if ($item->cardsintro):?>
         <p class="intro center uk-margin-medium-bottom"><?php echo $item->cardsintro;?></p>
       <?php endif;?>
-      <div uk-grid class="layout4-grid uk-child-width-auto">
+      <div uk-grid class="layout4-grid uk-child-width-auto uk-flex-cnter">
       <?php foreach ($cardstitle as $key => $layout4) :?>
       
         <div class="uk-width-1-1 uk-width-1-5@s">
