@@ -30,7 +30,7 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 		        <div class="uk-width-1-1 uk-width-1-5@s">
 		          <div class="content center">
 		              <img class="" src="<?php echo $imageurl?>" alt="<?php echo htmlspecialchars($item->name, ENT_QUOTES, 'UTF-8'); ?>"/>
-		              <h6><?php echo htmlspecialchars($item->name, ENT_QUOTES, 'UTF-8'); ?></h6>
+		              
 		              <p><?php echo $item->description;?></p>
 		              <a class="readmore" href="<?php echo $link; ?>" target="_blank">Discover More</a>
 		          </div>
