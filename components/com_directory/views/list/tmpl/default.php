@@ -125,38 +125,38 @@ $keyword = JRequest::getVar('keyword');
                        
                         <div class="content-content">
                           <h3><?php echo $item->f8; ?></h3>
-                          
-                          <?php if($item->f1): ?>
-                          <p><span class="icon-top" uk-icon="icon: location"></span> <span><?php echo $item->f1; ?>, <?php echo $item->f2; ?>, <?php echo $item->f3; ?> <?php echo $item->f4; ?>, <?php echo $item->f5; ?></span></p>
-                          <?php endif; ?>
+                          <?php if($item->f23 == "Opt-In 2 Full"): ?>
+                            <?php if($item->f1): ?>
+                            <p><span class="icon-top" uk-icon="icon: location"></span> <span><?php echo $item->f1; ?>, <?php echo $item->f2; ?>, <?php echo $item->f3; ?> <?php echo $item->f4; ?>, <?php echo $item->f5; ?></span></p>
+                            <?php endif; ?>
 
-                          <?php if($item->f10): ?>
-                          <p><span class="icon-top" uk-icon="icon: receiver"></span> <?php echo $item->f10; ?></p>
-                          <?php endif; ?>
+                            <?php if($item->f10): ?>
+                            <p><span class="icon-top" uk-icon="icon: receiver"></span> <?php echo $item->f10; ?></p>
+                            <?php endif; ?>
 
-                          <?php if($item->f11): ?>
-                          <p><span class="icon-top" uk-icon="icon: phone"></span> <?php echo $item->f11; ?></p>
-                          <?php endif; ?>
+                            <?php if($item->f11): ?>
+                            <p><span class="icon-top" uk-icon="icon: phone"></span> <?php echo $item->f11; ?></p>
+                            <?php endif; ?>
 
-                          <?php if($item->email): ?>
-                          <p><span class="icon-top" uk-icon="icon: mail"></span> <?php echo $item->email; ?></p>
-                          <?php endif; ?>
+                            <?php if($item->email): ?>
+                            <p><span class="icon-top" uk-icon="icon: mail"></span> <?php echo $item->email; ?></p>
+                            <?php endif; ?>
 
-                          <?php if($item->f12): ?>
-                          <p><span class="icon-top" uk-icon="icon: link"></span> <?php echo $item->f12; ?></p>
-                          <?php endif; ?>
+                            <?php if($item->f12): ?>
+                            <p><span class="icon-top" uk-icon="icon: link"></span> <?php echo $item->f12; ?></p>
+                            <?php endif; ?>
 
-                  
-                          <?php if($item->f14): ?>
-                            <a class="_icon-outer" href="<?php echo $item->f14; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
+                    
+                            <?php if($item->f14): ?>
+                              <a class="_icon-outer" href="<?php echo $item->f14; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: linkedin"></span></span></a>
+                            <?php endif; ?>
+                            <?php if($item->f15): ?>
+                              <a class="_icon-outer" href="<?php echo $item->f15; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
+                            <?php endif; ?>
+                            <?php if($item->f16): ?>
+                              <a class="_icon-outer" href="<?php echo $item->f16; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: twitter"></span></span></a>
+                            <?php endif; ?>
                           <?php endif; ?>
-                          <?php if($item->f15): ?>
-                            <a class="_icon-outer" href="<?php echo $item->f15; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: facebook"></span></span></a>
-                          <?php endif; ?>
-                          <?php if($item->f16): ?>
-                            <a class="_icon-outer" href="<?php echo $item->f16; ?>" target="_blank"><span class="icon-outer"><span uk-icon="icon: twitter"></span></span></a>
-                          <?php endif; ?>
-                          
                         </div>
                       </div>
       

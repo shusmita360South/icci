@@ -55,6 +55,7 @@ class DirectoryModelList extends JModelList {
 
 		$query->where('nc.published = 1');
 
+		$query->where('s.f23 NOT LIKE "%Opt-Out%"');
 
 		if($this->typeId) {
 			$query->where('s.catid = ' . $db->quote($this->typeId));
