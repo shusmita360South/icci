@@ -25,7 +25,7 @@ class DirectoryModelList extends JModelList {
 		$this->Itemid           = JRequest::getVar('Itemid');
 		
 		$value = $params->get('display_num');
-		//$this->setState('list.limit', $value);
+		$this->setState('list.limit', $value);
 
 		$value = $app->input->get('limitstart', 0, 'uint');
 		$this->setState('list.start', $value);		

@@ -1168,3 +1168,199 @@ ul.uk-accordion {
 
 	}
 }
+.pagination {
+	margin: 18px 0;
+	ul {
+		display: flex;
+		*display: inline;
+		*zoom: 1;
+		margin-left: 0;
+		margin-bottom: 0;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		overflow: scroll;
+		justify-content: center;
+		> li {
+			font-size: 13px;
+			display: inline-block;
+			margin-left: 0;
+			padding-left: 0;
+			>span.pagenav {
+				background-color: $blue;
+				color: #FFF
+			}
+			&.pagination-start, &.pagination-prev, &.pagination-next, &.pagination-end{
+				span {
+					opacity: .5;
+					background-color: #fff;
+					color: $text-color;
+				}
+			}
+			&.pagination-prev {
+				
+				a,span {
+					position: relative;
+					padding: 8px 15px 8px 30px;
+					&:after {
+						content: "";
+						display: inline-block;
+						background-image: url(../images/icon/paginationarrow.svg);
+						background-repeat: no-repeat;
+						width: 11px;
+						height: 9px;
+						position: absolute;
+						left: 15px;
+						top: 13px;
+						transform: rotate(180deg);
+					}
+				}
+				a {
+					&:hover {
+						&:after {
+							background-image: url(../images/icon/paginationarrow-white.svg);
+						}
+					}
+				}
+			}
+			&.pagination-next {
+
+				a,span {
+					position: relative;
+					padding: 8px 30px 8px 15px;
+					&:after {
+						content: "";
+						display: inline-block;
+						background-image: url(../images/icon/paginationarrow.svg);
+						background-repeat: no-repeat;
+						width: 11px;
+						height: 9px;
+						position: absolute;
+						right: 15px;
+						top: 13px;
+					}
+				}
+				a {
+					&:hover {
+						&:after {
+							background-image: url(../images/icon/paginationarrow-white.svg);
+						}
+					}
+				}
+			}
+			&.pagination-start {
+				
+				a,span {
+					position: relative;
+					padding: 8px 15px 8px 30px;
+					&:after {
+						content: "";
+						display: inline-block;
+						background-image: url(../images/icon/twoarrows.svg);
+						background-repeat: no-repeat;
+						width: 11px;
+						height: 9px;
+						position: absolute;
+						left: 15px;
+						top: 13px;
+						transform: rotate(180deg);
+					}
+				}
+				a {
+					&:hover {
+						&:after {
+							background-image: url(../images/icon/twoarrows-white.svg);
+						}
+					}
+				}
+			}
+			&.pagination-end {
+				
+				a,span {
+					position: relative;
+					padding: 8px 30px 8px 15px;
+					&:after {
+						content: "";
+						display: inline-block;
+						background-image: url(../images/icon/twoarrows.svg);
+						background-repeat: no-repeat;
+						width: 11px;
+						height: 9px;
+						position: absolute;
+						right: 15px;
+						top: 13px;
+					}
+				}
+				a {
+					&:hover {
+						&:after {
+							background-image: url(../images/icon/twoarrows-white.svg);
+						}
+					}
+				}
+			}
+			&:first-child {
+				a,span {
+					border-left-width: 1px;
+					-webkit-border-top-left-radius: 4px;
+					-moz-border-radius-topleft: 4px;
+					border-top-left-radius: 4px;
+					-webkit-border-bottom-left-radius: 4px;
+					-moz-border-radius-bottomleft: 4px;
+					border-bottom-left-radius: 4px;
+				}
+			}
+			&:last-child {
+				a,span {
+					-webkit-border-top-right-radius: 4px;
+					-moz-border-radius-topright: 4px;
+					border-top-right-radius: 4px;
+					-webkit-border-bottom-right-radius: 4px;
+					-moz-border-radius-bottomright: 4px;
+					border-bottom-right-radius: 4px;
+				}
+			}
+			a,span {
+				float: left;
+				padding: 8px 15px;
+				line-height: 18px;
+				text-decoration: none;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-left-width: 0;
+			}
+			> a {
+				&:hover, &:focus {
+					background-color: $blue;
+					color: #FFF;
+				}
+			}
+			
+
+		}
+		> .active {
+			a,span {
+				background-color: #f5f5f5;
+				color: $text-color;
+				cursor: default;
+			}
+		}
+		.disabled {
+			> span {
+				color: $text-color;
+				background-color: transparent;
+				cursor: default;
+			}
+			> a {
+				color: $text-color;
+				background-color: transparent;
+				cursor: default;
+				&:hover, &:focus {
+					color: $text-color;
+					background-color: transparent;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

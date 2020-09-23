@@ -2521,6 +2521,163 @@ ul.uk-accordion .uk-accordion-content {
   width: 40px;
 }
 
+.pagination {
+  margin: 18px 0;
+}
+.pagination ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-radius: 4px;
+  overflow: scroll;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pagination ul > li {
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 0;
+}
+.pagination ul > li > span.pagenav {
+  background-color: #009FE3;
+  color: #FFF;
+}
+.pagination ul > li.pagination-start span, .pagination ul > li.pagination-prev span, .pagination ul > li.pagination-next span, .pagination ul > li.pagination-end span {
+  opacity: 0.5;
+  background-color: #fff;
+  color: #000;
+}
+.pagination ul > li.pagination-prev a, .pagination ul > li.pagination-prev span {
+  position: relative;
+  padding: 8px 15px 8px 30px;
+}
+.pagination ul > li.pagination-prev a:after, .pagination ul > li.pagination-prev span:after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon/paginationarrow.svg);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 9px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.pagination ul > li.pagination-prev a:hover:after {
+  background-image: url(../images/icon/paginationarrow-white.svg);
+}
+.pagination ul > li.pagination-next a, .pagination ul > li.pagination-next span {
+  position: relative;
+  padding: 8px 30px 8px 15px;
+}
+.pagination ul > li.pagination-next a:after, .pagination ul > li.pagination-next span:after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon/paginationarrow.svg);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 9px;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+}
+.pagination ul > li.pagination-next a:hover:after {
+  background-image: url(../images/icon/paginationarrow-white.svg);
+}
+.pagination ul > li.pagination-start a, .pagination ul > li.pagination-start span {
+  position: relative;
+  padding: 8px 15px 8px 30px;
+}
+.pagination ul > li.pagination-start a:after, .pagination ul > li.pagination-start span:after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon/twoarrows.svg);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 9px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.pagination ul > li.pagination-start a:hover:after {
+  background-image: url(../images/icon/twoarrows-white.svg);
+}
+.pagination ul > li.pagination-end a, .pagination ul > li.pagination-end span {
+  position: relative;
+  padding: 8px 30px 8px 15px;
+}
+.pagination ul > li.pagination-end a:after, .pagination ul > li.pagination-end span:after {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/icon/twoarrows.svg);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 9px;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+}
+.pagination ul > li.pagination-end a:hover:after {
+  background-image: url(../images/icon/twoarrows-white.svg);
+}
+.pagination ul > li:first-child a, .pagination ul > li:first-child span {
+  border-left-width: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination ul > li:last-child a, .pagination ul > li:last-child span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination ul > li a, .pagination ul > li span {
+  float: left;
+  padding: 8px 15px;
+  line-height: 18px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination ul > li > a:hover, .pagination ul > li > a:focus {
+  background-color: #009FE3;
+  color: #FFF;
+}
+.pagination ul > .active a, .pagination ul > .active span {
+  background-color: #f5f5f5;
+  color: #000;
+  cursor: default;
+}
+.pagination ul .disabled > span {
+  color: #000;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination ul .disabled > a {
+  color: #000;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination ul .disabled > a:hover, .pagination ul .disabled > a:focus {
+  color: #000;
+  background-color: transparent;
+  cursor: default;
+}
+
 footer {
   background: #000;
 }

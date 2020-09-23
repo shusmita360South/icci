@@ -167,6 +167,11 @@ $keyword = JRequest::getVar('keyword');
         </div>
 
       </div>
+
+      <div class="pagination uk-margin-medium-top center">
+        <?php echo $this->pagination->getPagesLinks(); ?>
+      </div>
+
     </div>
   </div>
 
