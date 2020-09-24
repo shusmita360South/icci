@@ -856,12 +856,14 @@ class ContactformControllerForm extends ContactformController
 		$logofilesize = $_POST['logofilesize'];
 		$logofiletype = $_POST['logofiletype'];
 		$logofiledata = $_POST['logofiledata'];
+		$userId = $_POST['user_id'];
 
 
 		$fileuploadsuccess = "";
 		$fileuploaderror = "";
 		$target_logo_file = JPATH_ROOT.'/images/logo/'.basename($logofilename);
 		$uploadOk = 1;
+
 		if ($logofilename != ""){
 			
 			$cFileType = pathinfo($target_logo_file ,PATHINFO_EXTENSION);
@@ -909,7 +911,7 @@ class ContactformControllerForm extends ContactformController
 
 			    $query = $db->getQuery(true);
 
-			    $userId = 206;
+			    
 			
 
 				// Fields to update.
@@ -917,9 +919,11 @@ class ContactformControllerForm extends ContactformController
 				    $db->quoteName('f22') . ' = ' . $db->quote($logofilename)
 				);
 
+
+
 				// Conditions for which records should be updated.
 				$conditions = array(
-				    $db->quoteName('user_id') . ' = 206'
+				    $db->quoteName('user_id') . ' = '. $userId
 				);
 
 				$query->update($db->quoteName('#__rsmembership_subscribers'))->set($fields)->where($conditions);

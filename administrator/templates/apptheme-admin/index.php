@@ -317,12 +317,16 @@ else
 		        }
 		        reader.readAsDataURL(file);
 		        $('#imgContainer').addClass('hide');
+
+		        var userIdUrlParameter = RegExp('[?&]user_id=([^&]*)').exec(window.location.search);
+    			var userID = userIdUrlParameter && decodeURIComponent(userIdUrlParameter[1].replace(/\+/g, ' '));
+		        
 		        setTimeout(function(){
 		            
 		            $.ajax({
 		                url: '/index.php?option=com_contactform&task=form.rsmembership_logouplod',
 		                type: "POST",
-		                data: {"logofilename": logofile['name'], "logofilesize": logofile['size'], "logofiletype": logofile['type'], "logofiledata": demoImage.src},
+		                data: {"logofilename": logofile['name'], "logofilesize": logofile['size'], "logofiletype": logofile['type'], "logofiledata": demoImage.src, "user_id": userID},
 		          
 		                success: function(data)
 
