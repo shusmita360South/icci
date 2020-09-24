@@ -1032,10 +1032,15 @@ ul.uk-accordion {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.card-member-outer {
+		height: 100%;
+		position: relative;
+		padding-bottom: 60px;
+	}
 	.card-member { 
 
 		position: relative;
-
+		height: calc(100% - 60px);
 		.button {
 			position: absolute;
 			bottom: 50px;
@@ -1047,9 +1052,9 @@ ul.uk-accordion {
 		}
 	}
 	.caption {
-		padding: 50px 70px 120px 70px;
+		padding: 50px 30px 80px 30px;
 		@media only screen and (max-width: 1200px) {
-			padding: 40px 40px 100px 40px;
+			padding: 40px 30px 80px 30px;
 		}
 		@media only screen and (max-width: 800px) {
 			padding: 20px 20px 80px 20px;

@@ -36,8 +36,8 @@ $itemid = 152;
             $imagesrc    ='components/com_rsmembership/assets/thumbs/'.$item->thumb;
            
             ?>
-              <div class="uk-width-1-1 uk-width-1-3@s rsm_container">
-                <div>
+              <div class="uk-width-1-1 uk-width-1-4@s rsm_container">
+                <div class="card-member-outer">
                   <div class="thumbnail card-member center">
                     <img src="<?php echo $imagesrc; ?>"/>
                     <div class="caption">
@@ -67,6 +67,33 @@ $itemid = 152;
 
           <?php $i++; ?>
         <?php } ?>
+
+        <div class="uk-width-1-1 uk-width-1-4@s rsm_container">
+          <div class="card-member-outer">
+            <div class="thumbnail card-member center">
+              <img src="<?php echo $imagesrc; ?>"/>
+              <div class="caption">
+                <h3 class="rsm_title">International</h3>
+                
+                <p>This level is for individual and/ or business overseas</p>
+                
+                <div class="clearfix"></div>
+
+                  <a href="https://italcham-my.sharepoint.com/:w:/g/personal/marketing_italcham_com_au/Ee5W7eIl0apNtt6VvIKhn8oBSbUWaP-R6mPXddmAeX2RjA?e=l6CndN" class="button" target="_blank">Join Now</a>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="card-member-bottom">
+              <a href="https://italcham-my.sharepoint.com/:w:/g/personal/marketing_italcham_com_au/Ee5W7eIl0apNtt6VvIKhn8oBSbUWaP-R6mPXddmAeX2RjA?e=l6CndN" target="_blank">
+                <span>See what’s included</span>
+                <i class="icon icon-eye"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
   	</div>

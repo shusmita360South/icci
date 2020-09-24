@@ -2341,8 +2341,15 @@ ul.uk-accordion .uk-accordion-content {
   margin-left: auto;
   margin-right: auto;
 }
+.mod-membership .card-member-outer {
+  height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
 .mod-membership .card-member {
   position: relative;
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
 }
 .mod-membership .card-member .button {
   position: absolute;
@@ -2359,11 +2366,11 @@ ul.uk-accordion .uk-accordion-content {
   }
 }
 .mod-membership .caption {
-  padding: 50px 70px 120px 70px;
+  padding: 50px 30px 80px 30px;
 }
 @media only screen and (max-width: 1200px) {
   .mod-membership .caption {
-    padding: 40px 40px 100px 40px;
+    padding: 40px 30px 80px 30px;
   }
 }
 @media only screen and (max-width: 800px) {
