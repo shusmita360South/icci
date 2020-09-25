@@ -154,15 +154,15 @@ input::-moz-focus-inner {
   opacity: 0.7 !important;
 }
 
-.uk-input::-webkit-input-placeholder, #rsm_subscribe_login_form input::-webkit-input-placeholder, #rsm_subscribe_login_form select::-webkit-input-placeholder, #rsm_subscribe_login_form textarea::-webkit-input-placeholder, #rsm_subscribe_default_form input::-webkit-input-placeholder, #rsm_subscribe_default_form select::-webkit-input-placeholder, #rsm_subscribe_default_form textarea::-webkit-input-placeholder {
+.uk-input::-webkit-input-placeholder, #rsm_subscribe_login_form input::-webkit-input-placeholder, #rsm_subscribe_login_form select::-webkit-input-placeholder, #rsm_subscribe_login_form textarea::-webkit-input-placeholder, #rsm_subscribe_default_form input::-webkit-input-placeholder, #rsm_subscribe_default_form select::-webkit-input-placeholder, #rsm_subscribe_default_form textarea::-webkit-input-placeholder, #rsm_subscribe_preview_form input::-webkit-input-placeholder, #rsm_subscribe_preview_form select::-webkit-input-placeholder, #rsm_subscribe_preview_form textarea::-webkit-input-placeholder {
   color: #000;
 }
 
-.uk-input::-moz-placeholder, #rsm_subscribe_login_form input::-moz-placeholder, #rsm_subscribe_login_form select::-moz-placeholder, #rsm_subscribe_login_form textarea::-moz-placeholder, #rsm_subscribe_default_form input::-moz-placeholder, #rsm_subscribe_default_form select::-moz-placeholder, #rsm_subscribe_default_form textarea::-moz-placeholder {
+.uk-input::-moz-placeholder, #rsm_subscribe_login_form input::-moz-placeholder, #rsm_subscribe_login_form select::-moz-placeholder, #rsm_subscribe_login_form textarea::-moz-placeholder, #rsm_subscribe_default_form input::-moz-placeholder, #rsm_subscribe_default_form select::-moz-placeholder, #rsm_subscribe_default_form textarea::-moz-placeholder, #rsm_subscribe_preview_form input::-moz-placeholder, #rsm_subscribe_preview_form select::-moz-placeholder, #rsm_subscribe_preview_form textarea::-moz-placeholder {
   color: #000;
 }
 
-.uk-input::placeholder, #rsm_subscribe_login_form input::placeholder, #rsm_subscribe_login_form select::placeholder, #rsm_subscribe_login_form textarea::placeholder, #rsm_subscribe_default_form input::placeholder, #rsm_subscribe_default_form select::placeholder, #rsm_subscribe_default_form textarea::placeholder {
+.uk-input::placeholder, #rsm_subscribe_login_form input::placeholder, #rsm_subscribe_login_form select::placeholder, #rsm_subscribe_login_form textarea::placeholder, #rsm_subscribe_default_form input::placeholder, #rsm_subscribe_default_form select::placeholder, #rsm_subscribe_default_form textarea::placeholder, #rsm_subscribe_preview_form input::placeholder, #rsm_subscribe_preview_form select::placeholder, #rsm_subscribe_preview_form textarea::placeholder {
   color: #000;
 }
 
@@ -2407,7 +2407,7 @@ ul.uk-accordion .uk-accordion-content {
   height: 18px;
 }
 
-#rsm_subscribe_login_form .uk-input, #rsm_subscribe_login_form input, #rsm_subscribe_login_form select, #rsm_subscribe_login_form textarea, #rsm_subscribe_default_form .uk-input, #rsm_subscribe_default_form input, #rsm_subscribe_default_form select, #rsm_subscribe_default_form textarea {
+#rsm_subscribe_login_form .uk-input, #rsm_subscribe_login_form input, #rsm_subscribe_login_form select, #rsm_subscribe_login_form textarea, #rsm_subscribe_default_form .uk-input, #rsm_subscribe_default_form input, #rsm_subscribe_default_form select, #rsm_subscribe_default_form textarea, #rsm_subscribe_preview_form .uk-input, #rsm_subscribe_preview_form input, #rsm_subscribe_preview_form select, #rsm_subscribe_preview_form textarea {
   width: 300px;
   margin-bottom: 10px;
   height: 40px;
@@ -2437,17 +2437,29 @@ ul.uk-accordion .uk-accordion-content {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-#rsm_subscribe_login_form input[type=file], #rsm_subscribe_default_form input[type=file] {
+#rsm_subscribe_login_form input[type=file], #rsm_subscribe_default_form input[type=file], #rsm_subscribe_preview_form input[type=file] {
   border: none;
   padding-left: 0;
   width: 220px;
 }
-#rsm_subscribe_login_form #imgContainer, #rsm_subscribe_default_form #imgContainer {
+#rsm_subscribe_login_form #imgContainer, #rsm_subscribe_default_form #imgContainer, #rsm_subscribe_preview_form #imgContainer {
   max-width: 100px;
   opacity: 0;
 }
-#rsm_subscribe_login_form #imgContainer.show, #rsm_subscribe_default_form #imgContainer.show {
+#rsm_subscribe_login_form #imgContainer.show, #rsm_subscribe_default_form #imgContainer.show, #rsm_subscribe_preview_form #imgContainer.show {
   opacity: 1;
+}
+#rsm_subscribe_login_form #jform_memberlogo-lbl, #rsm_subscribe_login_form .memberlogo, #rsm_subscribe_login_form .logo-upload-btn, #rsm_subscribe_login_form #imgContainer, #rsm_subscribe_login_form #imgLogoContainer, #rsm_subscribe_login_form .logo-upload-error, #rsm_subscribe_default_form #jform_memberlogo-lbl, #rsm_subscribe_default_form .memberlogo, #rsm_subscribe_default_form .logo-upload-btn, #rsm_subscribe_default_form #imgContainer, #rsm_subscribe_default_form #imgLogoContainer, #rsm_subscribe_default_form .logo-upload-error, #rsm_subscribe_preview_form #jform_memberlogo-lbl, #rsm_subscribe_preview_form .memberlogo, #rsm_subscribe_preview_form .logo-upload-btn, #rsm_subscribe_preview_form #imgContainer, #rsm_subscribe_preview_form #imgLogoContainer, #rsm_subscribe_preview_form .logo-upload-error {
+  display: none;
+}
+#rsm_subscribe_login_form #jform_memberlogoview-lbl, #rsm_subscribe_login_form #rsm_memberlogoview, #rsm_subscribe_default_form #jform_memberlogoview-lbl, #rsm_subscribe_default_form #rsm_memberlogoview, #rsm_subscribe_preview_form #jform_memberlogoview-lbl, #rsm_subscribe_preview_form #rsm_memberlogoview {
+  display: none;
+}
+#rsm_subscribe_login_form #jform_public-directory-choice-lbl, #rsm_subscribe_login_form #rsm_public-directory-choice, #rsm_subscribe_default_form #jform_public-directory-choice-lbl, #rsm_subscribe_default_form #rsm_public-directory-choice, #rsm_subscribe_preview_form #jform_public-directory-choice-lbl, #rsm_subscribe_preview_form #rsm_public-directory-choice {
+  display: none;
+}
+#rsm_subscribe_default_form .rsmembership_form_table tr:nth-last-child(2) td, #rsm_subscribe_default_form .rsmembership_form_table tr:nth-last-child(1) td, #rsm_subscribe_default_form .rsmembership_form_table tr:nth-last-child(3) td, #rsm_subscribe_preview_form .rsmembership_form_table tr:nth-last-child(2) td, #rsm_subscribe_preview_form .rsmembership_form_table tr:nth-last-child(1) td, #rsm_subscribe_preview_form .rsmembership_form_table tr:nth-last-child(3) td {
+  height: 0;
 }
 
 .directory-list form {
@@ -2752,7 +2764,7 @@ footer .footer-top .totop {
 footer .footer-top .totop svg {
   display: none;
 }
-footer form .uk-input, footer form #rsm_subscribe_login_form input, #rsm_subscribe_login_form footer form input, footer form #rsm_subscribe_login_form select, #rsm_subscribe_login_form footer form select, footer form #rsm_subscribe_login_form textarea, #rsm_subscribe_login_form footer form textarea, footer form #rsm_subscribe_default_form input, #rsm_subscribe_default_form footer form input, footer form #rsm_subscribe_default_form select, #rsm_subscribe_default_form footer form select, footer form #rsm_subscribe_default_form textarea, #rsm_subscribe_default_form footer form textarea {
+footer form .uk-input, footer form #rsm_subscribe_login_form input, #rsm_subscribe_login_form footer form input, footer form #rsm_subscribe_login_form select, #rsm_subscribe_login_form footer form select, footer form #rsm_subscribe_login_form textarea, #rsm_subscribe_login_form footer form textarea, footer form #rsm_subscribe_default_form input, #rsm_subscribe_default_form footer form input, footer form #rsm_subscribe_default_form select, #rsm_subscribe_default_form footer form select, footer form #rsm_subscribe_default_form textarea, #rsm_subscribe_default_form footer form textarea, footer form #rsm_subscribe_preview_form input, #rsm_subscribe_preview_form footer form input, footer form #rsm_subscribe_preview_form select, #rsm_subscribe_preview_form footer form select, footer form #rsm_subscribe_preview_form textarea, #rsm_subscribe_preview_form footer form textarea {
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
   background: transparent;
@@ -2761,7 +2773,7 @@ footer form .uk-input, footer form #rsm_subscribe_login_form input, #rsm_subscri
   padding-left: 0;
   padding-right: 20px;
 }
-footer form .uk-input:focus, footer form #rsm_subscribe_login_form input:focus, #rsm_subscribe_login_form footer form input:focus, footer form #rsm_subscribe_login_form select:focus, #rsm_subscribe_login_form footer form select:focus, footer form #rsm_subscribe_login_form textarea:focus, #rsm_subscribe_login_form footer form textarea:focus, footer form #rsm_subscribe_default_form input:focus, #rsm_subscribe_default_form footer form input:focus, footer form #rsm_subscribe_default_form select:focus, #rsm_subscribe_default_form footer form select:focus, footer form #rsm_subscribe_default_form textarea:focus, #rsm_subscribe_default_form footer form textarea:focus, footer form .uk-select:focus, footer form .uk-textarea:focus {
+footer form .uk-input:focus, footer form #rsm_subscribe_login_form input:focus, #rsm_subscribe_login_form footer form input:focus, footer form #rsm_subscribe_login_form select:focus, #rsm_subscribe_login_form footer form select:focus, footer form #rsm_subscribe_login_form textarea:focus, #rsm_subscribe_login_form footer form textarea:focus, footer form #rsm_subscribe_default_form input:focus, #rsm_subscribe_default_form footer form input:focus, footer form #rsm_subscribe_default_form select:focus, #rsm_subscribe_default_form footer form select:focus, footer form #rsm_subscribe_default_form textarea:focus, #rsm_subscribe_default_form footer form textarea:focus, footer form #rsm_subscribe_preview_form input:focus, #rsm_subscribe_preview_form footer form input:focus, footer form #rsm_subscribe_preview_form select:focus, #rsm_subscribe_preview_form footer form select:focus, footer form #rsm_subscribe_preview_form textarea:focus, #rsm_subscribe_preview_form footer form textarea:focus, footer form .uk-select:focus, footer form .uk-textarea:focus {
   outline: 0;
   background-color: transparent;
   color: #666;
@@ -2776,13 +2788,13 @@ footer form .uk-form-controls {
 footer form .uk-margin {
   margin-top: 20px;
 }
-footer form .uk-input::-webkit-input-placeholder, footer form #rsm_subscribe_login_form input::-webkit-input-placeholder, #rsm_subscribe_login_form footer form input::-webkit-input-placeholder, footer form #rsm_subscribe_login_form select::-webkit-input-placeholder, #rsm_subscribe_login_form footer form select::-webkit-input-placeholder, footer form #rsm_subscribe_login_form textarea::-webkit-input-placeholder, #rsm_subscribe_login_form footer form textarea::-webkit-input-placeholder, footer form #rsm_subscribe_default_form input::-webkit-input-placeholder, #rsm_subscribe_default_form footer form input::-webkit-input-placeholder, footer form #rsm_subscribe_default_form select::-webkit-input-placeholder, #rsm_subscribe_default_form footer form select::-webkit-input-placeholder, footer form #rsm_subscribe_default_form textarea::-webkit-input-placeholder, #rsm_subscribe_default_form footer form textarea::-webkit-input-placeholder {
+footer form .uk-input::-webkit-input-placeholder, footer form #rsm_subscribe_login_form input::-webkit-input-placeholder, #rsm_subscribe_login_form footer form input::-webkit-input-placeholder, footer form #rsm_subscribe_login_form select::-webkit-input-placeholder, #rsm_subscribe_login_form footer form select::-webkit-input-placeholder, footer form #rsm_subscribe_login_form textarea::-webkit-input-placeholder, #rsm_subscribe_login_form footer form textarea::-webkit-input-placeholder, footer form #rsm_subscribe_default_form input::-webkit-input-placeholder, #rsm_subscribe_default_form footer form input::-webkit-input-placeholder, footer form #rsm_subscribe_default_form select::-webkit-input-placeholder, #rsm_subscribe_default_form footer form select::-webkit-input-placeholder, footer form #rsm_subscribe_default_form textarea::-webkit-input-placeholder, #rsm_subscribe_default_form footer form textarea::-webkit-input-placeholder, footer form #rsm_subscribe_preview_form input::-webkit-input-placeholder, #rsm_subscribe_preview_form footer form input::-webkit-input-placeholder, footer form #rsm_subscribe_preview_form select::-webkit-input-placeholder, #rsm_subscribe_preview_form footer form select::-webkit-input-placeholder, footer form #rsm_subscribe_preview_form textarea::-webkit-input-placeholder, #rsm_subscribe_preview_form footer form textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-footer form .uk-input::-moz-placeholder, footer form #rsm_subscribe_login_form input::-moz-placeholder, #rsm_subscribe_login_form footer form input::-moz-placeholder, footer form #rsm_subscribe_login_form select::-moz-placeholder, #rsm_subscribe_login_form footer form select::-moz-placeholder, footer form #rsm_subscribe_login_form textarea::-moz-placeholder, #rsm_subscribe_login_form footer form textarea::-moz-placeholder, footer form #rsm_subscribe_default_form input::-moz-placeholder, #rsm_subscribe_default_form footer form input::-moz-placeholder, footer form #rsm_subscribe_default_form select::-moz-placeholder, #rsm_subscribe_default_form footer form select::-moz-placeholder, footer form #rsm_subscribe_default_form textarea::-moz-placeholder, #rsm_subscribe_default_form footer form textarea::-moz-placeholder {
+footer form .uk-input::-moz-placeholder, footer form #rsm_subscribe_login_form input::-moz-placeholder, #rsm_subscribe_login_form footer form input::-moz-placeholder, footer form #rsm_subscribe_login_form select::-moz-placeholder, #rsm_subscribe_login_form footer form select::-moz-placeholder, footer form #rsm_subscribe_login_form textarea::-moz-placeholder, #rsm_subscribe_login_form footer form textarea::-moz-placeholder, footer form #rsm_subscribe_default_form input::-moz-placeholder, #rsm_subscribe_default_form footer form input::-moz-placeholder, footer form #rsm_subscribe_default_form select::-moz-placeholder, #rsm_subscribe_default_form footer form select::-moz-placeholder, footer form #rsm_subscribe_default_form textarea::-moz-placeholder, #rsm_subscribe_default_form footer form textarea::-moz-placeholder, footer form #rsm_subscribe_preview_form input::-moz-placeholder, #rsm_subscribe_preview_form footer form input::-moz-placeholder, footer form #rsm_subscribe_preview_form select::-moz-placeholder, #rsm_subscribe_preview_form footer form select::-moz-placeholder, footer form #rsm_subscribe_preview_form textarea::-moz-placeholder, #rsm_subscribe_preview_form footer form textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-footer form .uk-input::placeholder, footer form #rsm_subscribe_login_form input::placeholder, #rsm_subscribe_login_form footer form input::placeholder, footer form #rsm_subscribe_login_form select::placeholder, #rsm_subscribe_login_form footer form select::placeholder, footer form #rsm_subscribe_login_form textarea::placeholder, #rsm_subscribe_login_form footer form textarea::placeholder, footer form #rsm_subscribe_default_form input::placeholder, #rsm_subscribe_default_form footer form input::placeholder, footer form #rsm_subscribe_default_form select::placeholder, #rsm_subscribe_default_form footer form select::placeholder, footer form #rsm_subscribe_default_form textarea::placeholder, #rsm_subscribe_default_form footer form textarea::placeholder {
+footer form .uk-input::placeholder, footer form #rsm_subscribe_login_form input::placeholder, #rsm_subscribe_login_form footer form input::placeholder, footer form #rsm_subscribe_login_form select::placeholder, #rsm_subscribe_login_form footer form select::placeholder, footer form #rsm_subscribe_login_form textarea::placeholder, #rsm_subscribe_login_form footer form textarea::placeholder, footer form #rsm_subscribe_default_form input::placeholder, #rsm_subscribe_default_form footer form input::placeholder, footer form #rsm_subscribe_default_form select::placeholder, #rsm_subscribe_default_form footer form select::placeholder, footer form #rsm_subscribe_default_form textarea::placeholder, #rsm_subscribe_default_form footer form textarea::placeholder, footer form #rsm_subscribe_preview_form input::placeholder, #rsm_subscribe_preview_form footer form input::placeholder, footer form #rsm_subscribe_preview_form select::placeholder, #rsm_subscribe_preview_form footer form select::placeholder, footer form #rsm_subscribe_preview_form textarea::placeholder, #rsm_subscribe_preview_form footer form textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 footer form .submit {

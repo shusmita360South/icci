@@ -1082,7 +1082,7 @@ ul.uk-accordion {
 		height: 18px;
 	}
 }
-#rsm_subscribe_login_form, #rsm_subscribe_default_form {
+#rsm_subscribe_login_form, #rsm_subscribe_default_form, #rsm_subscribe_preview_form {
 	.uk-input{
 		width: 300px;
 		margin-bottom: 10px;
@@ -1116,6 +1116,29 @@ ul.uk-accordion {
 		opacity: 0;
 		&.show {
 			opacity: 1;
+		}
+	}
+	#jform_memberlogo-lbl, .memberlogo, .logo-upload-btn, #imgContainer, #imgLogoContainer, .logo-upload-error {
+		display: none;
+	}
+	#jform_memberlogoview-lbl, #rsm_memberlogoview {
+		display: none;
+
+	}
+	#jform_public-directory-choice-lbl, #rsm_public-directory-choice {
+		display: none;
+	}
+	.rsmembership_form_table {
+
+	}
+}
+#rsm_subscribe_default_form, #rsm_subscribe_preview_form {
+	.rsmembership_form_table {
+		tr:nth-last-child(2), tr:nth-last-child(1), tr:nth-last-child(3) {
+			td {
+				height: 0;
+			}
+		  
 		}
 	}
 }
