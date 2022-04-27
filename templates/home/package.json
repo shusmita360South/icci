@@ -3,7 +3,7 @@
   "description": "Build system for The Youth Junction.",
   "version": "0.1.0",
   "dependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.2",
     "grunt-autoprefixer": "~3.0.3",
     "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-connect": "~0.11.2",
